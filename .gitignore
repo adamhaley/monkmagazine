@@ -2,8 +2,8 @@
 web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
-web/app/themes/twentytwentythree/
-web/app/themes/blocksy/
+web/app/themes/*
+!web/app/themes/monk-theme
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
