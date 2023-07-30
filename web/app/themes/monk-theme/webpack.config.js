@@ -9,7 +9,7 @@ module.exports = {
 	mode: 'development',
 	devtool: 'source-map',
 	output: {
-		path: __dirname + '/dist',
+		path: __dirname + '/assets',
 		filename: 'bundle.js'
 	},
 	resolve: {
@@ -17,17 +17,17 @@ module.exports = {
 			// A standard alias that matches the first segment of an import path
 			// Note: Tilde (~) is not required, but is convention for stylesheet aliases
 			// Maps @import '~styl/*' to '/path/to/src/styl/*'
-			'~styl': path.join(__dirname, 'src/styl'),
+			'~styl': path.join(__dirname, 'styl'),
 
 			// An "exact match" alias (i.e. will only match @import 'mixins')
 			// @see https://webpack.js.org/configuration/resolve/#resolvealias
 			// Maps @import 'mixins' to '/path/to/src/styl/mixins'
-			'mixins$': path.join(__dirname, 'src/styl/mixins'),
+			'mixins$': path.join(__dirname, 'styl/mixins'),
 		},
 	},
 	module: {
 		rules: [
-            			{
+			{
 				test: /\.styl$/,
 				use: [
 					{
@@ -66,10 +66,10 @@ module.exports = {
 			ON_TEST: process.env.NODE_ENV === 'test'
 		}),
         new HtmlWebpackPlugin({
-          template: 'front-page.php'
+          template: 'index.html'
         }),
 		new MiniCssExtractPlugin({
-			filename: 'bundle.css'
+			filename: 'css/main.css'
 		})
 	],
 	performance: {

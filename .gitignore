@@ -5,6 +5,7 @@ web/app/mu-plugins/*/
 web/app/themes/*
 !web/app/themes/monk-theme
 web/app/themes/monk-theme/node_modules
+web/app/themes/monk-theme/assets
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
@@ -16,6 +17,8 @@ web/.htaccess
 
 # Logs
 *.log
+*.swp
+*.swo
 
 # Dotenv
 .env
