@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin= require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -71,7 +72,12 @@ module.exports = {
         }),
 		new MiniCssExtractPlugin({
 			filename: 'css/main.css'
-		})
+		}),
+		new CopyWebpackPlugin({
+			patterns: [
+				{from:'images',to:'../assets/images'}
+			]
+		}),
 	],
 	performance: {
 		maxAssetSize: 100000,
