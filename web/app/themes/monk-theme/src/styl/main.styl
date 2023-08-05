@@ -7,7 +7,7 @@
 	--transition-speed 0.2s
 	--transition-easing ease-in-out
 	--hamburger-margin .5em
-	--hamburger-height calc(var(--bar-height) * 3 + var(--bar-spacing) * 2 + var(--hamburger-margin))
+	--hamburger-height calc(var(--bar-height) * 3 + var(--bar-spacing) * 2 + var(--hamburger-margin) * 2)
 
 body
 	color #000
@@ -36,7 +36,7 @@ header
 					text-decoration underline
 
 .hamburger
-	--x-width calc(var(--hamburger-height) * 1.41421356237 )
+	--x-width 1.465em
 	display block
 	float right
 	margin-top var(--hamburger-margin)
@@ -44,7 +44,6 @@ header
 	//border 1px solid #000
 	width var(--bar-width)
 	height var(--hamburger-height)
-	border 1px solid red
 	span.bar
 		display block
 		width var(--bar-width)
@@ -59,12 +58,14 @@ header
 		span.bar:nth-child(1)
 			rotate 45deg
 			width var(--x-width)
+			//transform translateY(8px)
 			translate 0 calc(var(--bar-height) / -2)
 		span.bar:nth-child(3)
 			rotate -45deg
 			width var(--x-width)
+			//transform translateY(-8px)
 			translate 0 calc(var(--bar-height) / 2)
-
+//
 img.simple-mobile-true
 	width 70%
 	max-width 30em
