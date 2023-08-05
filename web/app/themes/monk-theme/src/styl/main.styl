@@ -9,17 +9,44 @@ header
 	img
 		float left
 		width 90%
-	div.hamburger
-		width 10%
-		height 100%
-		border 1px solid #000
-	/*
-	background-image url(/images/monk-magazine.jpg)
-	background-size 100%
-	background-repeat no-repeat
-	span
-		display none
-	*/
+
+.nav-menu
+	display none
+	float right
+	ul
+		list-style none
+		li
+			display inline-block
+			margin-left 1em
+			a
+				text-decoration none
+				color #000
+				&:hover
+					color #000
+					text-decoration underline
+
+.hamburger
+	display block
+	float right
+	margin-top 1.5em
+	//border 1px solid #000
+
+	span.bar
+		display block
+		width 2em
+		height 2px
+		background-color #000
+		margin-bottom 4px
+		transition all 0.2s ease-in-out
+
+	&.active
+		span.bar:nth-child(2)
+			opacity 0
+		span.bar:nth-child(1)
+			transform rotate(45deg) translate(8px)
+		span.bar:nth-child(3)
+			transform rotate(-45deg) translate(-8px)
+
 img.simple-mobile-true
 	width 70%
 	max-width 30em
