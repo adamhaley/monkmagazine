@@ -1,13 +1,3 @@
-:root
-	--bar-width 2em
-	--bar-height 2px
-	--bar-spacing 5px
-	--foreground-color #000
-	--background-color #fff
-	--transition-speed 0.2s
-	--transition-easing ease-in-out
-	--hamburger-margin .5em
-	--hamburger-height calc(var(--bar-height) * 3 + var(--bar-spacing) * 2 + var(--hamburger-margin))
 
 body
 	color #000
@@ -36,34 +26,22 @@ header
 					text-decoration underline
 
 .hamburger
-	--x-width calc(var(--hamburger-height) * 1.41421356237 )
 	display block
-	float right
-	margin-top var(--hamburger-margin)
 	cursor pointer
-	//border 1px solid #000
-	width var(--bar-width)
-	height var(--hamburger-height)
-	border 1px solid red
-	span.bar
+	float right
+	margin-top 1em
+	margin-right 1em
+	width 2em
+	height 2em
+	.menu
 		display block
-		width var(--bar-width)
-		height var(--bar-height)
-		background-color #000
-		margin-bottom var(--bar-spacing)
-		transition all 0.2s ease-in-out
-		transform-origin left center
+	.close
+		display none
 	&.active
-		span.bar:nth-child(2)
-			opacity 0
-		span.bar:nth-child(1)
-			rotate 45deg
-			width var(--x-width)
-			translate 0 calc(var(--bar-height) / -2)
-		span.bar:nth-child(3)
-			rotate -45deg
-			width var(--x-width)
-			translate 0 calc(var(--bar-height) / 2)
+		.menu
+			display none
+		.close
+			display block
 
 img.simple-mobile-true
 	width 70%
