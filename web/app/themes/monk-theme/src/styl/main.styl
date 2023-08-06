@@ -1,12 +1,15 @@
-
 body
+	display grid
 	color #000
 	background-color #fff
+	grid-template-columns 1fr 6fr 1fr
 
 header
-	max-width 40em
+	max-width 30em
 	min-height 5em
+
 	img
+		margin .2em
 		float left
 		width 90%
 
@@ -26,11 +29,11 @@ header
 					text-decoration underline
 
 .hamburger
-	display block
 	cursor pointer
+	margin-right .2em
+	margin-top .5em
+
 	float right
-	margin-top 1em
-	margin-right 1em
 	width 2em
 	height 2em
 	.menu
@@ -51,10 +54,12 @@ img.simple-mobile-true
 	margin-left auto
 
 img.monks-home
-	float left
+
 
 .container
-	max-width 40em
-
+	grid-template-columns 5fr 3fr
+	grid-template-rows 1fr 1fr
+	grid-template-areas
+		"img content"
 
 
