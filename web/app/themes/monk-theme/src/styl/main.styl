@@ -3,6 +3,7 @@ body
 	color #000
 	background-color #fff
 	grid-template-columns 1fr 6fr 1fr
+	font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif
 
 header
 	img
@@ -33,6 +34,11 @@ header
 	float right
 	width 2em
 	height 2em
+
+	img
+		width 80%
+		height 80%
+
 	.menu
 		display block
 	.close
@@ -44,19 +50,24 @@ header
 			display block
 
 img.simple-mobile-true
-	width 70%
-	max-width 30em
-	margin-left auto
-	margin-right auto
-	margin-left auto
+	width 80%
+	margin-top .5em
+	margin-bottom .5em
 
 img.monks-home
-
+	grid-column-start 2
+	grid-column-end 5
 
 .container
-	grid-template-columns 5fr 3fr
-	grid-template-rows 1fr 1fr
-	grid-template-areas
-		"img content"
+	display grid
+	grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+	gap .5em
+	.row
+		grid-column-start 2
+		grid-column-end 9
 
+	.content
+		grid-column-start 5
+		grid-column-end 9
+		border 1px solid #000
 
