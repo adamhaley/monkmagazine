@@ -9,7 +9,23 @@ const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('ul.nav-menu');
 
 hamburger.addEventListener('click', function() {
-	this.classList.toggle('active');
-	nav.classList.toggle('active');
+	if(this.classList.contains('active')) {
+		this.classList.remove('active');//hamburger remove active
+		nav.classList.remove('active');
+		nav.addEventListener('transitionend', function() {
+			nav.classList.remove('displayed'); //wait for transition to finish to remove nav from the flow
+		},{
+			capture: false,
+			once: true,
+			passive: false
+		});
+	} else {
+		this.classList.add('active'); //hamburger add active
+		nav.classList.add('displayed');
+		setTimeout(function() {
+			nav.classList.add('active');
+		}, 10);
+	}
 });
+
 
