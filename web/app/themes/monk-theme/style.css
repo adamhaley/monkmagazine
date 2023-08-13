@@ -1,9 +1,315 @@
-/*
+/*!****************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../node_modules/stylus-native-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./styl/main.styl ***!
+  \****************************************************************************************************************************************************************************/
+/*!
 Theme Name:     Monk-theme
-Theme URI:      
+Theme URI:
 Description:    Twentytwentythree child theme.
 Author:         Me
-Author URI:     
+Author URI:
 Template:       twentytwentythree
 Version:        0.1.0
 */
+body {
+  display: grid;
+  color: #000;
+  background-color: #fff;
+  grid-template-columns: 1fr 6fr 1fr;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9em;
+  font-leading: 0.6em;
+  font-kerning: normal;
+}
+header img {
+  margin: 0.2em;
+  float: left;
+  width: 100%;
+}
+.fa-plus:hover {
+  color: #fb0303;
+}
+ul.nav-menu {
+  display: none;
+  opacity: 0;
+  list-style: none;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  transition: all linear 0.2s;
+}
+ul.nav-menu.active {
+  top: 0;
+  opacity: 1;
+  transition: all ease-in-out 0.2s;
+}
+ul.nav-menu.displayed {
+  display: block;
+}
+ul.nav-menu li:first-child {
+  margin-top: 10em;
+}
+ul.nav-menu li {
+  align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+ul.nav-menu li a {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  display: block;
+}
+ul.nav-menu li a:hover {
+  color: #fb0303;
+  text-decoration: underline;
+}
+.hamburger {
+  cursor: pointer;
+  margin-right: 0.2em;
+  margin-top: 0.5em;
+  float: right;
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2000;
+}
+.hamburger img {
+  width: 80%;
+  height: 80%;
+}
+.hamburger .menu {
+  display: block;
+}
+.hamburger .close {
+  display: none;
+}
+.hamburger.active .menu {
+  display: none;
+}
+.hamburger.active .close {
+  display: block;
+}
+img.simple-mobile-true {
+  width: 80%;
+  margin-top: 6%;
+  margin-bottom: 2%;
+}
+img.monks-home {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+img.read-this {
+  height: 1.5em;
+  margin-top: 1.5em;
+}
+img.more {
+  cursor: pointer;
+  height: 1.4em;
+  margin-top: 1.5em;
+}
+a.more-link {
+  display: block;
+  text-decoration: none;
+  padding: 0.5em;
+  height: 0.8em;
+}
+a.more-link img {
+  display: inline-block;
+  margin-right: 0.2em;
+}
+a.more-link i {
+  position: relative;
+  top: -5px;
+  display: inline-block;
+  color: #000 !important;
+  text-shadow: 1px 1px 1px #000 !important;
+}
+a.more-link i:hover {
+  color: #fb0303 !important;
+}
+.gutter {
+  width: 100%;
+  grid-row: span 5;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em;
+}
+.container .row {
+  grid-column-start: 2;
+  grid-column-end: 9;
+}
+.container .buy {
+  margin-top: 4em;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.container a.cart {
+  display: block;
+  text-decoration: none;
+  padding: 0.5em;
+  height: 0.8em;
+  margin-top: 4em;
+  grid-column-start: 9;
+  grid-column-end: 10;
+}
+.container a.cart img {
+  display: inline-block;
+  margin-right: 0.2em;
+}
+.container a.cart i {
+  font-weight: 600;
+  position: relative;
+  color: #000 !important;
+}
+.container a.cart i:hover {
+  color: #fb0303 !important;
+}
+.container .content {
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../node_modules/stylus-native-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./styl/reset.styl ***!
+  \*****************************************************************************************************************************************************************************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
