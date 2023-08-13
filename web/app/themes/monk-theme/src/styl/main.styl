@@ -256,7 +256,8 @@ a.more-link
 		img
 			display inline-block
 			margin-right .2em
-
+			max-width none
+			height 1.5em
 		i
 			position relative
 			top -5px
@@ -267,10 +268,26 @@ a.more-link
 .footer
 	display grid
 	grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-
+	grid-template-rows 1fr 1fr
+	content-align center
 	img.connect
+		grid-row-start 1
+		grid-row-end 2
+		grid-column-start 2
+		grid-column-end 8
 		margin-top 1em
-		grid-column-start 3
-		grid-column-end 7
-		max-width none
-		height 7em
+
+	.social
+		grid-row-start 2
+		grid-row-end 3
+		display block
+		margin-top 2em
+		margin-bottom 2em
+		grid-column-start 1
+		grid-column-end 9
+		text-align center
+		svg
+			margin 1em
+			cursor pointer
+			&:hover
+				fill #fb0303
