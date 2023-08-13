@@ -165,9 +165,40 @@ a.more-link
 		grid-column-start 5
 		grid-column-end 9
 
-	.back-issues
+	ul.back-issues
 		display grid
 		grid-column-start 1
 		grid-column-end 9
 		grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr
-		gap 2em
+		gap 1.5em
+		list-style-type none
+		counter-reset issues 3 /* initializes counter to 0; use -1 for zero-based numbering */
+
+		li.issue
+			//overflow hidden
+			width 100px
+			height 150px
+			cursor pointer
+			position relative
+			&:after
+				content counter(issues)
+				color #fc0003
+				counter-increment issues 1/* Increase the counter by 1. */
+				position absolute
+				width 100px
+				text-align center
+				bottom -.4em
+				//align center
+				margin-left auto
+				margin-right auto
+				left 0
+				right 0
+				font-size 1.5em
+				font-weight 600
+
+			//on hover grow image
+			img
+				transform scale(1)
+				transition all ease-in-out .2s
+				&:hover
+					transform scale(1.1)

@@ -5,7 +5,7 @@
 Theme Name:     Monk-theme
 Theme URI:
 Description:    Twentytwentythree child theme.
-Author:         Me
+Author:         Adam Haley
 Author URI:
 Template:       twentytwentythree
 Version:        0.1.0
@@ -86,7 +86,7 @@ ul.nav-menu li a:hover {
   height: 80%;
 }
 .hamburger .menu {
-  display: block;
+display: block;
 }
 .hamburger .close {
   display: none;
@@ -176,6 +176,11 @@ a.more-link i:hover {
 }
 .container .content {
   grid-column-start: 5;
+  grid-column-end: 9;
+}
+.container .back-issues {
+  border: 1px solid #f00;
+  grid-column-start: 2;
   grid-column-end: 9;
 }
 
