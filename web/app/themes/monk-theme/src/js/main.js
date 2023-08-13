@@ -8,7 +8,13 @@ console.log('Hello World from main.js!');
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('ul.nav-menu');
 
+/**
+ * Functions
+ */
 
+/**
+ * Open Nav
+ */
 function openNav() {
 	hamburger.classList.add('active'); //hamburger add active
 	nav.classList.add('displayed');
@@ -17,6 +23,9 @@ function openNav() {
 	}, 10);
 }
 
+/**
+ * Close Nav
+ */
 function closeNav() {
 	hamburger.classList.remove('active');//hamburger remove active
 	nav.classList.remove('active');
@@ -29,18 +38,27 @@ function closeNav() {
 	});
 }
 
+
+/**
+ * Event Listeners
+ */
+
+/**
+ * Close nav when clicking a link on it
+ */
 nav.addEventListener('click', function(e) {
 	if(e.target.tagName === 'A') {
 		closeNav();
 	}
 });
 
-	hamburger.addEventListener('click', function() {
+/**
+ * Hamburger Menu Click
+ */
+hamburger.addEventListener('click', function() {
 	if(this.classList.contains('active')) {
 		closeNav();
 	} else {
 		openNav();
 	}
 });
-
-

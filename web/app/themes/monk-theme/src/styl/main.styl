@@ -14,6 +14,10 @@ header
 		float left
 		width 100%
 
+.fa-plus:hover
+	color #fb0303
+
+
 ul.nav-menu
 	display none
 	opacity 0
@@ -108,6 +112,14 @@ a.more-link
 		position relative
 		top -5px
 		display inline-block
+		color #000 !important
+		text-shadow 1px 1px 1px #000 !important
+
+
+.gutter
+	width 100%
+	grid-row span 5
+	border 1px solid red
 
 .container
 	display grid
@@ -116,6 +128,30 @@ a.more-link
 	.row
 		grid-column-start 2
 		grid-column-end 9
+
+	.buy
+		margin-top 4em
+		grid-column-start 1
+		grid-column-end 4
+		border 1px solid red
+
+	a.cart
+		display block
+		text-decoration none
+		padding .5em
+		height .8em
+		margin-top 4em
+		grid-column-start 9
+		grid-column-end 10
+		img
+			display inline-block
+			margin-right .2em
+		i
+			font-weight 600
+			position relative
+			color #000 !important
+			&:hover
+				color #fb0303 !important
 
 	.content
 		grid-column-start 5
