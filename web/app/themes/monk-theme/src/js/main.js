@@ -1,6 +1,6 @@
-require('../styl/reset.styl');
 require('../styl/main.styl');
 
+require('../styl/reset.styl');
 console.log('Hello World from main.js!');
 
 
