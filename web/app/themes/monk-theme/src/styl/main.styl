@@ -272,7 +272,7 @@ a.more-link
 				right 0
 				font-size 1.5em
 				font-weight 600
-				.xs &, .sm &
+				.xs &
 					font-size 3em
 			//on hover grow image
 			img
@@ -296,9 +296,10 @@ a.more-link
 	i
 		position relative
 		top -5px
-		.xs &, .sm &
-			top -5px
-
+		.xs &
+			top -7px
+		.sm &
+			top -4px
 		.md &
 			top -3px
 		display inline-block
@@ -424,3 +425,30 @@ a.more-link
 		grid-column-end 10
 		text-align center
 		font-size .7em
+
+.back-to-top
+	cursor pointer
+	margin-right .2em
+	margin-top .5em
+
+	//float right
+	width 2em
+	height 2em
+	position fixed
+	bottom 0
+	right 0
+	display none
+	z-index 2000
+	opacity 0
+	transition all ease-in-out .2s
+	&.in
+		display block
+
+	&.visible
+		opacity 1
+	svg
+		width 80%
+		height 80%
+
+		&:hover
+			fill #fb0303

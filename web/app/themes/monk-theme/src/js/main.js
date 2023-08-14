@@ -6,9 +6,6 @@ require('../styl/main.styl');
 console.log('Hello World from main.js!');
 
 
-//hamburger nav
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('ul.nav-menu');
 
 /**
  * Functions
@@ -59,6 +56,29 @@ function detectResponsiveEnvironment() {
 
 };
 
+function detectScrollPos() {
+	let scrollPos = window.scrollY;
+	let backToTop = document.querySelector('.back-to-top');
+	console.log(backToTop);
+	console.log('scrollPos: ' + scrollPos);
+	if(scrollPos > 100) {
+		backToTop.classList.add('in');
+		setTimeout(function() {
+			backToTop.classList.add('visible');
+		},10);
+	} else {
+		backToTop.classList.remove('visible');
+		backToTop.addEventListener('transitionend', function() {
+			backToTop.classList.remove('in');
+		}, {
+			capture: false,
+			once: true,
+			passive: false
+		});
+	}
+}
+
+
 /**
  * Open Nav
  */
@@ -85,10 +105,32 @@ function closeNav() {
 	});
 }
 
+let links = document.querySelectorAll('.nav-menu a[href^="#"]');
+links.forEach(function(link) {
+	link.addEventListener('click', function(e) {
+		e.preventDefault();
+		console.log('Hi');
+		console.log(this.getAttribute('href'));
+		let anchor = this.getAttribute('href').slice(1, this.getAttribute('href').length);
+		console.log(anchor);
+		let target = document.querySelector('.' + anchor);
+		let offset = target.getBoundingClientRect();
+		offset = offset.top;
+		console.log(offset);
+		window.scrollTo({
+			top: offset,
+			behavior: 'smooth'
+		});
+	});
+});
 
 /**
  * Event Listeners
  */
+//hamburger nav
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('ul.nav-menu');
+const backToTop = document.querySelector('.back-to-top a');
 
 /**
  * Close nav when clicking a link on it
@@ -110,6 +152,15 @@ hamburger.addEventListener('click', function() {
 	}
 });
 
+backToTop.addEventListener('click', function(e) {
+	e.preventDefault();
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth'
+	});
+});
+
+
 (function() {
 	$(document).ready(detectResponsiveEnvironment);
 
@@ -120,5 +171,13 @@ hamburger.addEventListener('click', function() {
 	}
 
 	window.addEventListener('resize', startResize);
+
+	var timeId2 = null;
+	function startScroll() {
+		clearTimeout(timeId2);
+		timeId2 = setTimeout(detectScrollPos, 250);
+	}
+
+	window.addEventListener('scroll', startScroll);
 }).call(this);
 
