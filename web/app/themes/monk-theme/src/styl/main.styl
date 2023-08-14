@@ -42,7 +42,7 @@ ul.nav-menu
 	z-index 1000
 	opacity 0
 	transition all linear .2s
-
+	font-size 1.5em
 	&.active
 		top 0
 		opacity 1
@@ -373,6 +373,7 @@ a.more-link
 	grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
 	grid-template-rows 1fr 1fr 1fr
 	content-align center
+	height 12em
 	img.connect
 		grid-row-start 1
 		grid-row-end 2
@@ -390,6 +391,12 @@ a.more-link
 		grid-column-end 9
 		text-align center
 
+		svg
+			transform scale(.8)
+			margin 1em
+			cursor pointer
+			&:hover
+				fill #fb0303
 		.xs &, .sm &, .md &
 			margin-top 0
 			margin-bottom 0
@@ -403,8 +410,9 @@ a.more-link
 				&:hover
 					fill #fb0303
 	.copyright
+		height 1em
 		grid-row-start 3
-		grid-row-end 4
+		grid-row-end 3
 		grid-column-start 1
 		grid-column-end 10
 		text-align center
