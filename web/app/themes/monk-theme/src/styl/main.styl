@@ -126,8 +126,13 @@ img.monks-home
 	grid-column-end 5
 
 	.xs &, .sm &, .md &
+		display block
+		object-fit cover
+		object-position 50% 20%
 		grid-column-start 1
 		grid-column-end 10
+		height 500px
+		width 100%
 
 img.read-this
 	height 1.5em
@@ -204,6 +209,8 @@ a.more-link
 				color #fb0303 !important
 
 	.content
+		display block
+		position relative
 		grid-column-start 5
 		grid-column-end 9
 		.xs &, .sm &, .md &
