@@ -262,7 +262,6 @@ a.more-link i {
   top: -5px;
   display: inline-block;
   color: #000 !important;
-  text-shadow: 1px 1px 1px #000 !important;
 }
 a.more-link i:hover {
   color: #fb0303 !important;
@@ -346,6 +345,54 @@ a.more-link i:hover {
 }
 .container ul.back-issues li.issue img:hover {
   transform: scale(1.1);
+}
+.more-stuff-to-buy {
+  display: block;
+  grid-column-start: 7;
+  grid-column-end: 10;
+  text-decoration: none;
+  padding: 0.5em;
+  height: 0.8em;
+  width: 100%;
+  margin-top: -4.5em;
+}
+.more-stuff-to-buy img {
+  display: inline-block;
+  margin-right: 0.2em;
+}
+.more-stuff-to-buy i {
+  position: relative;
+  top: -5px;
+  display: inline-block;
+  color: #000 !important;
+}
+.more-stuff-to-buy i:hover {
+  color: #fb0303 !important;
+}
+.on-the-road {
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: 9;
+  text-decoration: none;
+  padding: 0.5em;
+  height: 0.8em;
+  width: 100%;
+  margin-top: 1em;
+}
+.on-the-road .more-thrills {
+  height: 1em;
+}
+.on-the-road .more-thrills img {
+  display: inline-block;
+  margin-right: 0.2em;
+}
+.on-the-road .more-thrills i {
+  position: relative;
+  display: inline-block;
+  color: #000 !important;
+}
+.on-the-road .more-thrills i:hover {
+  color: #fb0303 !important;
 }
 
 
