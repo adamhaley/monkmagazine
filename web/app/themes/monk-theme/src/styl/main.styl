@@ -22,6 +22,8 @@ header
 		margin .2em
 		float left
 		width 100%
+		.sm &, .md &
+			width 100%
 
 .fa-plus:hover
 	color #fb0303
@@ -96,13 +98,23 @@ img.simple-mobile-true
 	margin-top 6%
 	margin-bottom 2%
 
+	.xs &, .sm &, .md &
+		width 100%
+
 img.monks-home
 	grid-column-start 2
 	grid-column-end 5
 
+	.xs &, .sm &, .md &
+		grid-column-start 1
+		grid-column-end 10
+
 img.read-this
 	height 1.5em
 	margin-top 1.5em
+
+	.xs &, .sm &, .md &
+		margin-top 0
 
 img.more
 	cursor pointer
@@ -137,6 +149,10 @@ a.more-link
 		grid-column-start 2
 		grid-column-end 9
 
+		.xs &, .sm &, .md &
+			grid-column-start 1
+			grid-column-end 10
+
 	.buy
 		margin-top 4em
 		grid-column-start 1
@@ -167,6 +183,9 @@ a.more-link
 	.content
 		grid-column-start 5
 		grid-column-end 9
+		.xs &, .sm &, .md &
+			grid-column-start 1
+			grid-column-end 10
 
 	ul.back-issues
 		display grid
