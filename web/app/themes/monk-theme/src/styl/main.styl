@@ -42,16 +42,23 @@ ul.nav-menu
 	z-index 1000
 	opacity 0
 	transition all linear .2s
+
 	&.active
 		top 0
 		opacity 1
 		transition all ease-in-out .2s
+		position fixed
 
 	&.displayed
 		display block
 
+	.xs &, .sm &, .md &
+		font-size 2em
+
 	li:first-child
 		margin-top 10em
+		.xs &, .sm &, .md &
+			margin-top 2em
 	li
 		align center
 		margin-left auto
@@ -65,16 +72,28 @@ ul.nav-menu
 			&:hover
 				color #fb0303
 				text-decoration underline
+	.social
+		display block
+		position absolute
+		bottom 0
+		margin-bottom 1em
+		width 100%
+		text-align center
 
+		svg
+			transform scale(.8)
+			margin .5em
+			cursor pointer
+			&:hover
+				fill #fb0303
 .hamburger
 	cursor pointer
 	margin-right .2em
 	margin-top .5em
 
-	float right
+	//float right
 	width 2em
 	height 2em
-
 	position absolute
 	top 0
 	right 0
@@ -88,6 +107,7 @@ ul.nav-menu
 	.close
 		display none
 	&.active
+		position fixed
 		.menu
 			display none
 		.close
@@ -170,6 +190,9 @@ a.more-link
 		margin-top 4em
 		grid-column-start 9
 		grid-column-end 10
+
+		.xs &, .sm &
+			margin-top 0
 		img
 			display inline-block
 			margin-right .2em
@@ -190,7 +213,7 @@ a.more-link
 	ul.back-issues
 		display grid
 		grid-column-start 1
-		grid-column-end 9
+		grid-column-end 10
 		grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr
 		gap 1.5em
 		list-style-type none
@@ -225,6 +248,8 @@ a.more-link
 			//overflow hidden
 			cursor pointer
 			position relative
+			.xs &, .sm &
+				margin-bottom 1em
 			&:after
 				content counter(issues)
 				color #fc0003
@@ -240,7 +265,8 @@ a.more-link
 				right 0
 				font-size 1.5em
 				font-weight 600
-
+				.xs &, .sm &
+					font-size 3em
 			//on hover grow image
 			img
 				transform scale(1)
@@ -263,6 +289,11 @@ a.more-link
 	i
 		position relative
 		top -5px
+		.xs &, .sm &
+			top -5px
+
+		.md &
+			top -3px
 		display inline-block
 		color #000 !important
 		&:hover
@@ -270,10 +301,11 @@ a.more-link
 
 	.md &, .sm &
 		width 100%
+		//margin-left 4em
 		margin-top -1em
 		margin-bottom 1em
-		grid-column-start 6
-		grid-column-end 9
+		grid-column-start 7
+		grid-column-end 11
 		img
 			width 80%
 			height auto
@@ -305,14 +337,23 @@ a.more-link
 		float left
 		width 50%
 		padding-right .5em
+		.xs &, .sm &, .md &
+			width 100%
+			float none
+			margin-top 1em
 
 	img.monk-on-the-road
 		float right
 		width 50%
 		max-width 100%
 
+		.xs &, .sm &, .md &
+			width 100%
+			float none
+			margin-top .5em
+			margin-bottom 1em
+
 	.more-thrills
-		width 7em
 		margin-top 1em
 		height 1.5em
 		img
@@ -330,7 +371,7 @@ a.more-link
 .footer
 	display grid
 	grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-	grid-template-rows 1fr 1fr
+	grid-template-rows 1fr 1fr 1fr
 	content-align center
 	img.connect
 		grid-row-start 1
@@ -344,13 +385,27 @@ a.more-link
 		grid-row-end 3
 		display block
 		margin-top 2em
-		margin-bottom 1em
+		margin-bottom 0
 		grid-column-start 1
 		grid-column-end 9
 		text-align center
-		svg
-			transform scale(.8)
-			margin 1em
-			cursor pointer
-			&:hover
-				fill #fb0303
+
+		.xs &, .sm &, .md &
+			margin-top 0
+			margin-bottom 0
+			grid-column-start 1
+			grid-column-end 9
+			text-align center
+			svg
+				transform scale(.8)
+				margin 1em
+				cursor pointer
+				&:hover
+					fill #fb0303
+	.copyright
+		grid-row-start 3
+		grid-row-end 4
+		grid-column-start 1
+		grid-column-end 10
+		text-align center
+		font-size .7em
