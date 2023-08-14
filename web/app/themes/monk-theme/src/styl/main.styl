@@ -177,10 +177,33 @@ a.more-link
 		list-style-type none
 		counter-reset issues 3 /* initializes counter to 0; use -1 for zero-based numbering */
 
+		.md &, .sm &
+			grid-template-columns 1fr 1fr 1fr 1fr
+			gap 1em 1em //row column
+			li.issue
+				grid-column-start auto
+				grid-column-end auto
+				img
+					width 100%
+					height auto
+					&:hover
+						transform scale(1.05)
+
+		.xs &
+			grid-template-columns 1fr
+			gap 1em
+
+			li.issue
+				grid-column-start auto
+				grid-column-end auto
+				img
+					width 100%
+					height auto
+					&:hover
+						transform scale(1.03)
+
 		li.issue
 			//overflow hidden
-			width 100px
-			height 150px
 			cursor pointer
 			position relative
 			&:after
@@ -188,7 +211,7 @@ a.more-link
 				color #fc0003
 				counter-increment issues 1/* Increase the counter by 1. */
 				position absolute
-				width 100px
+				width 100%
 				text-align center
 				bottom -.4em
 				//align center

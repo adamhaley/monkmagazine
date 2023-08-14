@@ -116,7 +116,7 @@ hamburger.addEventListener('click', function() {
 	var timeId = null;
 	function startResize() {
 		clearTimeout(timeId);
-		timeId = setTimeout(detectResponsiveEnvironment, 500);
+		timeId = setTimeout(detectResponsiveEnvironment, 250);
 	}
 
 	window.addEventListener('resize', startResize);
