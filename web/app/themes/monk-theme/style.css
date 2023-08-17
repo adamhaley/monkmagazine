@@ -157,6 +157,10 @@ header img {
   float: left;
   width: 100%;
 }
+.sm header img,
+.md header img {
+  width: 100%;
+}
 .fa-plus:hover {
   color: #fb0303;
 }
@@ -173,17 +177,29 @@ ul.nav-menu {
   z-index: 1000;
   opacity: 0;
   transition: all linear 0.2s;
+  font-size: 1.5em;
 }
 ul.nav-menu.active {
   top: 0;
   opacity: 1;
   transition: all ease-in-out 0.2s;
+  position: fixed;
 }
 ul.nav-menu.displayed {
   display: block;
 }
+.xs ul.nav-menu,
+.sm ul.nav-menu,
+.md ul.nav-menu {
+  font-size: 2em;
+}
 ul.nav-menu li:first-child {
   margin-top: 10em;
+}
+.xs ul.nav-menu li:first-child,
+.sm ul.nav-menu li:first-child,
+.md ul.nav-menu li:first-child {
+  margin-top: 2em;
 }
 ul.nav-menu li {
   align: center;
@@ -201,11 +217,26 @@ ul.nav-menu li a:hover {
   color: #fb0303;
   text-decoration: underline;
 }
+ul.nav-menu .social {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1em;
+  width: 100%;
+  text-align: center;
+}
+ul.nav-menu .social svg {
+  transform: scale(0.8);
+  margin: 0.5em;
+  cursor: pointer;
+}
+ul.nav-menu .social svg:hover {
+  fill: #fb0303;
+}
 .hamburger {
   cursor: pointer;
   margin-right: 0.2em;
   margin-top: 0.5em;
-  float: right;
   width: 2em;
   height: 2em;
   position: absolute;
@@ -223,6 +254,9 @@ ul.nav-menu li a:hover {
 .hamburger .close {
   display: none;
 }
+.hamburger.active {
+  position: fixed;
+}
 .hamburger.active .menu {
   display: none;
 }
@@ -234,13 +268,34 @@ img.simple-mobile-true {
   margin-top: 6%;
   margin-bottom: 2%;
 }
+.xs img.simple-mobile-true,
+.sm img.simple-mobile-true,
+.md img.simple-mobile-true {
+  width: 100%;
+}
 img.monks-home {
   grid-column-start: 2;
   grid-column-end: 5;
 }
+.xs img.monks-home,
+.sm img.monks-home,
+.md img.monks-home {
+  display: block;
+  object-fit: cover;
+  object-position: 50% 20%;
+  grid-column-start: 1;
+  grid-column-end: 10;
+  height: 30em;
+  width: 100%;
+}
 img.read-this {
   height: 1.5em;
   margin-top: 1.5em;
+}
+.xs img.read-this,
+.sm img.read-this,
+.md img.read-this {
+  margin-top: 0;
 }
 img.more {
   cursor: pointer;
@@ -279,10 +334,21 @@ a.more-link i:hover {
   grid-column-start: 2;
   grid-column-end: 9;
 }
+.xs .container .row,
+.sm .container .row,
+.md .container .row {
+  grid-column-start: 1;
+  grid-column-end: 10;
+}
 .container .buy {
   margin-top: 4em;
   grid-column-start: 1;
   grid-column-end: 4;
+}
+.container .buy img {
+  height: 1.5em;
+  display: block;
+  max-width: none;
 }
 .container a.cart {
   display: block;
@@ -292,6 +358,10 @@ a.more-link i:hover {
   margin-top: 4em;
   grid-column-start: 9;
   grid-column-end: 10;
+}
+.xs .container a.cart,
+.sm .container a.cart {
+  margin-top: 0;
 }
 .container a.cart img {
   display: inline-block;
@@ -306,30 +376,74 @@ a.more-link i:hover {
   color: #fb0303 !important;
 }
 .container .content {
+  display: block;
+  position: relative;
   grid-column-start: 5;
   grid-column-end: 9;
+}
+.xs .container .content,
+.sm .container .content,
+.md .container .content {
+  grid-column-start: 1;
+  grid-column-end: 10;
 }
 .container ul.back-issues {
   display: grid;
   grid-column-start: 1;
-  grid-column-end: 9;
+  grid-column-end: 10;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 1.5em;
   list-style-type: none;
   counter-reset: issues 3 /* initializes counter to 0; use -1 for zero-based numbering */;
 }
+.md .container ul.back-issues,
+.sm .container ul.back-issues {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em 1em;
+}
+.md .container ul.back-issues li.issue,
+.sm .container ul.back-issues li.issue {
+  grid-column-start: auto;
+  grid-column-end: auto;
+}
+.md .container ul.back-issues li.issue img,
+.sm .container ul.back-issues li.issue img {
+  width: 100%;
+  height: auto;
+}
+.md .container ul.back-issues li.issue img:hover,
+.sm .container ul.back-issues li.issue img:hover {
+  transform: scale(1.05);
+}
+.xs .container ul.back-issues {
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+.xs .container ul.back-issues li.issue {
+  grid-column-start: auto;
+  grid-column-end: auto;
+}
+.xs .container ul.back-issues li.issue img {
+  width: 100%;
+  height: auto;
+}
+.xs .container ul.back-issues li.issue img:hover {
+  transform: scale(1.03);
+}
 .container ul.back-issues li.issue {
-  width: 100px;
-  height: 150px;
   cursor: pointer;
   position: relative;
+}
+.xs .container ul.back-issues li.issue,
+.sm .container ul.back-issues li.issue {
+  margin-bottom: 1em;
 }
 .container ul.back-issues li.issue:after {
   content: counter(issues);
   color: #fc0003;
   counter-increment: issues 1 /* Increase the counter by 1. */;
   position: absolute;
-  width: 100px;
+  width: 100%;
   text-align: center;
   bottom: -0.4em;
   margin-left: auto;
@@ -338,6 +452,9 @@ a.more-link i:hover {
   right: 0;
   font-size: 1.5em;
   font-weight: 600;
+}
+.xs .container ul.back-issues li.issue:after {
+  font-size: 3em;
 }
 .container ul.back-issues li.issue img {
   transform: scale(1);
@@ -366,33 +483,189 @@ a.more-link i:hover {
   display: inline-block;
   color: #000 !important;
 }
+.xs .more-stuff-to-buy i {
+  top: -7px;
+}
+.sm .more-stuff-to-buy i {
+  top: -4px;
+}
+.md .more-stuff-to-buy i {
+  top: -3px;
+}
 .more-stuff-to-buy i:hover {
   color: #fb0303 !important;
 }
+.md .more-stuff-to-buy,
+.sm .more-stuff-to-buy {
+  width: 100%;
+  margin-top: -1em;
+  margin-bottom: 1em;
+  grid-column-start: 7;
+  grid-column-end: 11;
+}
+.md .more-stuff-to-buy img,
+.sm .more-stuff-to-buy img {
+  width: 80%;
+  height: auto;
+  margin-right: 0.2em;
+}
+.xs .more-stuff-to-buy {
+  margin-top: 0;
+  margin-bottom: 1em;
+  grid-column-start: 1;
+  grid-column-end: 9;
+}
+.xs .more-stuff-to-buy img {
+  width: 80%;
+  height: auto;
+  margin-right: 0.2em;
+}
 .on-the-road {
-  display: block;
+  display: grid;
   grid-column-start: 1;
   grid-column-end: 9;
   text-decoration: none;
   padding: 0.5em;
-  height: 0.8em;
   width: 100%;
   margin-top: 1em;
 }
+.on-the-road img.on-the-road-with-the-monks {
+  height: 1.5em;
+  max-width: none;
+}
+.on-the-road p {
+  margin-top: 1em;
+  float: left;
+  width: 50%;
+  padding-right: 0.5em;
+}
+.xs .on-the-road p,
+.sm .on-the-road p,
+.md .on-the-road p {
+  width: 100%;
+  float: none;
+  margin-top: 1em;
+}
+.on-the-road img.monk-on-the-road {
+  float: right;
+  width: 50%;
+  max-width: 100%;
+}
+.xs .on-the-road img.monk-on-the-road,
+.sm .on-the-road img.monk-on-the-road,
+.md .on-the-road img.monk-on-the-road {
+  width: 100%;
+  float: none;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
 .on-the-road .more-thrills {
-  height: 1em;
+  margin-top: 1em;
+  height: 1.5em;
 }
 .on-the-road .more-thrills img {
   display: inline-block;
   margin-right: 0.2em;
+  max-width: none;
+  height: 1.5em;
 }
 .on-the-road .more-thrills i {
   position: relative;
+  top: -5px;
   display: inline-block;
   color: #000 !important;
 }
 .on-the-road .more-thrills i:hover {
   color: #fb0303 !important;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  content-align: center;
+  height: 12em;
+}
+.footer img.connect {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 8;
+  margin-top: 1em;
+}
+.footer .social {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 0;
+  grid-column-start: 1;
+  grid-column-end: 9;
+  text-align: center;
+}
+.footer .social svg {
+  transform: scale(0.8);
+  margin: 1em;
+  cursor: pointer;
+}
+.footer .social svg:hover {
+  fill: #fb0303;
+}
+.xs .footer .social,
+.sm .footer .social,
+.md .footer .social {
+  margin-top: 0;
+  margin-bottom: 0;
+  grid-column-start: 1;
+  grid-column-end: 9;
+  text-align: center;
+}
+.xs .footer .social svg,
+.sm .footer .social svg,
+.md .footer .social svg {
+  transform: scale(0.8);
+  margin: 1em;
+  cursor: pointer;
+}
+.xs .footer .social svg:hover,
+.sm .footer .social svg:hover,
+.md .footer .social svg:hover {
+  fill: #fb0303;
+}
+.footer .copyright {
+  height: 1em;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 10;
+  text-align: center;
+  font-size: 0.7em;
+}
+.back-to-top {
+  cursor: pointer;
+  margin-right: 0.2em;
+  margin-top: 0.5em;
+  width: 2em;
+  height: 2em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: none;
+  z-index: 2000;
+  opacity: 0;
+  transition: all ease-in-out 0.2s;
+}
+.back-to-top.in {
+  display: block;
+}
+.back-to-top.visible {
+  opacity: 1;
+}
+.back-to-top svg {
+  width: 80%;
+  height: 80%;
+}
+.back-to-top svg:hover {
+  fill: #fb0303;
 }
 
 
