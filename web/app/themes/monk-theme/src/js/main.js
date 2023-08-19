@@ -131,6 +131,7 @@ links.forEach(function(link) {
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('ul.nav-menu');
 const backToTop = document.querySelector('.back-to-top a');
+const readMore = document.querySelector('.more-link');
 
 /**
  * Close nav when clicking a link on it
@@ -158,6 +159,18 @@ backToTop.addEventListener('click', function(e) {
 		top: 0,
 		behavior: 'smooth'
 	});
+});
+
+readMore.addEventListener('click', function(e) {
+	e.preventDefault();
+	//add expanded class to .overflow
+	let overflow = document.querySelector('.overflow');
+	if(overflow.classList.contains('in')) {
+		overflow.classList.remove('in');
+	}else{
+		overflow.classList.add('in');
+	}
+
 });
 
 

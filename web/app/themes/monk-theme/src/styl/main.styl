@@ -217,17 +217,26 @@ a.more-link
 			grid-column-start 1
 			grid-column-end 10
 
+		span.overflow
+			display block
+			max-height 0px
+			width auto
+			overflow hidden
+			transition all ease-in-out .5s
+			&.in
+				max-height 1000px
+				transition all ease-in-out .5s
 	ul.back-issues
 		display grid
 		grid-column-start 1
 		grid-column-end 10
-		grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr
+		grid-template-columns repeat( 6, 1fr )
 		gap 1.5em
 		list-style-type none
 		counter-reset issues 3 /* initializes counter to 0; use -1 for zero-based numbering */
 
 		.md &, .sm &
-			grid-template-columns 1fr 1fr 1fr 1fr
+			grid-template-columns repeat( 4,  1fr )
 			gap 1em 1em //row column
 			li.issue
 				grid-column-start auto
@@ -378,8 +387,8 @@ a.more-link
 				color #fb0303 !important
 .footer
 	display grid
-	grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-	grid-template-rows 1fr 1fr 1fr
+	grid-template-columns repeat( 8 , 1fr )
+	grid-template-rows repeat( 3, 1fr )
 	content-align center
 	height 12em
 	img.connect
