@@ -442,6 +442,42 @@ a.more-link
 			color #000 !important
 			&:hover
 				color #fb0303 !important
+
+.thrills-overflow
+	display grid
+	grid-column-start 1
+	grid-column-end 10
+	max-height 0px
+	overflow hidden
+	grid-template-columns repeat( 3, 1fr )
+	gap 5em
+	transition max-height ease-in-out .5s
+	border-bottom 0em
+	padding-bottom 0em
+	margin-top 1.5em
+
+	.xs &
+		grid-template-columns 1fr
+
+	&.in
+		max-height 20000px
+		transition max-height ease-in-out .5s
+		border-bottom 1em solid #fb0303
+		padding-bottom 1em
+
+	.thrill
+		width 100%
+		img
+			cursor pointer
+			margin-left auto
+			margin-right auto
+			width 100%
+			height auto
+			transition all ease-in-out .2s
+			&:hover
+				transform scale(1.05)
+				transition all ease-in-out .2s
+
 .footer
 	display grid
 	grid-template-columns repeat( 8 , 1fr )
