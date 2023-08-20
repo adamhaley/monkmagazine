@@ -217,7 +217,7 @@ a.more-link
 			grid-column-start 1
 			grid-column-end 10
 
-	span.overflow
+	span.overflow, div.buy-overflow
 		display block
 		max-height 0px
 		width auto
@@ -296,6 +296,50 @@ a.more-link
 				&:hover
 					transform scale(1.1)
 
+	ul.more-stuff
+		display grid
+		grid-column-start 1
+		grid-column-end 10
+		grid-template-columns repeat( 6, 1fr )
+		gap 1.5em
+		list-style-type none
+
+		.md &, .sm &
+			grid-template-columns repeat( 4,  1fr )
+			gap 1em 1em //row column
+			li.product
+				grid-column-start auto
+				grid-column-end auto
+				img
+					width 100%
+					height auto
+					&:hover
+						transform scale(1.05)
+
+		.xs &
+			grid-template-columns 1fr
+			gap 1em
+
+			li.product
+				grid-column-start auto
+				grid-column-end auto
+				img
+					width 100%
+					height auto
+					&:hover
+						transform scale(1.03)
+
+		li.product
+			cursor pointer
+			position relative
+			.xs &, .sm &
+				margin-bottom 1em
+
+			img
+				transform scale(1)
+				transition all ease-in-out .2s
+				&:hover
+					transform scale(1.1)
 .more-stuff-to-buy
 	display block
 	grid-column-start 7
