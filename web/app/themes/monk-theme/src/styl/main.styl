@@ -222,13 +222,15 @@ a.more-link
 		max-height 0px
 		width auto
 		overflow hidden
-		transition all ease-in-out .5s
+		transition max-height ease-in-out .5s
+		//transition border-bottom ease-in-out .1s
 		border-bottom 0 solid #fb0303
 		.xs &, .sm &, .md &
 			padding-top 3em
 		&.in
 			max-height 1000px
-			transition all ease-in-out .5s
+			transition max-height ease-in-out .5s
+			//transition border-bottom ease-in-out .1s
 			border-bottom 1em solid #fb0303
 			padding-bottom 1em
 
@@ -295,6 +297,11 @@ a.more-link
 				transition all ease-in-out .2s
 				&:hover
 					transform scale(1.1)
+	div.buy-overflow
+		grid-column-start 1
+		grid-column-end 10
+		&.in
+			max-height 20000px
 
 	ul.more-stuff
 		display grid
