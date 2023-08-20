@@ -217,15 +217,18 @@ a.more-link
 			grid-column-start 1
 			grid-column-end 10
 
-		span.overflow
-			display block
-			max-height 0px
-			width auto
-			overflow hidden
+	span.overflow
+		display block
+		max-height 0px
+		width auto
+		overflow hidden
+		transition all ease-in-out .5s
+		border-bottom 0 solid #fb0303
+		&.in
+			max-height 1000px
 			transition all ease-in-out .5s
-			&.in
-				max-height 1000px
-				transition all ease-in-out .5s
+			border-bottom 1em solid #fb0303
+			padding-bottom 1em
 	ul.back-issues
 		display grid
 		grid-column-start 1
