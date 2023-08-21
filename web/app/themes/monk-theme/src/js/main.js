@@ -109,14 +109,11 @@ let links = document.querySelectorAll('.nav-menu a[href^="#"]');
 links.forEach(function(link) {
 	link.addEventListener('click', function(e) {
 		e.preventDefault();
-		console.log('Hi');
 		console.log(this.getAttribute('href'));
 		let anchor = this.getAttribute('href').slice(1, this.getAttribute('href').length);
-		console.log(anchor);
 		let target = document.querySelector('.' + anchor);
 		let offset = target.getBoundingClientRect();
 		offset = offset.top;
-		console.log(offset);
 		window.scrollTo({
 			top: offset,
 			behavior: 'smooth'
@@ -134,6 +131,7 @@ const backToTop = document.querySelector('.back-to-top a');
 const readMore = document.querySelector('.more-link');
 const moreStuff = document.querySelector('.more-stuff-to-buy');
 const moreThrills = document.querySelector('.more-thrills');
+const overflowBottom = document.querySelectorAll('.overflow-bottom');
 
 /**
  * Close nav when clicking a link on it
@@ -195,6 +193,16 @@ moreThrills.addEventListener('click', function(e) {
 	}else{
 		overflow.classList.add('in');
 	}
+});
+
+//delegate click event off close icon
+overflowBottom.forEach(( item ) => {
+	item.addEventListener('click', function(e) {
+		e.preventDefault();
+		console.log(e.target.closest('.overflow'));
+		let overflow = e.target.closest('.overflow');
+		overflow.classList.remove('in');
+	});
 });
 
 (function() {
