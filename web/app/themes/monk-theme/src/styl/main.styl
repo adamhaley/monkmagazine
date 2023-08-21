@@ -442,12 +442,14 @@ a.more-link
 
 .overflow-bottom
 	display block
+	cursor pointer
 	height 0em
 	margin-top 1em
 	transition all ease-in-out .2s
 	grid-column-start 1
 	grid-column-end 10
-
+	grid-row-start 2
+	grid-row-end 3
 	.in &
 		height 1em
 		background-color #fb0303
@@ -463,21 +465,29 @@ a.more-link
 				color #fff
 
 .thrills-overflow
-	display grid
+	display block
 	grid-column-start 1
 	grid-column-end 10
 	max-height 0px
 	overflow hidden
-	grid-template-columns repeat( 3, 1fr )
-	gap 5em
-
-	.sm &, .md &
-		gap 2em
-
 	transition max-height ease-in-out .5s
 	border-bottom 0em
 	padding-bottom 0em
 	margin-top 1.5em
+
+	.thrills-wrapper
+		display grid
+		grid-template-columns repeat( 3, 1fr )
+		gap 5em
+		.xs &
+			grid-template-columns 1fr
+			grid-template-rows repeat( 3, 1fr )
+			gap 1em
+			overflow hidden
+			transition all ease-in-out .2s
+			border-bottom 0em
+			padding-bottom 0em
+			margin-top 1.5em
 
 	.overflow-bottom
 		display block
@@ -486,25 +496,23 @@ a.more-link
 		grid-column-start 1
 		grid-column-end 4
 
+
 	i.fa
 		display none
 
-	.xs &
-		grid-template-columns 1fr
-		.thrill
-			width 100%;
 	&.in
 		max-height 20000px
 		transition max-height ease-in-out .5s
-		//border-bottom 1em solid #fb0303
 		padding-bottom 1em
 
 		.overflow-bottom
+			cursor pointer
 			height 1em
 			width 100%
 			background-color #fb0303
+			grid-row-start 2
+			grid-row-end 3
 			i.fa
-				cursor pointer
 				margin-right.5em
 				display inline-block
 				float right

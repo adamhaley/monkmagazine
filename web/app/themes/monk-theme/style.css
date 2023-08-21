@@ -327,7 +327,7 @@ a.more-link i:hover {
 }
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(8, 1fr);
   gap: 1em;
 }
 .container .row {
@@ -387,18 +387,42 @@ a.more-link i:hover {
   grid-column-start: 1;
   grid-column-end: 10;
 }
+.container span.overflow,
+.container div.buy-overflow {
+  display: block;
+  max-height: 0px;
+  width: auto;
+  overflow: hidden;
+  transition: max-height ease-in-out 0.5s;
+  border-bottom: 0 solid #fb0303;
+}
+.xs .container span.overflow,
+.xs .container div.buy-overflow,
+.sm .container span.overflow,
+.sm .container div.buy-overflow,
+.md .container span.overflow,
+.md .container div.buy-overflow {
+  padding-top: 3em;
+}
+.container span.overflow.in,
+.container div.buy-overflow.in {
+  max-height: 1000px;
+  transition: max-height ease-in-out 0.5s;
+  border-bottom: 1em solid #fb0303;
+  padding-bottom: 1em;
+}
 .container ul.back-issues {
   display: grid;
   grid-column-start: 1;
   grid-column-end: 10;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.5em;
   list-style-type: none;
   counter-reset: issues 3 /* initializes counter to 0; use -1 for zero-based numbering */;
 }
 .md .container ul.back-issues,
 .sm .container ul.back-issues {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1em 1em;
 }
 .md .container ul.back-issues li.issue,
@@ -461,6 +485,70 @@ a.more-link i:hover {
   transition: all ease-in-out 0.2s;
 }
 .container ul.back-issues li.issue img:hover {
+  transform: scale(1.1);
+}
+.container div.buy-overflow {
+  grid-column-start: 1;
+  grid-column-end: 10;
+}
+.container div.buy-overflow.in {
+  max-height: 20000px;
+}
+.container ul.more-stuff {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 10;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5em;
+  list-style-type: none;
+}
+.md .container ul.more-stuff,
+.sm .container ul.more-stuff {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em 1em;
+}
+.md .container ul.more-stuff li.product,
+.sm .container ul.more-stuff li.product {
+  grid-column-start: auto;
+  grid-column-end: auto;
+}
+.md .container ul.more-stuff li.product img,
+.sm .container ul.more-stuff li.product img {
+  width: 100%;
+  height: auto;
+}
+.md .container ul.more-stuff li.product img:hover,
+.sm .container ul.more-stuff li.product img:hover {
+  transform: scale(1.05);
+}
+.xs .container ul.more-stuff {
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+.xs .container ul.more-stuff li.product {
+  grid-column-start: auto;
+  grid-column-end: auto;
+}
+.xs .container ul.more-stuff li.product img {
+  width: 100%;
+  height: auto;
+}
+.xs .container ul.more-stuff li.product img:hover {
+  transform: scale(1.03);
+}
+.container ul.more-stuff li.product {
+  cursor: pointer;
+  position: relative;
+}
+.xs .container ul.more-stuff li.product,
+.sm .container ul.more-stuff li.product {
+  margin-bottom: 1em;
+}
+.container ul.more-stuff li.product img {
+  transform: scale(1);
+  transition: all ease-in-out 0.2s;
+}
+.container ul.more-stuff li.product img:hover {
   transform: scale(1.1);
 }
 .more-stuff-to-buy {
@@ -578,10 +666,87 @@ a.more-link i:hover {
 .on-the-road .more-thrills i:hover {
   color: #fb0303 !important;
 }
+.overflow-bottom {
+  display: block;
+  height: 0em;
+  transition: all ease-in-out 0.2s;
+  grid-column-start: 1;
+  grid-column-end: 10;
+}
+.in .overflow-bottom {
+  height: 1em;
+  transition: all ease-in-out 0.2s;
+  background-color: #fb0303;
+}
+.thrills-overflow {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 10;
+  max-height: 0px;
+  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5em;
+  transition: max-height ease-in-out 0.5s;
+  border-bottom: 0em;
+  padding-bottom: 0em;
+  margin-top: 1.5em;
+}
+.sm .thrills-overflow,
+.md .thrills-overflow {
+  gap: 2em;
+}
+.thrills-overflow .overflow-bottom {
+  display: block;
+  height: 0em;
+  transition: all ease-in-out 0.2s;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.thrills-overflow i.fa {
+  display: none;
+}
+.xs .thrills-overflow {
+  grid-template-columns: 1fr;
+}
+.thrills-overflow.in {
+  max-height: 20000px;
+  transition: max-height ease-in-out 0.5s;
+  padding-bottom: 1em;
+}
+.thrills-overflow.in .overflow-bottom {
+  height: 1em;
+  width: 100%;
+  background-color: #fb0303;
+}
+.thrills-overflow.in .overflow-bottom i.fa {
+  cursor: pointer;
+  margin-right: 0.5em;
+  display: inline-block;
+  float: right;
+  color: #000;
+}
+.thrills-overflow.in .overflow-bottom i.fa:hover {
+  color: #fb0303;
+}
+.thrills-overflow .thrill {
+  width: 100%;
+}
+.thrills-overflow .thrill img {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+  transition: all ease-in-out 0.2s;
+}
+.thrills-overflow .thrill img:hover {
+  transform: scale(1.05);
+  transition: all ease-in-out 0.2s;
+}
 .footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   content-align: center;
   height: 12em;
 }
