@@ -455,12 +455,11 @@ a.more-link
 		background-color #fb0303
 
 		i.fa
-			display none
-			cursor pointer
 			margin-right.5em
 			display block
 			float right
 			color #000
+
 		&:hover
 			i.fa
 				color #fff
@@ -610,3 +609,37 @@ a.more-link
 
 		&:hover
 			fill #fb0303
+
+.carousel-wrapper
+	display grid
+	grid-column-start 2
+	grid-column-end 5
+	grid-template-columns 1fr
+	grid-template-rows 1fr
+	grid-gap 10px
+	overflow hidden
+	height 40vh
+	.xs &, .sm &, .md &
+		display block
+		/*
+		object-fit cover
+		object-position 50% 20%
+
+		 */
+		grid-column-start 1
+		grid-column-end 10
+		height 30em
+		width 100%
+
+	.gallery
+		max-width 10000em
+		overflow-x scroll
+		overflow-y scroll
+		scroll-snap-type x mandatory
+		scroll-behavior smooth
+		whitespace nowrap
+		img
+			scroll-snap-align center
+			display block
+			float left
+			width 100%
