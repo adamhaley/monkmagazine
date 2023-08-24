@@ -610,36 +610,33 @@ a.more-link
 		&:hover
 			fill #fb0303
 
-.carousel-wrapper
-	display grid
+#monks-home
 	grid-column-start 2
 	grid-column-end 5
-	grid-template-columns 1fr
-	grid-template-rows 1fr
-	grid-gap 10px
-	overflow hidden
-	height 40vh
-	.xs &, .sm &, .md &
-		display block
-		/*
-		object-fit cover
-		object-position 50% 20%
-
-		 */
+	width 20em
+	height 30em
+	.xs &
 		grid-column-start 1
-		grid-column-end 10
-		height 30em
+		grid-column-end 9
 		width 100%
-
-	.gallery
-		max-width 10000em
-		overflow-x scroll
-		overflow-y scroll
-		scroll-snap-type x mandatory
-		scroll-behavior smooth
-		whitespace nowrap
+		height 20em
+		overflow hidden
+		margin-top 1em
+		margin-bottom 1em
+	.sm &, .md &
+		grid-column-start 1
+		grid-column-end 9
+		width 100%
+		height 30em
+		margin-top 1em
+		margin-bottom 1em
+		overflow hidden
 		img
-			scroll-snap-align center
-			display block
-			float left
 			width 100%
+			height 100%
+			object-fit cover
+			object-position center
+			transition all ease-in-out .2s
+			&:hover
+				transform scale(1.05)
+				transition all ease-in-out .2s
