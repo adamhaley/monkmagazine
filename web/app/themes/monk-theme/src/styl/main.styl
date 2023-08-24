@@ -455,12 +455,11 @@ a.more-link
 		background-color #fb0303
 
 		i.fa
-			display none
-			cursor pointer
 			margin-right.5em
 			display block
 			float right
 			color #000
+
 		&:hover
 			i.fa
 				color #fff
@@ -610,3 +609,34 @@ a.more-link
 
 		&:hover
 			fill #fb0303
+
+#monks-home
+	grid-column-start 2
+	grid-column-end 5
+	width 20em
+	height 30em
+	.xs &
+		grid-column-start 1
+		grid-column-end 9
+		width 100%
+		height 20em
+		overflow hidden
+		margin-top 1em
+		margin-bottom 1em
+	.sm &, .md &
+		grid-column-start 1
+		grid-column-end 9
+		width 100%
+		height 30em
+		margin-top 1em
+		margin-bottom 1em
+		overflow hidden
+		img
+			width 100%
+			height 100%
+			object-fit cover
+			object-position center
+			transition all ease-in-out .2s
+			&:hover
+				transform scale(1.05)
+				transition all ease-in-out .2s
