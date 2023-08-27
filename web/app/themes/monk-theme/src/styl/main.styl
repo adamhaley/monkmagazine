@@ -216,14 +216,12 @@ a.more-link
 		max-height 0px
 		width auto
 		overflow hidden
-		transition max-height ease-in-out .5s
-		//transition border-bottom ease-in-out .1s
+		transition max-height ease-in-out .2s
 		.xs &, .sm &, .md &
 			padding-top 3em
 		&.in
 			max-height 1000px
-			transition max-height ease-in-out .5s
-			//transition border-bottom ease-in-out .1s
+			//transition max-height ease-in-out .5s
 
 	ul.back-issues
 		display grid
@@ -467,7 +465,7 @@ a.more-link
 	grid-column-end 10
 	max-height 0px
 	overflow hidden
-	transition max-height ease-in-out .5s
+	transition max-height ease-in-out .2s
 	border-bottom 0em
 	padding-bottom 0em
 	margin-top 1.5em
@@ -495,6 +493,7 @@ a.more-link
 	.overflow-bottom
 		display block
 		height 0em
+
 		transition all ease-in-out .2s
 		grid-column-start 1
 		grid-column-end 4
@@ -505,7 +504,7 @@ a.more-link
 
 	&.in
 		max-height 20000px
-		transition max-height ease-in-out .5s
+		transition max-height ease-in-out .2s
 		padding-bottom 1em
 
 		.overflow-bottom

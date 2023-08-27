@@ -206,7 +206,7 @@ overflowBottom.forEach(( item ) => {
 });
 
 (function() {
-	$(document).ready(detectResponsiveEnvironment);
+	window.addEventListener('load', detectResponsiveEnvironment, false);
 
 	var timeId = null;
 	function startResize() {
