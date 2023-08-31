@@ -7,7 +7,11 @@
  * @package monk-theme
  */
 
+function monketheme_support(){
+	add_theme_support('title-tag');
+}
 
+add_action('after_setup_theme', 'monketheme_support');
 function monktheme_register_styles(){
 	$version = wp_get_theme()->get('Version');
 	wp_enqueue_style('monktheme-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '4.4.1', 'all');
