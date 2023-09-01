@@ -23,7 +23,7 @@
 			<div class="carousel-item">
 				<img class="monks-home d-block w-300" src="https://placekitten.com/g/400/600" alt="Third slide">
 			</div>
-			a	</div>
+		</div>
 		<a class="carousel-control-prev" href="#monks-home" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
@@ -43,7 +43,7 @@
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores aspernatur blanditiis cumque distinctio dolores ex in maxime modi nisi non placeat, quae unde voluptate voluptatem? Enim exercitationem ipsam reprehenderit.
 
 		<a name="read-this"></a>
-		<a href="" class="more-link"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/more.png' ) ?>" alt="More" class="more" /><i class="fa-solid fa-plus"></i>
+		<a href="" class="more-link"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/more.png' ) ?>" alt="More" class="more" /><i class="fa fa-solid fa-plus"></i>
 		</a>
 	</div>
 	<div class="row">
@@ -69,7 +69,7 @@
 		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/literally-buy.png' ) ?>" alt="Buy" />
 	</div>
 
-	<a href="" class="cart"><i class="fa-solid fa-shopping-cart"></i></a>
+	<a href="" class="cart"><i class="fa fa-solid fa-shopping-cart"></i></a>
 	<ul class="back-issues">
 		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #4"></li>
 		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #5"></li>
@@ -88,7 +88,7 @@
 		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #18"></li>
 		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #19"></li>
 	</ul>
-	<a href="" class="more-stuff-to-buy"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .   '/assets/images/more-stuff-to-buy.png' ) ?>" alt="More Stuff To Buy" class="more" /><i class="fa-solid fa-plus"></i></a>
+	<a href="" class="more-stuff-to-buy"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .   '/assets/images/more-stuff-to-buy.png' ) ?>" alt="More Stuff To Buy" class="more" /><i class="fa fa-solid fa-plus"></i></a>
 	<div class="buy-overflow overflow">
 		<ul class="more-stuff">
 			<li class="product"><img src="https://placekitten.com/g/200/300" alt="Issue #4"></li>
@@ -151,7 +151,7 @@
 					<span class="sr-only">Next</span>
 				</a>
 			</div>
-			<a href="" class="more-thrills"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/more-thrills.png' ) ?>" alt="More Thrills" class="more-thrills" /><i class="fa-solid fa-plus"></i></a>
+			<a href="" class="more-thrills"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/more-thrills.png' ) ?>" alt="More Thrills" class="more-thrills" /><i class="fa fa-solid fa-plus"></i></a>
 		</div>
 	</div>
 	<div class="thrills-overflow overflow">
