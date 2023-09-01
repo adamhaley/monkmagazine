@@ -19,7 +19,8 @@ function monktheme_register_styles(){
 	wp_enqueue_style('monktheme-googlefonts', "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap", array(), '1.0', 'all');
 	wp_enqueue_style( 'monktheme-style',
 		get_stylesheet_directory_uri() . '/style.css',
-		[ 'twentytwentythree-style' ]
+		[ ],
+		$version
 	);
 }
 
