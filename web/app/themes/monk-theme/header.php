@@ -8,6 +8,7 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
 
 
 	<?php wp_head(); ?>
@@ -22,7 +23,11 @@
 </header>
 <div class="gutter">
 	<div class="hamburger">
-		<img class="menu" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/menu.svg' ); ?>" alt="">
-		<img class="close" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/x.svg' ); ?>" alt="">
+		<svg xmlnas="http://www.w3.org/2000/svg" class="menu"  viewBox="0 0 459 459">
+			<path d="M0 382.5h459v-51H0v51zM0 255h459v-51H0v51zM0 76.5v51h459v-51H0z"/>
+		</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" class="close" preserveAspectRatio="xMidYMid" viewBox="0 0 28 28">
+			<path d="M27.123 25.002l-2.12 2.12-11.44-11.438-11.44 11.44L.003 25l11.438-11.44L.003 2.122l2.12-2.12 11.44 11.44L25.002 0l2.12 2.12-11.438 11.44 11.44 11.44z" fill-rule="evenodd"/>
+		</svg>
 	</div>
 </div>
