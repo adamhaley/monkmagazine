@@ -6,20 +6,34 @@
 		<img class="simple-mobile-true" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/simple-mobile-true.png' ); ?>" alt="Simple.Mobile.True." >
 	</div><br />
 	<!-- main image carousel -->
-	<div class="carousel slide" data-ride="carousel">
+	<div id="monks-home" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#monks-home" data-slide-to="0" class="active"></li>
+			<li data-target="#monks-home" data-slide-to="1"></li>
+			<li data-target="#monks-home" data-slide-to="2"></li>
+		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="d-block w-100" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/monks-home.png' ); ?>" alt="First slide">
+				<img class="monks-home d-block w-300" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/monks-home.png' ); ?>" alt="First slide">
 			</div>
 			<div class="carousel-item">
 				<!--place kitten -->
-				<img class="d-block w-100" src="https://placekitten.com/g/100/300" alt="Second slide">
+				<img class="monks-home d-block w-300" src="https://placekitten.com/g/400/600" alt="Second slide">
 			</div>
 			<div class="carousel-item">
-				<img class="d-block w-100" src="https://placekitten.com/g/100/300" alt="Third slide">
+				<img class="monks-home d-block w-300" src="https://placekitten.com/g/400/600" alt="Third slide">
 			</div>
-		</div>
+			a	</div>
+		<a class="carousel-control-prev" href="#monks-home" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#monks-home" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
 	</div>
+
 	<div class="content">
 		<img class="read-this" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/read-this.png' ) ?>" alt="Read This" /><br />
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
@@ -109,7 +123,34 @@
 				Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
 
 			<br />
-			<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/on-the-road.jpg' ) ?>" alt="Monk On The Road" class="monk-on-the-road" />
+			<!-- main image carousel -->
+			<div id="monk-on-the-road" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#monk-on-the-road" data-slide-to="0" class="active"></li>
+					<li data-target="#monk-on-the-road" data-slide-to="1"></li>
+					<li data-target="#monk-on-the-road" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-600" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/on-the-road.jpg' ) ?>" alt="Monk On The Road" class="monk-on-the-road" />
+					</div>
+					<div class="carousel-item">
+						<!--place kitten -->
+						<img class="d-block w-300" src="https://placekitten.com/g/798/534" alt="Second slide">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-300" src="https://placekitten.com/g/798/534" alt="Third slide">
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#monk-on-the-road" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#monk-on-the-road" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
 			<a href="" class="more-thrills"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/more-thrills.png' ) ?>" alt="More Thrills" class="more-thrills" /><i class="fa-solid fa-plus"></i></a>
 		</div>
 	</div>

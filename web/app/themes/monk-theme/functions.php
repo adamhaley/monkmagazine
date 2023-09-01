@@ -26,8 +26,7 @@ function monktheme_register_styles(){
 
 function monktheme_register_scripts(){
 	$version = wp_get_theme()->get('Version');
-	wp_enqueue_script('monktheme-jquery', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), '3.4.1', true);
-//	wp_enqueue_script('monktheme-popper', "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js", array(), '1.16.0', true);
+	wp_enqueue_script('monktheme-jquery', "https://code.jquery.com/jquery-3.6.0.slim.min.js", array(), '3.6.0', true);
 	//font awesome
 	wp_enqueue_script('monktheme-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js", array(), '5.13.0', true);
 
@@ -35,14 +34,11 @@ function monktheme_register_scripts(){
 	wp_enqueue_script('monktheme-main', get_stylesheet_directory_uri() . "/assets/bundle.js", array(), $version, true);
 }
 
-//add_action( 'wp_enqueue_scripts', 'twentytwentythree_parent_theme_enqueue_styles' );
+function smartwp_remove_wp_block_library_css(){
+	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'wp-block-library-theme' );
+	wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
+}
+add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
 add_action('wp_enqueue_scripts', 'monktheme_register_styles');
 add_action('wp_enqueue_scripts', 'monktheme_register_scripts');
-
-/**
- * Enqueue scripts and styles.
- */
-function twentytwentythree_parent_theme_enqueue_styles() {
-	wp_enqueue_style( 'twentytwentythree-style', get_template_directory_uri() . '/style.css' );
-
-}
