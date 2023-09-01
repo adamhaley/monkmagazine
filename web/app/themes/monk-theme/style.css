@@ -248,6 +248,15 @@ ul.nav-menu .social svg:hover {
   width: 80%;
   height: 80%;
 }
+.hamburger svg {
+  width: 100%;
+  height: 100%;
+  fill: #000;
+/*
+		&:hover
+			fill #fb0303
+		*/
+}
 .hamburger .menu {
   display: block;
 }
@@ -264,43 +273,38 @@ ul.nav-menu .social svg:hover {
   display: block;
 }
 img.simple-mobile-true {
-  width: 80%;
+  height: 4em;
   margin-top: 6%;
   margin-bottom: 2%;
+  margin-left: 20%;
 }
-.xs img.simple-mobile-true,
-.sm img.simple-mobile-true,
+.xs img.simple-mobile-true {
+  height: 2em;
+}
+.sm img.simple-mobile-true {
+  height: 2em;
+  margin-bottom: 0;
+}
 .md img.simple-mobile-true {
-  width: 100%;
-}
-img.monks-home {
-  grid-column-start: 2;
-  grid-column-end: 5;
-}
-.xs img.monks-home,
-.sm img.monks-home,
-.md img.monks-home {
-  display: block;
-  object-fit: cover;
-  object-position: 50% 20%;
-  grid-column-start: 1;
-  grid-column-end: 10;
-  height: 30em;
-  width: 100%;
+  height: 3em;
+  margin-bottom: 0;
 }
 img.read-this {
-  height: 1.5em;
-  margin-top: 1.5em;
+  height: 2em;
+  margin-top: 0em;
 }
 .xs img.read-this,
 .sm img.read-this,
 .md img.read-this {
   margin-top: 0;
 }
+.xs img.read-this {
+  height: 1.5em;
+}
 img.more {
   cursor: pointer;
-  height: 1.4em;
-  margin-top: 1.5em;
+  height: 1em;
+  margin-top: 0.5em;
 }
 a.more-link {
   display: block;
@@ -313,8 +317,6 @@ a.more-link img {
   margin-right: 0.2em;
 }
 a.more-link i {
-  position: relative;
-  top: -5px;
   display: inline-block;
   color: #000 !important;
 }
@@ -342,13 +344,16 @@ a.more-link i:hover {
 }
 .container .buy {
   margin-top: 4em;
+  width: 100%;
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 8;
 }
 .container .buy img {
-  height: 1.5em;
+  height: 2.5em;
   display: block;
-  max-width: none;
+}
+.xs .container .buy img {
+  height: 1.5em;
 }
 .container a.cart {
   display: block;
@@ -393,7 +398,7 @@ a.more-link i:hover {
   max-height: 0px;
   width: auto;
   overflow: hidden;
-  transition: max-height ease-in-out 0.5s;
+  transition: max-height ease-in-out 0.2s;
 }
 .xs .container span.overflow,
 .xs .container div.buy-overflow,
@@ -406,7 +411,6 @@ a.more-link i:hover {
 .container span.overflow.in,
 .container div.buy-overflow.in {
   max-height: 1000px;
-  transition: max-height ease-in-out 0.5s;
 }
 .container ul.back-issues {
   display: grid;
@@ -555,17 +559,21 @@ a.more-link i:hover {
   grid-column-end: 10;
   text-decoration: none;
   padding: 0.5em;
-  height: 0.8em;
+  height: 1em;
   width: 100%;
   margin-top: -4.5em;
 }
 .more-stuff-to-buy img {
   display: inline-block;
   margin-right: 0.2em;
+  margin-top: 2em;
+}
+.xs .more-stuff-to-buy img {
+  height: 1em;
 }
 .more-stuff-to-buy i {
   position: relative;
-  top: -5px;
+  top: -2px;
   display: inline-block;
   color: #000 !important;
 }
@@ -609,15 +617,15 @@ a.more-link i:hover {
 .on-the-road {
   display: grid;
   grid-column-start: 1;
-  grid-column-end: 9;
+  grid-column-end: 10;
   text-decoration: none;
   padding: 0.5em;
   width: 100%;
   margin-top: 1em;
 }
-.on-the-road img.on-the-road-with-the-monks {
-  height: 1.5em;
-  max-width: none;
+.on-the-road .on-the-road-with-the-monks {
+  height: auto;
+  max-width: 100%;
 }
 .on-the-road p {
   margin-top: 1em;
@@ -632,14 +640,14 @@ a.more-link i:hover {
   float: none;
   margin-top: 1em;
 }
-.on-the-road img.monk-on-the-road {
+.on-the-road #monk-on-the-road {
   float: right;
   width: 50%;
   max-width: 100%;
 }
-.xs .on-the-road img.monk-on-the-road,
-.sm .on-the-road img.monk-on-the-road,
-.md .on-the-road img.monk-on-the-road {
+.xs .on-the-road #monk-on-the-road,
+.sm .on-the-road #monk-on-the-road,
+.md .on-the-road #monk-on-the-road {
   width: 100%;
   float: none;
   margin-top: 0.5em;
@@ -647,17 +655,16 @@ a.more-link i:hover {
 }
 .on-the-road .more-thrills {
   margin-top: 1em;
-  height: 1.5em;
+  height: 1em;
 }
 .on-the-road .more-thrills img {
   display: inline-block;
   margin-right: 0.2em;
   max-width: none;
-  height: 1.5em;
+  height: 1em;
 }
 .on-the-road .more-thrills i {
   position: relative;
-  top: -5px;
   display: inline-block;
   color: #000 !important;
 }
@@ -674,6 +681,9 @@ a.more-link i:hover {
   grid-column-end: 10;
   grid-row-start: 2;
   grid-row-end: 3;
+}
+.overflow-bottom i.fa {
+  display: none;
 }
 .in .overflow-bottom {
   height: 1em;
@@ -694,7 +704,7 @@ a.more-link i:hover {
   grid-column-end: 10;
   max-height: 0px;
   overflow: hidden;
-  transition: max-height ease-in-out 0.5s;
+  transition: max-height ease-in-out 0.2s;
   border-bottom: 0em;
   padding-bottom: 0em;
   margin-top: 1.5em;
@@ -703,6 +713,12 @@ a.more-link i:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5em;
+}
+.sm .thrills-overflow .thrills-wrapper {
+  gap: 1em;
+}
+.md .thrills-overflow .thrills-wrapper {
+  gap: 1.5em;
 }
 .xs .thrills-overflow .thrills-wrapper {
   grid-template-columns: 1fr;
@@ -721,12 +737,12 @@ a.more-link i:hover {
   grid-column-start: 1;
   grid-column-end: 4;
 }
-.thrills-overflow i.fa {
+.thrills-overflow .overflow-bottom i.fa {
   display: none;
 }
 .thrills-overflow.in {
   max-height: 20000px;
-  transition: max-height ease-in-out 0.5s;
+  transition: max-height ease-in-out 0.2s;
   padding-bottom: 1em;
 }
 .thrills-overflow.in .overflow-bottom {
@@ -743,7 +759,7 @@ a.more-link i:hover {
   float: right;
   color: #000;
 }
-.thrills-overflow.in .overflow-bottom i.fa:hover {
+.thrills-overflow.in .overflow-bottom:hover i.fa {
   color: #fff;
 }
 .thrills-overflow .thrill {
@@ -771,8 +787,17 @@ a.more-link i:hover {
 .footer img.connect {
   grid-row-start: 1;
   grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 8;
+  grid-column-start: 3;
+  grid-column-end: 7;
+  margin-top: 1em;
+}
+.lg .footer img.connect,
+.xl .footer img.connect {
+  margin-top: 0;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 4;
+  grid-column-end: 6;
   margin-top: 1em;
 }
 .footer .social {
@@ -850,24 +875,41 @@ a.more-link i:hover {
 .back-to-top svg:hover {
   fill: #fb0303;
 }
-.carousel-wrapper {
+#monks-home {
   grid-column-start: 2;
   grid-column-end: 5;
   width: 20em;
   height: 30em;
-  overflow-x: scroll;
 }
-.carousel-wrapper .gallery {
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  white-space: nowrap;
+.xs #monks-home {
+  grid-column-start: 1;
+  grid-column-end: 10;
+  width: 100%;
+  height: 20em;
+  overflow: hidden;
+  margin-bottom: 1em;
 }
-.carousel-wrapper .gallery .slide {
-  float: left;
-  box-sizing: border-box;
-  width: 20em;
-  max-height: 30em;
+.sm #monks-home,
+.md #monks-home {
+  grid-column-start: 1;
+  grid-column-end: 10;
+  width: 100%;
+  height: 40em;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+.sm #monks-home img,
+.md #monks-home img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% -30%;
+  transition: all ease-in-out 0.2s;
+}
+.sm #monks-home img:hover,
+.md #monks-home img:hover {
+  transform: scale(1.05);
+  transition: all ease-in-out 0.2s;
 }
 
 
