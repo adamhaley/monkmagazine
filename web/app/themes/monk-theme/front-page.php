@@ -3,13 +3,13 @@
 <div class="container">
 	<!-- simple mobile true image -->
 	<div class="row">
-		<img class="simple-mobile-true" src="assets/images/simple-mobile-true.png" alt="Simple.Mobile.True." >
+		<img class="simple-mobile-true" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/simple-mobile-true.png' ); ?>" alt="Simple.Mobile.True." >
 	</div><br />
 	<!-- main image carousel -->
 	<div class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="d-block w-100" src="assets/images/monks-home.png" alt="First slide">
+				<img class="d-block w-100" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/monks-home.png' ); ?>" alt="First slide">
 			</div>
 			<div class="carousel-item">
 				<!--place kitten -->
@@ -21,7 +21,7 @@
 		</div>
 	</div>
 	<div class="content">
-		<img class="read-this" src="assets/images/read-this.png" alt="Read This" /><br />
+		<img class="read-this" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/read-this.png' ) ?>" alt="Read This" /><br />
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
 		Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliqua.
 
@@ -29,7 +29,7 @@
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores aspernatur blanditiis cumque distinctio dolores ex in maxime modi nisi non placeat, quae unde voluptate voluptatem? Enim exercitationem ipsam reprehenderit.
 
 		<a name="read-this"></a>
-		<a href="" class="more-link"><img src="assets/images/more.png" alt="More" class="more" /><i class="fa-solid fa-plus"></i>
+		<a href="" class="more-link"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/more.png' ) ?>" alt="More" class="more" /><i class="fa-solid fa-plus"></i>
 		</a>
 	</div>
 	<div class="row">
@@ -52,7 +52,7 @@
 
 	</div>
 	<div class="buy">
-		<img src="assets/images/literally-buy.png" alt="Buy" />
+		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/literally-buy.png' ) ?>" alt="Buy" />
 	</div>
 
 	<a href="" class="cart"><i class="fa-solid fa-shopping-cart"></i></a>
@@ -74,7 +74,7 @@
 		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #18"></li>
 		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #19"></li>
 	</ul>
-	<a href="" class="more-stuff-to-buy"><img src="assets/images/more-stuff-to-buy.png" alt="More Stuff To Buy" class="more" /><i class="fa-solid fa-plus"></i></a>
+	<a href="" class="more-stuff-to-buy"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .   '/assets/images/more-stuff-to-buy.png' ) ?>" alt="More Stuff To Buy" class="more" /><i class="fa-solid fa-plus"></i></a>
 	<div class="buy-overflow overflow">
 		<ul class="more-stuff">
 			<li class="product"><img src="https://placekitten.com/g/200/300" alt="Issue #4"></li>
@@ -104,13 +104,13 @@
 		<div class="on-the-road-content">
 			<p>
 				<a name="on-the-road"></a>
-				<img src="assets/images/on-the-road-with-the-monks.png" alt="On The Road With The Monks" class="on-the-road-with-the-monks" /><br />
+				<img src="<?php echo esc_url( get_stylesheet_directory_uri() .   '/assets/images/on-the-road-with-the-monks.png' ) ?>" alt="On The Road With The Monks" class="on-the-road-with-the-monks" /><br />
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
 				Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
 
 			<br />
-			<img src="assets/images/on-the-road.jpg" alt="Monk On The Road" class="monk-on-the-road" />
-			<a href="" class="more-thrills"><img src="assets/images/more-thrills.png" alt="More Thrills" class="more-thrills" /><i class="fa-solid fa-plus"></i></a>
+			<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/on-the-road.jpg' ) ?>" alt="Monk On The Road" class="monk-on-the-road" />
+			<a href="" class="more-thrills"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/more-thrills.png' ) ?>" alt="More Thrills" class="more-thrills" /><i class="fa-solid fa-plus"></i></a>
 		</div>
 	</div>
 	<div class="thrills-overflow overflow">

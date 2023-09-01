@@ -18,11 +18,11 @@
 </div>
 <header>
 
-	<img class="header" src="assets/images/monk-magazine.jpg" alt="Monk Magazine">
+	<img class="header" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/monk-magazine.jpg' ); ?>" alt="Monk Magazine">
 </header>
 <div class="gutter">
 	<div class="hamburger">
-		<img class="menu" src="assets/images/menu.svg" alt="">
-		<img class="close" src="assets/mages/x.svg" alt="">
+		<img class="menu" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/menu.svg' ); ?>" alt="">
+		<img class="close" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/x.svg' ); ?>" alt="">
 	</div>
 </div>

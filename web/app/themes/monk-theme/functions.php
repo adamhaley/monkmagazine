@@ -27,6 +27,9 @@ function monktheme_register_scripts(){
 	$version = wp_get_theme()->get('Version');
 	wp_enqueue_script('monktheme-jquery', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), '3.4.1', true);
 	wp_enqueue_script('monktheme-popper', "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js", array(), '1.16.0', true);
+	//font awesome
+	wp_enqueue_script('monktheme-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js", array(), '5.13.0', true);
+
 	wp_enqueue_script('monktheme-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", array(), '4.4.1', true);
 	wp_enqueue_script('monktheme-main', get_stylesheet_directory_uri() . "/assets/bundle.js", array(), $version, true);
 }

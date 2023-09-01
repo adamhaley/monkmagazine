@@ -1,5 +1,5 @@
 <div class="footer">
-	<img src="assets/images/connect.png" alt="Footer" class="connect" />
+	<img src=" <?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/connect.png' ); ?>" alt="Footer" class="connect" />
 
 	<br />
 	<div class="social">
