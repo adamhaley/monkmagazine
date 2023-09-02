@@ -10,6 +10,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
 
+
+	<script src="https://kit.fontawesome.com/a6c23e75fc.js" crossorigin="anonymous"></script>
 	<script>
 		FontAwesomeConfig = { autoReplaceSvg: false }
 	</script>
