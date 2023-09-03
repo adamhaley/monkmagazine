@@ -53,29 +53,20 @@
 
 	<div class="content">
 		<img class="read-this" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/read-this.png' ) ?>" alt="Read This" /><br />
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
-		Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliqua.
+		<?php
+			$post = get_post( 1 );
 
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at deserunt dicta dignissimos doloremque ducimus eius error expedita fuga inventore ipsa iste labore libero nisi pariatur quidem sed tempora, velit!
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores aspernatur blanditiis cumque distinctio dolores ex in maxime modi nisi non placeat, quae unde voluptate voluptatem? Enim exercitationem ipsam reprehenderit.
+			echo $post->post_excerpt;
+			?>
+			<br /><br />
 
-		<a name="read-this"></a>
+			<a name="read-this"></a>
 		<a href="" class="more-link"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/more.png' ) ?>" alt="More" class="more" /><i class="fa fa-solid fa-plus"></i>
 		</a>
 	</div>
 	<div class="row">
 			<span class="overflow">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br /><br />A deserunt, esse eum excepturi, laborum mollitia nemo nobis non odio officia omnis quam quia quibusdam quo repudiandae sed, tempora vel voluptatum!
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dignissimos dolorem doloremque est, laborum minus molestias omnis perferendis quae. Ducimus inventore ipsa voluptatem? A quidem reiciendis tenetur. Doloremque, quae suscipit!
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, amet at blanditiis consequatur cum dicta dolor esse eum inventore iusto nemo nostrum obcaecati possimus quidem quo, rerum similique veniam.
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam aliquid amet est expedita laborum minima modi voluptatibus. Delectus deleniti deserunt facilis ipsum magni placeat quae quo rem suscipit, vel?
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aliquid assumenda dolore magni pariatur quidem saepe sequi totam, voluptate. At distinctio error ex facilis incidunt laboriosam ratione sequi, sint?
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. At optio, quo. Aliquam deleniti deserunt dolorem eum exercitationem iste itaque iure natus nostrum placeat quibusdam quo, quos ratione tempore tenetur veritatis.
-				<br /><br />Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, amet at blanditiis consequatur cum dicta dolor esse eum inventore iusto nemo nostrum obcaecati possimus quidem quo, rerum similique veniam.
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam aliquid amet est expedita laborum minima modi voluptatibus. Delectus deleniti deserunt facilis ipsum magni placeat quae quo rem suscipit, vel?
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aliquid assumenda dolore magni pariatur quidem saepe sequi totam, voluptate. At distinctio error ex facilis incidunt laboriosam ratione sequi, sint?
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. At optio, quo. Aliquam deleniti deserunt dolorem eum exercitationem iste itaque iure natus nostrum placeat quibusdam quo, quos ratione tempore tenetur veritatis.
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere iure iusto quidem repellendus voluptate! At, eius sapiente? Aut beatae expedita fuga laudantium minus nobis nulla pariatur quasi reiciendis rem, voluptas?			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere iure iusto quidem repellendus voluptate! At, eius sapiente? Aut beatae expedita fuga laudantium minus nobis nulla pariatur quasi reiciendis rem, voluptas?
+				<?php echo $post->post_content; ?>
 				<div class="overflow-bottom">
 					<i class="close-icon fa fa-minus"></i>
 				</div>
