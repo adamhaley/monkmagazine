@@ -5,24 +5,41 @@
 	<div class="row">
 		<img class="simple-mobile-true" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/simple-mobile-true.png' ); ?>" alt="Simple.Mobile.True." >
 	</div><br />
+	<?php
+		$args = array(
+			'post_type' => 'attachment',
+			'numberposts' => '10',
+			'category_name' => 'home-carousel'
+		);
+		$images = get_posts($args);
+		$num_images = count($images);
+	?>
+
 	<!-- main image carousel -->
 	<div id="monks-home" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
-			<li data-target="#monks-home" data-slide-to="0" class="active"></li>
-			<li data-target="#monks-home" data-slide-to="1"></li>
-			<li data-target="#monks-home" data-slide-to="2"></li>
+			<?php
+				foreach($images as $key => $image) {
+					if ($key == 0) {
+						echo '<li data-target="#monks-home" data-slide-to="' . $key . '" class="active"></li>';
+					} else {
+						echo '<li data-target="#monks-home" data-slide-to="' . $key . '"></li>';
+					}
+				}
+			?>
 		</ol>
 		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img class="monks-home d-block w-300" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/monks-home.png' ); ?>" alt="First slide">
-			</div>
-			<div class="carousel-item">
-				<!--place kitten -->
-				<img class="monks-home d-block w-300" src="https://placekitten.com/g/400/600" alt="Second slide">
-			</div>
-			<div class="carousel-item">
-				<img class="monks-home d-block w-300" src="https://placekitten.com/g/400/600" alt="Third slide">
-			</div>
+			<?php
+				foreach($images as $key => $image) {
+					if ($key == 0) {
+						echo '<div class="carousel-item active">';
+					} else {
+						echo '<div class="carousel-item">';
+					}
+					echo "<img class='monks-home d-block w-300' src='" . wp_get_attachment_url($image->ID) . "' alt='Monks Home'>";
+					echo '</div>';
+				}
+			?>
 		</div>
 		<a class="carousel-control-prev" href="#monks-home" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
