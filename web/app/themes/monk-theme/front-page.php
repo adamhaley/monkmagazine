@@ -191,42 +191,30 @@
 	</div>
 	<div class="thrills-overflow overflow">
 		<div class="thrills-wrapper">
-			<!--three columns-->
-			<div class="thrill">
-				<img src="https://placekitten.com/g/200/200" alt="Issue #4" />
-				<br />
-				<p class="thrill-content">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
-					<span class="extended">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
-							</span>
-				</p>
-			</div>
-			<div class="thrill">
-				<img src="https://placekitten.com/g/200/200" alt="Issue #5" />
-				<br />
-				<p class="thrill-content">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
-					<span class="extended">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
-							</span>
+			<?php
+			$args = array(
+				'posts_per_page' => 3,
+				'order_by'		 => 'post_date',
+				'order'		 => 'ASC',
+				'category_name'    => 'more-thrills',
+			);
 
-				</p>
-			</div>
-			<div class="thrill">
-				<img src="https://placekitten.com/g/200/200" alt="Issue #6" />
-				<br />
-				<p class="thrill-content">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
-					<span class="extended">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia quibusdam sed tempora tenetur vel vitae voluptatum! Laudantium quaerat quo voluptas.
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque doloremque dolorum et, ipsa laboriosam, libero modi odit officia.
-							</span>
-				</p>
-			</div>
+			$loop = new WP_Query( $args );
+			if ( $loop->have_posts() ) {
+				while ( $loop->have_posts() ) : $loop->the_post();
+					echo "<div class='thrill'>";
+					echo "<img src='" . get_the_post_thumbnail_url() . "' alt='" . get_the_title() . "' />";
+					echo "<br />";
+					echo "<p class='thrill-content'>" . get_the_content() . "</p>";
+					echo "</div>";
+
+				endwhile;
+			} else {
+				echo __( 'No thrills found' );
+			}
+			wp_reset_postdata();
+
+			?>
 		</div>
 		<div class="overflow-bottom">
 			<i class="close-icon fa fa-minus"></i>
