@@ -79,22 +79,26 @@
 
 	<a href="" class="cart"><i class="fa fa-solid fa-shopping-cart"></i></a>
 	<ul class="back-issues">
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #4"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #5"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #6"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #7"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #8"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #9"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #10"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #11"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #12"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #13"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #14"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #15"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #16"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #17"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #18"></li>
-		<li class="issue"><img src="https://placekitten.com/g/200/300" alt="Issue #19"></li>
+		<?php
+			$args = array(
+				'post_type'      => 'product',
+				'posts_per_page' => 19,
+				'orderby'	 => 'issue-number',
+				'order'		 => 'ASC',
+				'product_cat'    => 'back-issues'
+			);
+
+			$loop = new WP_Query( $args );
+				if ( $loop->have_posts() ) {
+				while ( $loop->have_posts() ) : $loop->the_post();
+				echo "<li class='issue'><a href='" . get_permalink() . "'><img src='" . get_the_post_thumbnail_url() . "' alt='" . get_the_title() . "' /></a></li>";
+				endwhile;
+			} else {
+				echo __( 'No products found' );
+			}
+			wp_reset_postdata();
+
+			?>
 	</ul>
 	<a href="" class="more-stuff-to-buy"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .   '/assets/images/more-stuff-to-buy.png' ) ?>" alt="More Stuff To Buy" class="more" /><i class="fa fa-solid fa-plus"></i></a>
 	<div class="buy-overflow overflow">
