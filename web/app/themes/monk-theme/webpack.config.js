@@ -9,6 +9,7 @@ module.exports = {
 	entry: './js/main.js',
 	mode: 'development',
 	devtool: 'source-map',
+    watch: true,
 	output: {
 		path: __dirname + '/assets',
 		filename: 'bundle.js'
