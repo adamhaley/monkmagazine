@@ -203,7 +203,10 @@
 			if ( $loop->have_posts() ) {
 				while ( $loop->have_posts() ) : $loop->the_post();
 					echo "<div class='thrill'>";
+					//link to post
+					echo "<a href='" . get_permalink() . "'>";
 					echo "<img src='" . get_the_post_thumbnail_url() . "' alt='" . get_the_title() . "' />";
+					echo "</a>";
 					echo "<br />";
 					echo "<p class='thrill-content'>" . get_the_content() . "</p>";
 					echo "</div>";
@@ -215,6 +218,7 @@
 			wp_reset_postdata();
 
 			?>
+
 		</div>
 		<div class="overflow-bottom">
 			<i class="close-icon fa fa-minus"></i>
