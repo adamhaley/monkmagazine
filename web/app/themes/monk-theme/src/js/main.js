@@ -54,6 +54,13 @@ function detectResponsiveEnvironment() {
 
 	updateBodyClass()
 
+	console.log('running detect admin bar');
+	//if wp admin bar is there, move hamburger down
+	if(document.querySelector('#wpadminbar')) {
+		document.querySelector('.hamburger').style.top = '32px';
+	}
+
+
 };
 
 function detectScrollPos() {
@@ -223,5 +230,7 @@ overflowBottom.forEach(( item ) => {
 	}
 
 	window.addEventListener('scroll', startScroll);
+
+
 }).call(this);
 
