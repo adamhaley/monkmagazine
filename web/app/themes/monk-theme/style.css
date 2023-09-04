@@ -563,13 +563,19 @@ a.more-link i:hover {
   width: 100%;
   margin-top: -4.5em;
 }
+.xs .more-stuff-to-buy,
+.sm .more-stuff-to-buy {
+  margin-top: 0;
+}
 .more-stuff-to-buy img {
   display: inline-block;
-  margin-right: 0.2em;
-  margin-top: 2em;
 }
 .xs .more-stuff-to-buy img {
   height: 1em;
+  margin-top: -1em;
+}
+.md .more-stuff-to-buy img {
+  margin-top: 2em;
 }
 .more-stuff-to-buy i {
   position: relative;
