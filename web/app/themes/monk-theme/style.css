@@ -395,7 +395,6 @@ a.more-link i:hover {
 .container div.buy-overflow {
   display: block;
   max-height: 0px;
-  width: auto;
   overflow: hidden;
   transition: max-height ease-in-out 0.2s;
 }
@@ -409,7 +408,7 @@ a.more-link i:hover {
 }
 .container span.overflow.in,
 .container div.buy-overflow.in {
-  max-height: 1000px;
+  max-height: 5000px;
 }
 .container ul.back-issues {
   display: grid;
