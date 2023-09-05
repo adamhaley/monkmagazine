@@ -140,7 +140,7 @@ Description:    Twentytwentythree child theme.
 Author:         Adam Haley
 Author URI:
 Template:       monk-theme
-Version:        0.1.1
+Version:        0.1.3
 */
 body {
   display: grid;
@@ -149,8 +149,7 @@ body {
   grid-template-columns: 1fr 6fr 1fr;
   font-family: 'Oswald', sans-serif;
   font-size: 0.9em;
-  font-leading: 0.6em;
-  font-kerning: normal;
+  line-height: 1.2em;
 }
 header img {
   margin: 0.2em;
