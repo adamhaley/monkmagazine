@@ -8,10 +8,13 @@
 	<?php
 		$args = array(
 			'post_type' => 'attachment',
-			'numberposts' => '10',
+			'numberposts' => '30',
+			'orderby'	 => 'post_name',
+			'order'		 => 'ASC',
 			'category_name' => 'home-carousel'
 		);
 		$images = get_posts($args);
+
 		$num_images = count($images);
 	?>
 
@@ -144,7 +147,9 @@
 				<?php
 				$args = array(
 					'post_type' => 'attachment',
-					'numberposts' => '10',
+					'numberposts' => '30',
+					'order' => 'ASC',
+					'order_by' => 'post_name',
 					'category_name' => 'on-the-road-carousel',
 				);
 				$images = get_posts($args);
