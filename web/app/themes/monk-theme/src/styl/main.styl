@@ -272,6 +272,7 @@ a.more-link
 				margin-bottom 1em
 			&:after
 				content counter(issues)
+				z-index 500
 				color #fc0003
 				counter-increment issues 1/* Increase the counter by 1. */
 				position absolute
@@ -286,6 +287,7 @@ a.more-link
 				font-size 1.5em
 				font-weight 600
 				.xs &
+					bottom -.2em
 					font-size 3em
 			//on hover grow image
 			img
