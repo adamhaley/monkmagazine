@@ -11,6 +11,13 @@ function monketheme_support(){
 	add_theme_support('title-tag');
 }
 
+add_action('wp_head', 'header_code');
+
+function header_code() {
+	echo '<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN2K5L"></script> <script>  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag(\'js\', new Date()); gtag(\'config\', \'G-NN2K5L\');</script>';
+}
+
+
 add_action('after_setup_theme', 'monketheme_support');
 function monktheme_register_styles(){
 	$version = wp_get_theme()->get('Version');
@@ -35,6 +42,9 @@ function smartwp_remove_wp_block_library_css(){
 	wp_dequeue_style( 'wp-block-library-theme' );
 	wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
 }
-//add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
+add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
 add_action('wp_enqueue_scripts', 'monktheme_register_styles');
 add_action('wp_enqueue_scripts', 'monktheme_register_scripts');
+
+
+
