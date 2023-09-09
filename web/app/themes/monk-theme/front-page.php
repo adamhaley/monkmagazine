@@ -94,7 +94,7 @@
 			$loop = new WP_Query( $args );
 				if ( $loop->have_posts() ) {
 				while ( $loop->have_posts() ) : $loop->the_post();
-				echo "<li class='issue'><!--<a href='" . get_permalink() . "'>--><img src='" . get_the_post_thumbnail_url() . "' alt='" . get_the_title() . "' /><!--</a>--></li>";
+				echo "<li class='issue'><a href='" . get_permalink() . "'><img src='" . get_the_post_thumbnail_url() . "' alt='" . get_the_title() . "' /></a></li>";
 				endwhile;
 			} else {
 				echo __( 'No products found' );
@@ -117,7 +117,7 @@
 			$loop = new WP_Query( $args );
 			if ( $loop->have_posts() ) {
 				while ( $loop->have_posts() ) : $loop->the_post();
-					echo "<li class='product'><!--<a href='" . get_permalink() . "'>--><img src='" . get_the_post_thumbnail_url() . "' alt='" . get_the_title() . "' /><!--</a>--></li>";
+					echo "<li class='product'><a href='" . get_permalink() . "'><img src='" . get_the_post_thumbnail_url() . "' alt='" . get_the_title() . "' /></a></li>";
 				endwhile;
 			} else {
 				echo __( 'No products found' );
