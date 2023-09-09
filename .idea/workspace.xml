@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="efd85e79-221c-4c80-8c12-648e78e6e1a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/monkmagazine-9-8-23.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monkmagazine.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/plugins/theme-customisations/custom/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/monkmagazine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/monkmagazine.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/plugins/theme-customisations/custom/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/plugins/theme-customisations/custom/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/plugins/theme-customisations/custom/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/plugins/theme-customisations/custom/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/templates/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/templates/archive.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/templates/blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/templates/blog-alternative.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/templates/page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/templates/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/templates/single.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/archive-product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/auth/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/auth/form-grant-access.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/auth/form-login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/auth/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/cart-empty.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/cart-item-data.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/cart-shipping.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/cart-totals.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/cart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/cross-sells.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/mini-cart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/proceed-to-checkout-button.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/shipping-calculator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/cart-errors.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-billing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-checkout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-coupon.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-pay.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-shipping.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-verify-email.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/order-receipt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/payment-method.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/payment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/review-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/terms.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/thankyou.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/content-product-cat.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/content-product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/content-single-product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/content-widget-price-filter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/content-widget-product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/content-widget-reviews.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/admin-cancelled-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/admin-failed-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/admin-new-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-completed-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-invoice.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-new-account.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-note.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-on-hold-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-processing-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-refunded-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-reset-password.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-addresses.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-customer-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-downloads.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-mobile-messaging.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-order-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-order-items.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-styles.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/admin-cancelled-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/admin-failed-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/admin-new-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-completed-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-invoice.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-new-account.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-note.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-on-hold-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-processing-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-refunded-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-reset-password.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/email-addresses.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/email-customer-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/email-downloads.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/email-order-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/email-order-items.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/global/breadcrumb.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/global/form-login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/global/quantity-input.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/global/sidebar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/global/wrapper-end.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/global/wrapper-start.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/add-to-cart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/loop-end.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/loop-start.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/no-products-found.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/orderby.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/price.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/rating.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/result-count.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/sale-flash.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/dashboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/downloads.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/form-add-payment-method.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/form-edit-account.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/form-edit-address.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/form-login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/form-lost-password.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/form-reset-password.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/lost-password-confirmation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/my-account.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/my-address.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/my-downloads.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/my-orders.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/navigation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/orders.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/payment-methods.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/view-order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/notices/error.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/notices/notice.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/notices/success.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/form-tracking.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/order-again.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/order-details-customer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/order-details-item.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/order-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/order-downloads.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/tracking.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/product-searchform.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product-reviews.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/external.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/grouped.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/simple.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/variable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/variation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/meta.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/photoswipe.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/price.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/product-attributes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/product-image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/product-thumbnails.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/rating.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/related.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/review-meta.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/review-rating.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/review.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/sale-flash.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/share.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/short-description.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/stock.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/tabs/additional-information.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/tabs/description.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/tabs/tabs.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/title.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/up-sells.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/taxonomy-product-attribute.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/taxonomy-product-cat.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/taxonomy-product-tag.php" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/web/app/plugins/theme-customisations" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/web/app/themes/monk-theme/front-page.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/roots/wp-password-bcrypt" />
+      <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/vendor/roots/wordpress-core-installer" />
+      <path value="$PROJECT_DIR$/vendor/roots/bedrock-autoloader" />
+      <path value="$PROJECT_DIR$/vendor/roots/wp-config" />
+      <path value="$PROJECT_DIR$/vendor/oscarotero/env" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2SzTfoJ7Co49vjfZuIXagILL3Tt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/app/plugins/theme-customisations/custom" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/app/plugins/theme-customisations/custom" />
+      <recent name="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce" />
+      <recent name="$PROJECT_DIR$/web/app/plugins/woocommerce/templates" />
+      <recent name="$PROJECT_DIR$/web/app/themes/monk-theme/assets/css" />
+      <recent name="$PROJECT_DIR$/web/app/themes/monk-theme" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/app/themes/monk-theme/" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/monkmagazine/web/app/themes/monk-theme/assets/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efd85e79-221c-4c80-8c12-648e78e6e1a6" name="Changes" comment="" />
+      <created>1690148517192</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690148517192</updated>
+      <workItem from="1690148519550" duration="35324000" />
+      <workItem from="1691884220169" duration="37063000" />
+      <workItem from="1692475798372" duration="120856000" />
+      <workItem from="1694295161783" duration="833000" />
+      <workItem from="1694296003321" duration="124000" />
+      <workItem from="1694296135968" duration="177000" />
+      <workItem from="1694296314301" duration="1694000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/app/themes/monk-theme/src/js/main.js</url>
+          <line>157</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/theme/src/js/main.js</url>
+          <line>7</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
