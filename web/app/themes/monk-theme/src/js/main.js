@@ -5,8 +5,6 @@ require('../styl/main.styl');
 
 console.log('Hello World from main.js!');
 
-
-
 /**
  * Functions
  */
@@ -52,14 +50,13 @@ function detectResponsiveEnvironment() {
 		document.body.classList.add(breakpoint);
 	}
 
-	updateBodyClass()
+	updateBodyClass();
 
 	console.log('running detect admin bar');
 	//if wp admin bar is there, move hamburger down
 	if(document.querySelector('#wpadminbar')) {
 		document.querySelector('.hamburger').style.top = '32px';
 	}
-
 
 };
 
@@ -85,7 +82,6 @@ function detectScrollPos() {
 	}
 }
 
-
 /**
  * Open Nav
  */
@@ -95,6 +91,9 @@ function openNav() {
 	setTimeout(function() {
 		nav.classList.add('active');
 	}, 10);
+
+	//attach social link events
+	attachSocialLinks();
 }
 
 /**
@@ -139,6 +138,29 @@ const readMore = document.querySelector('.more-link');
 const moreStuff = document.querySelector('.more-stuff-to-buy');
 const moreThrills = document.querySelector('.more-thrills');
 const overflowBottom = document.querySelectorAll('.overflow-bottom');
+
+//social links
+function attachSocialLinks() {
+	const facebookLinks = document.querySelectorAll('.facebook');
+	const instagramLinks = document.querySelectorAll('.ig');
+
+	facebookLinks.forEach(function(link) {
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+			window.open('https://www.facebook.com/people/Monk-Magazine/100067147688530/', '_blank');
+		});
+	});
+
+	instagramLinks.forEach(function(link) {
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+			window.open('https://www.instagram.com/monk.magazine/', '_blank');
+		});
+	});
+
+}
+
+
 
 /**
  * Close nav when clicking a link on it
@@ -231,6 +253,7 @@ overflowBottom.forEach(( item ) => {
 
 	window.addEventListener('scroll', startScroll);
 
+	attachSocialLinks();
 
 }).call(this);
 
