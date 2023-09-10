@@ -30,6 +30,12 @@ function monktheme_register_styles(){
 			[],
 			$version
 		);
+	}else {
+		wp_enqueue_style('shop-style',
+			get_stylesheet_directory_uri() . '/shop.css',
+			[],
+			$version
+		);
 	}
 }
 
