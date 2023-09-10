@@ -68,3 +68,7 @@ add_action('wp_enqueue_scripts', 'monktheme_register_styles');
 add_action('wp_enqueue_scripts', 'monktheme_register_scripts');
 add_action('woocommerce_before_main_content','add_open_container_div', 5);
 add_action('woocommerce_after_main_content','add_close_container_div', 150);
+add_action('woocommerce_before_checkout_form','add_open_container_div', 5);
+add_action('woocommerce_after_checkout_form','add_close_container_div', 150);
+add_action('woocommerce_before_cart','add_open_container_div', 5);
+add_action('woocommerce_after_cart','add_close_container_div', 150);
