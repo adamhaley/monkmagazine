@@ -32,7 +32,7 @@
 	<li><a href="#read-this">Read This</a></li>
 	<li><a href="#buy">Buy</a></li>
 	<li><a href="#on-the-road">On The Road</a></li>
-	<li><a href="#cart">Shopping Cart</a></li>
+	<li><a href="index.php/cart/">Shopping Cart</a></li>
 	<div class="social">
 		<!-- inline SVG gloriousness -->
 		<!--facebook-->

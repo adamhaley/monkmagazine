@@ -80,7 +80,7 @@
 		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/literally-buy.png' ) ?>" alt="Buy" />
 	</div>
 
-	<a href="" class="cart"><i class="fa fa-solid fa-shopping-cart"></i></a>
+	<a href="index.php/cart/" class="cart"><i class="fa fa-solid fa-shopping-cart"></i></a>
 	<ul class="back-issues">
 		<?php
 			$args = array(
@@ -94,7 +94,7 @@
 			$loop = new WP_Query( $args );
 				if ( $loop->have_posts() ) {
 				while ( $loop->have_posts() ) : $loop->the_post();
-				echo "<li class='issue'><a href='" . get_permalink() . "'><img src='" . get_the_post_thumbnail_url() . "' alt='" . get_the_title() . "' /></a></li>";
+				echo "<li class='issue'><a href='" . get_permalink() . "'><img src='" . get_the_post_thumbnail_url( get_the_ID(), 'small'  ) . "' alt='" . get_the_title() . "' /></a></li>";
 				endwhile;
 			} else {
 				echo __( 'No products found' );
