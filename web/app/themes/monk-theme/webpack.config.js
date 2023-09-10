@@ -6,13 +6,18 @@ const path = require('path');
 
 module.exports = {
 	context: __dirname + '/src',
-	entry: './js/main.js',
+	entry: {
+		bundle: './js/main.js',
+		reset: './styl/reset.styl',
+		style: './styl/main.styl',
+		shop: './styl/shop.styl',
+	},
 	mode: 'development',
 	devtool: 'source-map',
     watch: true,
 	output: {
 		path: __dirname + '/assets',
-		filename: 'bundle.js'
+		filename: '[name].js'
 	},
 	resolve: {
 		alias: {
@@ -72,7 +77,7 @@ module.exports = {
           template: 'index.html'
         }),
 		new MiniCssExtractPlugin({
-			filename: '../style.css'
+			filename: '../[name].css'
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
