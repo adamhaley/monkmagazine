@@ -1,0 +1,49 @@
+/*!****************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../node_modules/stylus-native-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./styl/shop.styl ***!
+  \****************************************************************************************************************************************************************************/
+body {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9em;
+  line-height: 1.2em;
+}
+.container {
+  margin: 0 auto;
+  width: 70%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+.wp-block-group__inner-container h1 {
+  padding-left: 16%;
+}
+.wp-block-post-title {
+  line-height: 1.2em;
+}
+img.attachment-woocommerce_single {
+  transform: scale(1);
+  transition: all ease-in-out 0.2s;
+}
+img.attachment-woocommerce_single:hover {
+  transform: scale(1.05);
+}
+a {
+  color: #000;
+}
+a:hover {
+  color: #fb0303;
+}
+button.wp-block-button__link {
+  color: #fff;
+  background-color: #000;
+  border: none;
+  padding: 10px 20px;
+}
+button.wp-block-button__link:hover {
+  background-color: #fb0303;
+  color: #fff;
+}
+.added_to_cart {
+  margin-left: 1em;
+}
+
+
+/*# sourceMappingURL=shop.css.map*/
