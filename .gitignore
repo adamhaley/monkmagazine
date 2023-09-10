@@ -11,6 +11,8 @@ web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
+.idea
+
 
 # WordPress
 web/wp

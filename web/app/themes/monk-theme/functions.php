@@ -23,11 +23,13 @@ function monktheme_register_styles(){
 	$version = wp_get_theme()->get('Version');
 	wp_enqueue_style('monktheme-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", [], '4.5.2', 'all');
 	wp_enqueue_style('monktheme-googlefonts', "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap", [], '1.0', 'all');
-	wp_enqueue_style( 'monktheme-style',
-		get_stylesheet_directory_uri() . '/style.css',
-		[ ],
-		$version
-	);
+	if(is_front_page()) {
+		wp_enqueue_style('monktheme-style',
+			get_stylesheet_directory_uri() . '/style.css',
+			[],
+			$version
+		);
+	}
 }
 
 function monktheme_register_scripts(){
