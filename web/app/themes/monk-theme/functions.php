@@ -47,8 +47,18 @@ function smartwp_remove_wp_block_library_css(){
 		wp_dequeue_style('wc-blocks-style'); // Remove WooCommerce block CSS
 	}
 }
+
+/**woocommerce pages */
+function add_open_container_div() {
+	echo '<div class="container">';
+}
+
+function add_close_container_div() {
+	echo '</div>';
+}
+
 add_action('wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100);
 add_action('wp_enqueue_scripts', 'monktheme_register_styles');
 add_action('wp_enqueue_scripts', 'monktheme_register_scripts');
-
-
+add_action('woocommerce_before_main_content','add_open_container_div', 5);
+add_action('woocommerce_after_main_content','add_close_container_div', 150);

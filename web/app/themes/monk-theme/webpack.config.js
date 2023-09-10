@@ -72,12 +72,11 @@ module.exports = {
           template: 'index.html'
         }),
 		new MiniCssExtractPlugin({
-			filename: 'css/main.css'
+			filename: '../style.css'
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
 				{from:'images',to:'../assets/images'},
-				{from:'../assets/css/main.css',to:'../style.css'}
 			]
 		}),
 	],
