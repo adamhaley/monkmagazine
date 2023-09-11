@@ -2,7 +2,7 @@
 Theme Name:     Monk-theme
 Description:    Monk Magazine Custom theme.
 Author:         Adam Haley
-Version:        0.1.6
+Version:        0.2.0
 */
 body
 	display grid
@@ -158,6 +158,8 @@ a.more-link
 		margin-right .2em
 	i
 		display inline-block
+		position relative
+		top:.4em
 		color #000 !important
 		&:hover
 			color #fb0303 !important
@@ -367,13 +369,8 @@ a.more-link
 
 	i
 		position relative
-		top -2px
-		.xs &
-			top -7px
-		.sm &
-			top -4px
-		.md &
-			top -3px
+		top .4em
+		margin-left .2em
 		display inline-block
 		color #000 !important
 		&:hover
@@ -444,6 +441,7 @@ a.more-link
 			height 1em
 		i
 			position relative
+			top .6em
 			display inline-block
 			color #000 !important
 			&:hover
