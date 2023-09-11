@@ -15,6 +15,9 @@ body {
 .wp-site-blocks h1.wp-block-heading {
   padding-left: 16%;
 }
+.wp-site-blocks h1.wp-block-post-title {
+  padding-left: 16%;
+}
 .wp-block-post-title {
   line-height: 1.2em;
   padding-left: 0;
