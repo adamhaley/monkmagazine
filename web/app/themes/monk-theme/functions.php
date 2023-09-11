@@ -64,6 +64,13 @@ function add_close_container_div() {
 	echo '</div>';
 }
 
+function add_woo_support()
+{
+	add_theme_support( 'woocommerce' );
+}
+
+add_action('after_setup_theme', 'add_woo_support');
+
 add_action('wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100);
 add_action('wp_enqueue_scripts', 'monktheme_register_styles');
 add_action('wp_enqueue_scripts', 'monktheme_register_scripts');
