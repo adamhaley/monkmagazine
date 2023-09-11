@@ -5,7 +5,7 @@
 Theme Name:     Monk-theme
 Description:    Monk Magazine Custom theme.
 Author:         Adam Haley
-Version:        0.2.0
+Version:        0.2.1
 */
 body {
   display: grid;
@@ -15,6 +15,10 @@ body {
   font-family: 'Oswald', sans-serif;
   font-size: 0.9em;
   line-height: 1.2em;
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 header img {
   margin: 0.2em;
