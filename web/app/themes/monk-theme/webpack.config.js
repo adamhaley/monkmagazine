@@ -8,6 +8,7 @@ module.exports = {
 	context: __dirname + '/src',
 	entry: {
 		bundle: './js/main.js',
+		home: './js/home.js',
 		reset: './styl/reset.styl',
 		style: './styl/main.styl',
 		shop: './styl/shop.styl',
