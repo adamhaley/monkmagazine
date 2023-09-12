@@ -5,7 +5,7 @@
 Theme Name:     Monk-theme
 Description:    Monk Magazine Custom theme.
 Author:         Adam Haley
-Version:        0.2.1
+Version:        0.2.3
 */
 body {
   display: grid;
@@ -20,13 +20,13 @@ img {
   display: block;
   max-width: 100%;
 }
-header img {
+img.header {
   margin: 0.2em;
   float: left;
   width: 100%;
 }
-.sm header img,
-.md header img {
+.sm img.header,
+.md img.header {
   width: 100%;
 }
 .fa-plus:hover {
@@ -85,7 +85,7 @@ ul.nav-menu li a:hover {
   color: #fb0303;
   text-decoration: underline;
 }
-ul.nav-menu .social {
+ul.nav-menu .social-links {
   display: block;
   position: absolute;
   bottom: 0;
@@ -93,12 +93,12 @@ ul.nav-menu .social {
   width: 100%;
   text-align: center;
 }
-ul.nav-menu .social svg {
+ul.nav-menu .social-links svg {
   transform: scale(0.8);
   margin: 0.5em;
   cursor: pointer;
 }
-ul.nav-menu .social svg:hover {
+ul.nav-menu .social-links svg:hover {
   fill: #fb0303;
 }
 .hamburger {
@@ -672,7 +672,7 @@ a.more-link i:hover {
   grid-column-end: 6;
   margin-top: 1em;
 }
-.footer .social {
+.footer .social-links {
   grid-row-start: 2;
   grid-row-end: 3;
   display: block;
@@ -682,33 +682,33 @@ a.more-link i:hover {
   grid-column-end: 9;
   text-align: center;
 }
-.footer .social svg {
+.footer .social-links svg {
   transform: scale(0.8);
   margin: 1em;
   cursor: pointer;
 }
-.footer .social svg:hover {
+.footer .social-links svg:hover {
   fill: #fb0303;
 }
-.xs .footer .social,
-.sm .footer .social,
-.md .footer .social {
+.xs .footer .social-links,
+.sm .footer .social-links,
+.md .footer .social-links {
   margin-top: 0;
   margin-bottom: 0;
   grid-column-start: 1;
   grid-column-end: 9;
   text-align: center;
 }
-.xs .footer .social svg,
-.sm .footer .social svg,
-.md .footer .social svg {
+.xs .footer .social-links svg,
+.sm .footer .social-links svg,
+.md .footer .social-links svg {
   transform: scale(0.8);
   margin: 1em;
   cursor: pointer;
 }
-.xs .footer .social svg:hover,
-.sm .footer .social svg:hover,
-.md .footer .social svg:hover {
+.xs .footer .social-links svg:hover,
+.sm .footer .social-links svg:hover,
+.md .footer .social-links svg:hover {
   fill: #fb0303;
 }
 .footer .copyright {

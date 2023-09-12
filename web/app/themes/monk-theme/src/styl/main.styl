@@ -2,7 +2,7 @@
 Theme Name:     Monk-theme
 Description:    Monk Magazine Custom theme.
 Author:         Adam Haley
-Version:        0.2.1
+Version:        0.2.3
 */
 body
 	display grid
@@ -17,13 +17,12 @@ img
 	display block
 	max-width 100%
 
-header
-	img
-		margin .2em
-		float left
+img.header
+	margin .2em
+	float left
+	width 100%
+	.sm &, .md &
 		width 100%
-		.sm &, .md &
-			width 100%
 
 .fa-plus:hover
 	color #fb0303
@@ -71,7 +70,7 @@ ul.nav-menu
 			&:hover
 				color #fb0303
 				text-decoration underline
-	.social
+	.social-links
 		display block
 		position absolute
 		bottom 0
@@ -575,7 +574,7 @@ a.more-link
 			grid-column-start 4
 			grid-column-end 6
 			margin-top 1em
-	.social
+	.social-links
 		grid-row-start 2
 		grid-row-end 3
 		display block
