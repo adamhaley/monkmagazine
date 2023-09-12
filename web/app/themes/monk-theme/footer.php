@@ -2,7 +2,7 @@
 	<img src=" <?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/connect.png' ); ?>" alt="Footer" class="connect" />
 
 	<br />
-	<div class="social">
+	<div class="social-links">
 		<!-- inline SVG gloriousness -->
 		<!--facebook-->
 		<svg class="facebook" width="20px" height="20px" viewBox="0 0 20 20" aria-hidden="true">
@@ -33,7 +33,7 @@
 	<li><a href="#buy">Buy</a></li>
 	<li><a href="#on-the-road">On The Road</a></li>
 	<li><a href="index.php/cart/">Shopping Cart</a></li>
-	<div class="social">
+	<div class="social-links">
 		<!-- inline SVG gloriousness -->
 		<!--facebook-->
 		<svg class="facebook" width="20px" height="20px" viewBox="0 0 20 20" aria-hidden="true">
