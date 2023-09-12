@@ -22,8 +22,9 @@
 
 </div>
 <header>
-
-	<img class="header" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/monk-magazine.jpg' ); ?>" alt="Monk Magazine">
+	<a href="/">
+		<img class="header" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/monk-magazine.jpg' ); ?>" alt="Monk Magazine">
+	</a>
 </header>
 <div class="gutter">
 	<div class="hamburger">
