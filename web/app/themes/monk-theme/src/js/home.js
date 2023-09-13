@@ -3,6 +3,11 @@ const moreStuff = document.querySelector('.more-stuff-to-buy');
 const moreThrills = document.querySelector('.more-thrills');
 const overflowBottom = document.querySelectorAll('.overflow-bottom');
 
+//hamburger nav
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('ul.nav-menu');
+const backToTop = document.querySelector('.back-to-top a');
+
 readMore.addEventListener('click', function(e) {
 	e.preventDefault();
 	//add expanded class to .overflow
@@ -44,6 +49,35 @@ overflowBottom.forEach(( item ) => {
 		console.log(e.target.closest('.overflow'));
 		let overflow = e.target.closest('.overflow');
 		overflow.classList.remove('in');
+	});
+});
+
+
+/**
+ * Close nav when clicking a link on it
+ */
+nav.addEventListener('click', function(e) {
+	if(e.target.tagName === 'A') {
+		closeNav();
+	}
+});
+
+/**
+ * Hamburger Menu Click
+ */
+hamburger.addEventListener('click', function() {
+	if(this.classList.contains('active')) {
+		closeNav();
+	} else {
+		openNav();
+	}
+});
+
+backToTop.addEventListener('click', function(e) {
+	e.preventDefault();
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth'
 	});
 });
 

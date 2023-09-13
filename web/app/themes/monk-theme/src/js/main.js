@@ -108,13 +108,6 @@ function closeNav() {
 
 
 
-/**
- * Event Listeners
- */
-//hamburger nav
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('ul.nav-menu');
-const backToTop = document.querySelector('.back-to-top a');
 
 //social links
 function attachSocialLinks() {
@@ -136,33 +129,6 @@ function attachSocialLinks() {
 	});
 
 }
-/**
- * Close nav when clicking a link on it
- */
-nav.addEventListener('click', function(e) {
-	if(e.target.tagName === 'A') {
-		closeNav();
-	}
-});
-
-/**
- * Hamburger Menu Click
- */
-hamburger.addEventListener('click', function() {
-	if(this.classList.contains('active')) {
-		closeNav();
-	} else {
-		openNav();
-	}
-});
-
-backToTop.addEventListener('click', function(e) {
-	e.preventDefault();
-	window.scrollTo({
-		top: 0,
-		behavior: 'smooth'
-	});
-});
 
 
 (function() {
