@@ -77,37 +77,6 @@ function detectScrollPos() {
 	}
 }
 
-/**
- * Open Nav
- */
-function openNav() {
-	hamburger.classList.add('active'); //hamburger add active
-	nav.classList.add('displayed');
-	setTimeout(function() {
-		nav.classList.add('active');
-	}, 10);
-
-	//attach social link events
-	attachSocialLinks();
-}
-
-/**
- * Close Nav
- */
-function closeNav() {
-	hamburger.classList.remove('active');//hamburger remove active
-	nav.classList.remove('active');
-	nav.addEventListener('transitionend', function() {
-		nav.classList.remove('displayed'); //wait for transition to finish to remove nav from the flow
-	},{
-		capture: false,
-		once: true,
-		passive: false
-	});
-}
-
-
-
 
 //social links
 function attachSocialLinks() {
