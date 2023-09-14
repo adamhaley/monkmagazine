@@ -32,6 +32,12 @@ h2 {
   line-height: 1.2em;
   padding-left: 10%;
 }
+p.block-site-title a {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 2em;
+  padding-left: 10%;
+}
 img.attachment-woocommerce_single {
   transform: scale(1);
   transition: all ease-in-out 0.2s;
@@ -164,7 +170,11 @@ bdi {
   line-height: 2em;
 }
 input {
-  height: 2em;
+  height: 4em;
+}
+input.wc-block-components-quantity-selector__input {
+  height: 1em;
+  width: 2em;
 }
 ol.flex-control-thumbs li {
   cursor: pointer;
