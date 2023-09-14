@@ -6,6 +6,9 @@ body {
   font-size: 0.9em;
   line-height: 1.2em;
 }
+body .wp-site-blocks {
+  padding: 1em;
+}
 h2 {
   font-size: 1.5em;
   font-weight: 400;
@@ -27,7 +30,7 @@ h2 {
 }
 .wp-block-post-title {
   line-height: 1.2em;
-  padding-left: 0;
+  padding-left: 10%;
 }
 img.attachment-woocommerce_single {
   transform: scale(1);
@@ -58,114 +61,6 @@ button.wp-block-button__link:hover {
 img.header {
   margin: 0.2em;
   width: 20em;
-}
-ul.nav-menu {
-  display: none;
-  opacity: 0;
-  list-style: none;
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -100px;
-  left: 0;
-  z-index: 1000;
-  opacity: 0;
-  transition: all linear 0.2s;
-  font-size: 1.5em;
-}
-ul.nav-menu.active {
-  top: 0;
-  opacity: 1;
-  transition: all ease-in-out 0.2s;
-  position: fixed;
-}
-ul.nav-menu.displayed {
-  display: block;
-}
-.xs ul.nav-menu,
-.sm ul.nav-menu,
-.md ul.nav-menu {
-  font-size: 2em;
-}
-ul.nav-menu li:first-child {
-  margin-top: 10em;
-}
-.xs ul.nav-menu li:first-child,
-.sm ul.nav-menu li:first-child,
-.md ul.nav-menu li:first-child {
-  margin-top: 2em;
-}
-ul.nav-menu li {
-  align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1em;
-}
-ul.nav-menu li a {
-  text-decoration: none;
-  color: #000;
-  text-align: center;
-  display: block;
-}
-ul.nav-menu li a:hover {
-  color: #fb0303;
-  text-decoration: underline;
-}
-ul.nav-menu .social-links {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 1em;
-  width: 100%;
-  text-align: center !important;
-}
-ul.nav-menu .social-links svg {
-  transform: scale(0.8);
-  margin: 0.5em;
-  cursor: pointer;
-}
-ul.nav-menu .social-links svg:hover {
-  fill: #fb0303;
-}
-.hamburger {
-  cursor: pointer;
-  margin-right: 0.2em;
-  margin-top: 0.5em;
-  width: 2em;
-  height: 2em;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2000;
-/*
-	&:hover
-		fill #fb0303
-	*/
-}
-.hamburger img {
-  width: 80%;
-  height: 80%;
-}
-.hamburger svg {
-  width: 100%;
-  height: 100%;
-  fill: #000;
-}
-.hamburger .menu {
-  display: block;
-}
-.hamburger .close {
-  display: none;
-}
-.hamburger.active {
-  position: fixed;
-}
-.hamburger.active .menu {
-  display: none;
-}
-.hamburger.active .close {
-  display: block;
 }
 .footer {
   display: grid;
@@ -264,6 +159,27 @@ ul.nav-menu .social-links svg:hover {
 }
 .footer .back-to-top svg:hover {
   fill: #fb0303;
+}
+bdi {
+  line-height: 2em;
+}
+input {
+  height: 2em;
+}
+ol.flex-control-thumbs li {
+  cursor: pointer;
+  width: 6em;
+  height: 6em;
+  float: left;
+  border: 2px solid #fff;
+}
+ol.flex-control-thumbs li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wp-block-woocommerce-product-image-gallery {
+  margin: 2em;
 }
 
 
