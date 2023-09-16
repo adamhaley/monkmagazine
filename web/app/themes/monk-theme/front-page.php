@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container">
+<div class="container" x-data="{ content1 : false, content2 : false, content3 : false }">
 	<!-- simple mobile true image -->
 	<div class="row">
 		<img class="simple-mobile-true" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/simple-mobile-true.png' ); ?>" alt="Simple.Mobile.True." >
@@ -64,13 +64,13 @@
 			<br /><br />
 
 			<a name="read-this"></a>
-		<a href="" class="more-link"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/more.png' ) ?>" alt="More" class="more" /><i class="fa fa-solid fa-plus"></i>
+		<a href="" class="more-link" @click="content1=!content1"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/more.png' ) ?>" alt="More" class="more" /><i :class="content1? 'fa fa-minus' : 'fa fa-plus'"></i>
 		</a>
 	</div>
 	<div class="row">
 			<span class="overflow">
 				<?php echo $post->post_content; ?>
-				<div class="overflow-bottom">
+				<div class="overflow-bottom" @click="content1=false">
 					<i class="close-icon fa fa-minus"></i>
 				</div>
 			</span>
@@ -103,7 +103,7 @@
 
 			?>
 	</ul>
-	<a href="" class="more-stuff-to-buy"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .   '/assets/images/more-stuff-to-buy.png' ) ?>" alt="More Stuff To Buy" class="more" /><i class="fa fa-solid fa-plus"></i></a>
+	<a href="" class="more-stuff-to-buy" @click="content2=!content2"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .   '/assets/images/more-stuff-to-buy.png' ) ?>" alt="More Stuff To Buy" class="more" /><i :class="content2? 'fa fa-minus' : 'fa fa-plus'"></i></a>
 	<div class="buy-overflow overflow">
 		<ul class="more-stuff">
 			<?php
@@ -126,7 +126,7 @@
 
 			?>
 		</ul>
-		<div class="overflow-bottom">
+		<div class="overflow-bottom" @click="content2=false">
 			<i class="close-icon fa fa-minus"></i>
 		</div>
 	</div>
@@ -191,7 +191,7 @@
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
-			<a href="" class="more-thrills"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/more-thrills.png' ) ?>" alt="More Thrills" class="more-thrills" /><i class="fa fa-solid fa-plus"></i></a>
+			<a href="" @click="content3 = !content3" class="more-thrills"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/more-thrills.png' ) ?>" alt="More Thrills" class="more-thrills" /><i :class="content3? 'fa fa-minus' : 'fa fa-plus'"></i></a>
 		</div>
 	</div>
 	<div class="thrills-overflow overflow">
@@ -221,7 +221,7 @@
 
 			?>
 		</div>
-		<div class="overflow-bottom">
+		<div class="overflow-bottom" @click="content3=false">
 			<i class="close-icon fa fa-minus"></i>
 		</div>
 	</div>
