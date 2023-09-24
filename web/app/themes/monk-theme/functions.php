@@ -96,3 +96,7 @@ add_action('woocommerce_before_cart','add_open_container_div', 12);
 add_action('woocommerce_after_cart','add_close_container_div', 200);
 add_action('woocommerce_after_cart','add_footer', 215);
 add_action('after_setup_theme', 'add_woo_support');
+
+/**
+ * WOO COMMERCE CUSTOMIZATIONS
+ */
