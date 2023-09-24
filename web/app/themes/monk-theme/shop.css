@@ -187,6 +187,19 @@ ol.flex-control-thumbs li img {
   width: 100%;
   object-fit: contain;
 }
+.wp-image-81 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.xs .wp-image-81,
+.sm .wp-image-81 {
+  width: 100% !important;
+  height: auto !important;
+}
+.wp-container-3.wp-container-3 {
+  justify-content: center;
+}
 .wp-block-woocommerce-product-image-gallery {
   margin: 2em;
 }
