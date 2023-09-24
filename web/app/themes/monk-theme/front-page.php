@@ -80,7 +80,7 @@
 		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/literally-buy.png' ) ?>" alt="Buy" />
 	</div>
 
-	<a href="index.php/cart/" class="cart"><i class="fa fa-solid fa-shopping-cart"></i></a>
+	<a href="index.php/cart/" class="cart"> <b>SHOPPING CART</b><i class="fa fa-solid fa-shopping-cart"></i></a>
 	<ul class="back-issues">
 		<?php
 			$args = array(

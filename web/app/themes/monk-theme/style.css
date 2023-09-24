@@ -236,6 +236,11 @@ a.more-link i:hover {
   margin-top: 4em;
   grid-column-start: 9;
   grid-column-end: 10;
+  color: #000;
+}
+.container a.cart b {
+  display: inline-block;
+  margin-right: 0.5em;
 }
 .xs .container a.cart,
 .sm .container a.cart {
