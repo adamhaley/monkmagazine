@@ -86,6 +86,7 @@ function detectScrollPos() {
 function attachSocialLinks() {
 	const facebookLinks = document.querySelectorAll('.facebook');
 	const instagramLinks = document.querySelectorAll('.ig');
+	// const emailLinks = document.querySelectorAll('.email');
 
 	facebookLinks.forEach(function(link) {
 		link.addEventListener('click', function(e) {
@@ -100,6 +101,7 @@ function attachSocialLinks() {
 			window.open('https://www.instagram.com/monk.magazine/', '_blank');
 		});
 	});
+
 
 }
 

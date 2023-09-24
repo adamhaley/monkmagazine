@@ -191,6 +191,12 @@ ol.flex-control-thumbs li img {
 .wp-block-woocommerce-product-image-gallery {
   margin: 2em;
 }
+h1.wp-block-query-title {
+  line-height: 2em;
+}
+.wp-block-query {
+  margin-top: 1em;
+}
 
 
 /*# sourceMappingURL=shop.css.map*/
