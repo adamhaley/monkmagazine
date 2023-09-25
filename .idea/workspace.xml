@@ -5,17 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efd85e79-221c-4c80-8c12-648e78e6e1a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/monkmagazine-9-24-23" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/cart-errors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-billing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-checkout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-coupon.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-pay.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-shipping.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-verify-email.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/order-receipt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/payment-method.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/review-order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/terms.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/thankyou.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/js/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/main.styl" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/main.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/shop.styl" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/shop.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
