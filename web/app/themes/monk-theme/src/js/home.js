@@ -3,10 +3,6 @@ const moreStuff = document.querySelector('.more-stuff-to-buy');
 const moreThrills = document.querySelector('.more-thrills');
 const overflowBottom = document.querySelectorAll('.overflow-bottom');
 
-//hamburger nav
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('ul.nav-menu');
-const backToTop = document.querySelector('.back-to-top a');
 
 readMore.addEventListener('click', function(e) {
 	e.preventDefault();
