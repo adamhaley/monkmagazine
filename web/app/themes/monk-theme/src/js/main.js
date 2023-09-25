@@ -7,6 +7,67 @@ Alpine.start()
 /**
  * Functions
  */
+//hamburger nav
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('ul.nav-menu');
+const backToTop = document.querySelector('.back-to-top-link a');
+
+/**
+ * Open Nav
+ */
+function openNav() {
+	hamburger.classList.add('active'); //hamburger add active
+	nav.classList.add('displayed');
+	setTimeout(function() {
+		nav.classList.add('active');
+	}, 10);
+
+	//attach social link events
+	attachSocialLinks();
+}
+
+/**
+ * Close Nav
+ */
+function closeNav() {
+	hamburger.classList.remove('active');//hamburger remove active
+	nav.classList.remove('active');
+	nav.addEventListener('transitionend', function() {
+		nav.classList.remove('displayed'); //wait for transition to finish to remove nav from the flow
+	},{
+		capture: false,
+		once: true,
+		passive: false
+	});
+}
+
+/**
+ * Close nav when clicking a link on it
+ */
+nav.addEventListener('click', function(e) {
+	if(e.target.tagName === 'A') {
+		closeNav();
+	}
+});
+
+/**
+ * Hamburger Menu Click
+ */
+hamburger.addEventListener('click', function() {
+	if(this.classList.contains('active')) {
+		closeNav();
+	} else {
+		openNav();
+	}
+});
+
+backToTop.addEventListener('click', function(e) {
+	e.preventDefault();
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth'
+	});
+});
 
 function detectResponsiveEnvironment() {
 
@@ -61,7 +122,7 @@ function detectResponsiveEnvironment() {
 
 function detectScrollPos() {
 	let scrollPos = window.scrollY;
-	let backToTop = document.querySelector('.back-to-top');
+	let backToTop = document.querySelector('.back-to-top-link');
 	console.log(backToTop);
 	console.log('scrollPos: ' + scrollPos);
 	if(scrollPos > 100) {

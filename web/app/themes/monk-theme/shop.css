@@ -14,6 +14,124 @@ h2 {
   font-weight: 400;
   line-height: 2em;
 }
+header img.header {
+  width: 80%;
+}
+.sm header img.header,
+.md header img.header {
+  width: 100%;
+}
+.fa-plus:hover {
+  color: #fb0303;
+}
+ul.nav-menu {
+  display: none;
+  opacity: 0;
+  list-style: none;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  transition: all linear 0.2s;
+  font-size: 1.5em;
+}
+ul.nav-menu.active {
+  top: 0;
+  opacity: 1;
+  transition: all ease-in-out 0.2s;
+  position: fixed;
+}
+ul.nav-menu.displayed {
+  display: block;
+}
+.xs ul.nav-menu,
+.sm ul.nav-menu,
+.md ul.nav-menu {
+  font-size: 2em;
+}
+ul.nav-menu li:first-child {
+  margin-top: 10em;
+}
+.xs ul.nav-menu li:first-child,
+.sm ul.nav-menu li:first-child,
+.md ul.nav-menu li:first-child {
+  margin-top: 2em;
+}
+ul.nav-menu li {
+  align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+ul.nav-menu li a {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  display: block;
+}
+ul.nav-menu li a:hover {
+  color: #fb0303;
+  text-decoration: underline;
+}
+ul.nav-menu .social-links {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1em;
+  width: 100%;
+  text-align: center;
+}
+ul.nav-menu .social-links svg {
+  transform: scale(0.8);
+  margin: 0.5em;
+  cursor: pointer;
+}
+ul.nav-menu .social-links svg:hover {
+  fill: #fb0303;
+}
+.hamburger {
+  cursor: pointer;
+  margin-right: 0.2em;
+  margin-top: 0.5em;
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2000;
+/*
+	&:hover
+		fill #fb0303
+	*/
+}
+.hamburger img {
+  width: 80%;
+  height: 80%;
+}
+.hamburger svg {
+  width: 100%;
+  height: 100%;
+  fill: #000;
+}
+.hamburger .menu {
+  display: block;
+}
+.hamburger .close {
+  display: none;
+}
+.hamburger.active {
+  position: fixed;
+}
+.hamburger.active .menu {
+  display: none;
+}
+.hamburger.active .close {
+  display: block;
+}
 .container {
   margin: 0 auto;
   width: 70%;
@@ -139,7 +257,7 @@ img.header {
   text-align: center;
   font-size: 0.7em;
 }
-.footer .back-to-top {
+.back-to-top-link {
   cursor: pointer;
   margin-right: 0.2em;
   margin-top: 0.5em;
@@ -153,28 +271,31 @@ img.header {
   opacity: 0;
   transition: all ease-in-out 0.2s;
 }
-.footer .back-to-top.in {
+.back-to-top-link.in {
   display: block;
 }
-.footer .back-to-top.visible {
+.back-to-top-link.visible {
   opacity: 1;
 }
-.footer .back-to-top svg {
+.back-to-top-link svg {
   width: 80%;
   height: 80%;
 }
-.footer .back-to-top svg:hover {
+.back-to-top-link svg:hover {
   fill: #fb0303;
 }
 bdi {
   line-height: 2em;
 }
 input {
-  height: 4em;
+  height: 2em;
 }
 input.wc-block-components-quantity-selector__input {
   height: 1em;
   width: 2em;
+}
+.wc-block-components-product-sku {
+  left: 0px;
 }
 ol.flex-control-thumbs li {
   cursor: pointer;
@@ -183,8 +304,9 @@ ol.flex-control-thumbs li {
   float: left;
   border: 2px solid #fff;
 }
-ol.flex-control-thumbs li img {
-  width: 100%;
+ol.flex-control-thumbs img {
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
 }
 .wp-image-81 {
@@ -208,6 +330,9 @@ h1.wp-block-query-title {
 }
 .wp-block-query {
   margin-top: 1em;
+}
+.woocommerce-breadcrumb {
+  visibility: hidden;
 }
 
 

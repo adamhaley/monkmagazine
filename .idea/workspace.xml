@@ -5,156 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efd85e79-221c-4c80-8c12-648e78e6e1a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/archive-product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/auth/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/auth/form-grant-access.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/auth/form-login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/auth/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/cart-empty.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/cart-item-data.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/cart-shipping.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/cart-totals.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/cart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/cross-sells.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/mini-cart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/proceed-to-checkout-button.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/cart/shipping-calculator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/cart-errors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-billing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-checkout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-coupon.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-pay.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-shipping.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/form-verify-email.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/order-receipt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/payment-method.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/payment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/review-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/terms.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/checkout/thankyou.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/content-product-cat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/content-product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/content-single-product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/content-widget-price-filter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/content-widget-product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/content-widget-reviews.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/admin-cancelled-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/admin-failed-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/admin-new-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-completed-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-invoice.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-new-account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-note.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-on-hold-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-processing-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-refunded-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/customer-reset-password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-addresses.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-customer-details.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-downloads.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-mobile-messaging.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-order-details.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-order-items.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/email-styles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/admin-cancelled-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/admin-failed-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/admin-new-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-completed-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-invoice.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-new-account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-note.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-on-hold-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-processing-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-refunded-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/customer-reset-password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/email-addresses.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/email-customer-details.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/email-downloads.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/email-order-details.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/emails/plain/email-order-items.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/global/breadcrumb.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/global/form-login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/global/quantity-input.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/global/sidebar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/global/wrapper-end.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/global/wrapper-start.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/add-to-cart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/loop-end.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/loop-start.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/no-products-found.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/orderby.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/price.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/rating.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/result-count.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/loop/sale-flash.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/downloads.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/form-add-payment-method.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/form-edit-account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/form-edit-address.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/form-login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/form-lost-password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/form-reset-password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/lost-password-confirmation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/my-account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/my-address.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/my-downloads.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/my-orders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/navigation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/orders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/payment-methods.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/myaccount/view-order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/notices/error.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/notices/notice.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/notices/success.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/form-tracking.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/order-again.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/order-details-customer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/order-details-item.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/order-details.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/order-downloads.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/order/tracking.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/product-searchform.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product-reviews.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/external.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/grouped.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/simple.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/variable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/variation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/meta.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/photoswipe.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/price.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/product-attributes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/product-image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/product-thumbnails.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/rating.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/related.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/review-meta.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/review-rating.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/review.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/sale-flash.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/share.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/short-description.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/stock.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/tabs/additional-information.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/tabs/description.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/tabs/tabs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/title.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/up-sells.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/taxonomy-product-attribute.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/taxonomy-product-cat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/taxonomy-product-tag.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/main.styl" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/main.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/shop.styl" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/shop.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -10,6 +10,109 @@ h2
 	font-weight 400
 	line-height 2em
 
+header
+
+	img.header
+		width 80%
+		.sm &, .md &
+			width 100%
+
+.fa-plus:hover
+	color #fb0303
+
+ul.nav-menu
+	display none
+	opacity 0
+	list-style none
+	background-color #fff
+	width 100%
+	height 100%
+	position absolute
+	top -100px
+	left 0
+	z-index 1000
+	opacity 0
+	transition all linear .2s
+	font-size 1.5em
+	&.active
+		top 0
+		opacity 1
+		transition all ease-in-out .2s
+		position fixed
+
+	&.displayed
+		display block
+
+	.xs &, .sm &, .md &
+		font-size 2em
+
+	li:first-child
+		margin-top 10em
+		.xs &, .sm &, .md &
+			margin-top 2em
+	li
+		align center
+		margin-left auto
+		margin-right auto
+		margin-top 1em
+		a
+			text-decoration none
+			color #000
+			text-align center
+			display block
+			&:hover
+				color #fb0303
+				text-decoration underline
+	.social-links
+		display block
+		position absolute
+		bottom 0
+		margin-bottom 1em
+		width 100%
+		text-align center
+
+		svg
+			transform scale(.8)
+			margin .5em
+			cursor pointer
+			&:hover
+				fill #fb0303
+.hamburger
+	cursor pointer
+	margin-right .2em
+	margin-top .5em
+
+	//float right
+	width 2em
+	height 2em
+	position absolute
+	top 0
+	right 0
+	z-index 2000
+	img
+		width 80%
+		height 80%
+
+	svg
+		width 100%
+		height 100%
+		fill #000
+	/*
+	&:hover
+		fill #fb0303
+	*/
+	.menu
+		display block
+	.close
+		display none
+	&.active
+		position fixed
+		.menu
+			display none
+		.close
+			display block
+
+
 .container
 	margin 0 auto
 	width 70%
@@ -63,7 +166,6 @@ button.wp-block-button__link
 img.header
 	margin .2em
 	width 20em
-
 
 .footer
 	display grid
@@ -122,42 +224,45 @@ img.header
 		text-align center
 		font-size .7em
 
-	.back-to-top
-		cursor pointer
-		margin-right .2em
-		margin-top .5em
+.back-to-top-link
+	cursor pointer
+	margin-right .2em
+	margin-top .5em
 
-		//float right
-		width 2em
-		height 2em
-		position fixed
-		bottom 0
-		right 0
-		display none
-		z-index 2000
-		opacity 0
-		transition all ease-in-out .2s
-		&.in
-			display block
+	//float right
+	width 2em
+	height 2em
+	position fixed
+	bottom 0
+	right 0
+	display none
+	z-index 2000
+	opacity 0
+	transition all ease-in-out .2s
+	&.in
+		display block
 
-		&.visible
-			opacity 1
-		svg
-			width 80%
-			height 80%
+	&.visible
+		opacity 1
+	svg
+		width 80%
+		height 80%
 
-			&:hover
-				fill #fb0303
+		&:hover
+			fill #fb0303
 
 bdi
 	line-height 2em
 
 input
-	height 4em
+	height 2em
 
 input.wc-block-components-quantity-selector__input
 	height 1em
 	width 2em
+
+.wc-block-components-product-sku
+	left 0px
 
 ol.flex-control-thumbs
 	li
@@ -166,9 +271,10 @@ ol.flex-control-thumbs
 		height 6em
 		float left
 		border 2px solid white
-		img
-			width 100%
-			object-fit contain
+	img
+		max-width 100%
+		height auto
+		object-fit contain
 
 .wp-image-81
 	display block
@@ -189,3 +295,6 @@ h1.wp-block-query-title
 
 .wp-block-query
 	margin-top 1em
+
+.woocommerce-breadcrumb
+	visibility hidden
