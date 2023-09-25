@@ -147,7 +147,7 @@ function detectScrollPos() {
 function attachSocialLinks() {
 	const facebookLinks = document.querySelectorAll('.facebook');
 	const instagramLinks = document.querySelectorAll('.ig');
-	// const emailLinks = document.querySelectorAll('.email');
+	const emailLinks = document.querySelectorAll('.email');
 
 	facebookLinks.forEach(function(link) {
 		link.addEventListener('click', function(e) {
@@ -163,7 +163,12 @@ function attachSocialLinks() {
 		});
 	});
 
-
+	emailLinks.forEach(function(link) {
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+			window.location.href = 'mailto:info@monkmagazine.com';
+		});
+	});
 }
 
 
