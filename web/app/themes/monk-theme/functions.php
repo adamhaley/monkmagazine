@@ -78,6 +78,7 @@ function add_footer() {
 function add_woo_support()
 {
 	add_theme_support( 'woocommerce' );
+	add_theme_support( 'post-thumbnails' );
 }
 
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 10 );
@@ -90,13 +91,15 @@ add_action('woocommerce_before_main_content','add_header', 5);
 add_action('woocommerce_before_main_content','add_open_container_div', 7);
 add_action('woocommerce_after_main_content','add_close_container_div', 150);
 add_action('woocommerce_after_main_content','add_footer', 160);
-add_action('woocommerce_before_checkout_form','add_header', 5);
+add_action('woocommerce_before_checkout_form','add_header', 1);
 add_action('woocommerce_before_checkout_form','add_open_container_div', 7);
 add_action('woocommerce_after_checkout_form','add_close_container_div', 170);
-add_action('woocommerce_after_checkout_form','add_footer', 215);
+add_action('woocommerce_after_checkout_form','add_footer', 100);
 add_action('woocommerce_before_cart','add_header', 5);
 add_action('woocommerce_before_cart','add_open_container_div', 12);
 add_action('woocommerce_after_cart','add_close_container_div', 200);
 add_action('woocommerce_after_cart','add_footer', 215);
 add_action('after_setup_theme', 'add_woo_support');
+
+remove_filter( 'woocommerce_before_checkout_form', 'wpautop', 10 );
 

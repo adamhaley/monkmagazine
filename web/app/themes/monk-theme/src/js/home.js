@@ -78,10 +78,6 @@ function closeNav() {
 }
 
 
-
-
-
-
 /**
  * Close nav when clicking a link on it
  */
