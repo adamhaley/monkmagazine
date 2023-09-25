@@ -72,11 +72,11 @@ backToTop.addEventListener('click', function(e) {
 function detectResponsiveEnvironment() {
 
 	let breakpoints = {
-		'xs': 0,
-		'sm': 576,
-		'md': 768,
-		'lg': 992,
-		'xl': 1200
+		xs: 0,
+		sm: 576,
+		md: 768,
+		lg: 992,
+		xl: 1200
 	};
 
 	let currentBreakpoint = 'xs';
@@ -97,12 +97,11 @@ function detectResponsiveEnvironment() {
 	//add class to the body tag based on breakpoint
 	function updateBodyClass() {
 		let breakpoint = getCurrentBreakpoint();
-		document.body.classList.remove(['xs', 'sm', 'md', 'lg', 'xl']);
+
+		document.body.classList.remove(Object.keys(breakpoints));
 
 		document.body.classList.forEach(function(item) {
-			if(item == breakpoint && !document.body.classList.contains(breakpoint)) {
-				document.body.classList.add(item);
-			}else{
+			if( Object.keys(breakpoints).includes(item) && item != breakpoint ){
 				document.body.classList.remove(item);
 			}
 
@@ -117,6 +116,7 @@ function detectResponsiveEnvironment() {
 	if(document.querySelector('#wpadminbar')) {
 		document.querySelector('.hamburger').style.top = '32px';
 	}
+
 
 };
 
@@ -168,8 +168,8 @@ function attachSocialLinks() {
 
 
 (function() {
-	// window.addEventListener('load', detectResponsiveEnvironment, false);
-
+	window.addEventListener('load', detectResponsiveEnvironment, false);
+	window.addEventListener('load', attachSocialLinks, false)
 	var timeId = null;
 	function startResize() {
 		clearTimeout(timeId);
@@ -186,7 +186,5 @@ function attachSocialLinks() {
 
 	window.addEventListener('scroll', startScroll);
 
-	attachSocialLinks();
-	detectResponsiveEnvironment();
 }).call(this);
 
