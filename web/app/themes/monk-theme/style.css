@@ -728,7 +728,7 @@ a.more-link i:hover {
   text-align: center;
   font-size: 0.7em;
 }
-.back-to-top {
+.back-to-top-link {
   cursor: pointer;
   margin-right: 0.2em;
   margin-top: 0.5em;
@@ -742,17 +742,17 @@ a.more-link i:hover {
   opacity: 0;
   transition: all ease-in-out 0.2s;
 }
-.back-to-top.in {
+.back-to-top-link.in {
   display: block;
 }
-.back-to-top.visible {
+.back-to-top-link.visible {
   opacity: 1;
 }
-.back-to-top svg {
+.back-to-top-link svg {
   width: 80%;
   height: 80%;
 }
-.back-to-top svg:hover {
+.back-to-top-link svg:hover {
   fill: #fb0303;
 }
 #monks-home {
