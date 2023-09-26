@@ -171,10 +171,46 @@ function attachSocialLinks() {
 	});
 }
 
+function attachNavLinks() {
+	/*
+	const navLinks = document.querySelectorAll('ul.nav-menu li a');
+	navLinks.forEach(function(link) {
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+			const target = this.getAttribute('href');
+			const targetElement = document.querySelector(target);
+			const targetOffset = targetElement.offsetTop;
+			window.scrollTo({
+				top: targetOffset,
+				behavior: 'smooth'
+			});
+		});
+	});
+	*/
+
+	let links = document.querySelectorAll('.nav-menu a[href^="#"]');
+	links.forEach(function(link) {
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+			console.log(this.getAttribute('href'));
+			let anchor = this.getAttribute('href').slice(1, this.getAttribute('href').length);
+			let target = document.querySelector('.' + anchor);
+			let offset = target.getBoundingClientRect();
+			offset = offset.top;
+			window.scrollTo({
+				top: offset,
+				behavior: 'smooth'
+			});
+		});
+	});
+
+}
 
 (function() {
 	window.addEventListener('load', detectResponsiveEnvironment, false);
 	window.addEventListener('load', attachSocialLinks, false)
+	window.addEventListener('load', attachNavLinks, false)
+
 	var timeId = null;
 	function startResize() {
 		clearTimeout(timeId);
