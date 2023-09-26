@@ -158,13 +158,17 @@ a.more-link
 	text-decoration none
 	padding .5em
 	height .8em
+	color #000
+	&:hover
+		color #000
 	img
 		display inline-block
 		margin-right .2em
 	i
 		display inline-block
 		position relative
-		top:.4em
+		//top:.4em
+		margin-left .2em
 		color #000 !important
 		&:hover
 			color #fb0303 !important
@@ -364,10 +368,15 @@ a.more-link
 	grid-column-start 7
 	grid-column-end 10
 	text-decoration none
-	padding .5em
+	//padding .5em
 	height 1em
 	width 100%
 	margin-top -4.5em
+	margin-left 2em
+	color #000
+	&:hover
+		color #000
+		text-decoration none
 	.xs &, .sm &, .md &
 		margin-top 0
 	img
@@ -380,8 +389,8 @@ a.more-link
 
 	i
 		position relative
-		top .4em
-		margin-left .2em
+		//top .4em
+		//margin-left .2em
 		display inline-block
 		color #000 !important
 		&:hover
@@ -443,8 +452,14 @@ a.more-link
 			margin-bottom 1em
 
 	.more-thrills
-		margin-top 1em
+		position relative
+		top 1em
 		height 1em
+		color #000
+		&:hover
+			color #000
+			text-decoration none
+
 		img
 			display inline-block
 			margin-right .2em
@@ -452,7 +467,7 @@ a.more-link
 			height 1em
 		i
 			position relative
-			top .6em
+			margin-left .2em
 			display inline-block
 			color #000 !important
 			&:hover
