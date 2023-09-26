@@ -106,18 +106,3 @@ backToTop.addEventListener('click', function(e) {
 	});
 });
 
-let links = document.querySelectorAll('.nav-menu a[href^="#"]');
-links.forEach(function(link) {
-	link.addEventListener('click', function(e) {
-		e.preventDefault();
-		console.log(this.getAttribute('href'));
-		let anchor = this.getAttribute('href').slice(1, this.getAttribute('href').length);
-		let target = document.querySelector('.' + anchor);
-		let offset = target.getBoundingClientRect();
-		offset = offset.top;
-		window.scrollTo({
-			top: offset,
-			behavior: 'smooth'
-		});
-	});
-});

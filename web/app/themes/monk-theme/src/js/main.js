@@ -171,10 +171,36 @@ function attachSocialLinks() {
 	});
 }
 
+function attachNavLinks() {
+
+	let links = document.querySelectorAll('.nav-menu a[href^="#"]');
+	links.forEach(function(link) {
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+			let anchor = this.getAttribute('href').slice(1, this.getAttribute('href').length);
+			//if we are on the homepage, scroll to the anchor
+			if(document.body.classList.contains('home')) {
+				let target = document.querySelector('.' + anchor);
+				let offset = target.getBoundingClientRect();
+				offset = offset.top;
+				window.scrollTo({
+					top: offset,
+					behavior: 'smooth'
+				});
+			}else{
+				//got home with anchor link
+				window.location.href = window.location.origin + '/#' + anchor;
+			}
+		});
+	});
+
+}
 
 (function() {
 	window.addEventListener('load', detectResponsiveEnvironment, false);
 	window.addEventListener('load', attachSocialLinks, false)
+	window.addEventListener('load', attachNavLinks, false)
+
 	var timeId = null;
 	function startResize() {
 		clearTimeout(timeId);
