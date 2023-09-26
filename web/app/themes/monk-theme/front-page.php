@@ -65,7 +65,7 @@
 			<br /><br />
 
 			<a name="read-this"></a>
-		<a href="" class="more-link" @click="content1=!content1"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/more.png' ) ?>" alt="More" class="more" /><i :class="content1? 'fa fa-minus' : 'fa fa-plus'"></i>
+		<a href="" class="more-link" @click="content1=!content1"><!--<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/more.png' ) ?>" alt="More" class="more" />--><b>MORE</b><i :class="content1? 'fa fa-minus' : 'fa fa-plus'"></i>
 		</a>
 	</div>
 	<div class="row">
@@ -104,7 +104,7 @@
 
 			?>
 	</ul>
-	<a href="" class="more-stuff-to-buy" @click="content2=!content2"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .   '/assets/images/more-stuff-to-buy.png' ) ?>" alt="More Stuff To Buy" class="more" /><i :class="content2? 'fa fa-minus' : 'fa fa-plus'"></i></a>
+	<a href="" class="more-stuff-to-buy" @click="content2=!content2"><!--<img src="<?php echo esc_url( get_stylesheet_directory_uri() .   '/assets/images/more-stuff-to-buy.png' ) ?>" alt="More Stuff To Buy" class="more" />--><b>MORE STUFF TO BUY</b> <i :class="content2? 'fa fa-minus' : 'fa fa-plus'"></i></a>
 	<div class="buy-overflow overflow">
 		<ul class="more-stuff">
 			<?php
@@ -192,7 +192,7 @@
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
-			<a href="" @click="content3 = !content3" class="more-thrills"><img src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/more-thrills.png' ) ?>" alt="More Thrills" class="more-thrills" /><i :class="content3? 'fa fa-minus' : 'fa fa-plus'"></i></a>
+			<a href="" @click="content3 = !content3" class="more-thrills"><!--<img src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/more-thrills.png' ) ?>" alt="More Thrills" class="more-thrills" />--><b>MORE THRILLS</b><i :class="content3? 'fa fa-minus' : 'fa fa-plus'"></i></a>
 		</div>
 	</div>
 	<div class="thrills-overflow overflow">
