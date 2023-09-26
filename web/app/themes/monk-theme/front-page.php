@@ -55,6 +55,7 @@
 	</div>
 
 	<div class="content">
+		<a name="read-this"></a>
 		<img class="read-this" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/read-this.png' ) ?>" alt="Read This" /><br />
 		<?php
 			$post = get_post( 1 );
@@ -76,7 +77,7 @@
 			</span>
 
 	</div>
-	<div class="buy">
+	<div class="buy"><a name="buy"></a>
 		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/literally-buy.png' ) ?>" alt="Buy" />
 	</div>
 

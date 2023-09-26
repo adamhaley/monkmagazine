@@ -5,48 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efd85e79-221c-4c80-8c12-648e78e6e1a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/monkmagazine-9-26.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/external.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/grouped.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/simple.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/variable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/variation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/meta.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/photoswipe.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/price.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/product-attributes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/product-image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/product-thumbnails.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/rating.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/related.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/review-meta.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/review-rating.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/review.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/sale-flash.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/share.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/short-description.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/stock.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/tabs/additional-information.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/tabs/description.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/tabs/tabs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/title.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/up-sells.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monkmagazine-9-11.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monkmagazine-9-8-23.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monkmagazine.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monkmagazine9-10.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monkmagazinebackup.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monkmagazinebak.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/main.styl" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/main.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/shop.styl" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/shop.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/front-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/front-page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
