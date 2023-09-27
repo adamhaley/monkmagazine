@@ -6,36 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="efd85e79-221c-4c80-8c12-648e78e6e1a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/shop.styl" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/shop.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/external.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/grouped.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/simple.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/variable.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/add-to-cart/variation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/meta.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/photoswipe.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/price.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/product-attributes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/product-image.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/product-thumbnails.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/rating.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/related.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/review-meta.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/review-rating.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/review.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/sale-flash.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/share.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/short-description.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/stock.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/tabs/additional-information.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/tabs/description.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/tabs/tabs.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/title.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/woocommerce/single-product/up-sells.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/main.styl" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/main.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/style.css.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

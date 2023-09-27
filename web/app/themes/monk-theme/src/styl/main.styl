@@ -130,7 +130,7 @@ img.simple-mobile-true
 
 	.xs &
 		height 2em
-
+		margin-left .5em
 	.sm &
 		height 2em
 		margin-bottom 0
@@ -192,15 +192,14 @@ a.more-link
 
 	.buy
 		margin-top 4em
-		width 100%
 		grid-column-start 1
 		grid-column-end 8
 		img
-			height 2.5em
+			height 1.5em
 			display block
-
+			max-width none
 			.xs &
-				height 1.5em
+				height 1.1em
 	a.cart
 		display block
 		text-decoration none
@@ -231,7 +230,10 @@ a.more-link
 		display block
 		position relative
 		grid-column-start 5
-		grid-column-end 9
+		grid-column-end 10
+		.lg &
+			grid-column-start 5
+			grid-column-end 10
 		.xs &, .sm &, .md &
 			grid-column-start 1
 			grid-column-end 10
