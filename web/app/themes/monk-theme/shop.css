@@ -2,12 +2,13 @@
   !*** css ../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../node_modules/stylus-native-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./styl/shop.styl ***!
   \****************************************************************************************************************************************************************************/
 body {
+  display: grid;
   font-family: 'Oswald', sans-serif;
   font-size: 0.9em;
   line-height: 1.2em;
 }
 body .wp-site-blocks {
-  padding: 1em;
+  padding: 0em;
 }
 h2 {
   font-size: 1.5em;
@@ -16,10 +17,14 @@ h2 {
 }
 header img.header {
   width: 80%;
+  margin-left: 10%;
 }
-.sm header img.header,
-.md header img.header {
-  width: 100%;
+.md header img.header,
+.xs header img.header {
+  margin-left: 5%;
+}
+.xs header img.header {
+  width: 80%;
 }
 .fa-plus:hover {
   color: #fb0303;
@@ -329,6 +334,9 @@ h1.wp-block-query-title {
   margin: 0;
   padding: 0;
   display: inline;
+}
+body .wp-site-blocks {
+  padding: 0em;
 }
 
 
