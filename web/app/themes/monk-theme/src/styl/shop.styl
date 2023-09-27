@@ -1,10 +1,11 @@
 body
+	display grid
 	font-family: 'Oswald', sans-serif;
 	font-size .9em
 	line-height 1.2em
 
 	.wp-site-blocks
-		padding 1em
+		padding 0em
 h2
 	font-size 1.5em
 	font-weight 400
@@ -14,9 +15,11 @@ header
 
 	img.header
 		width 80%
-		.sm &, .md &
-			width 100%
-
+		margin-left 10%
+		.md &, .xs &
+			margin-left 5%
+		.xs &
+			width 80%
 .fa-plus:hover
 	color #fb0303
 
@@ -294,3 +297,6 @@ h1.wp-block-query-title
 		margin 0
 		padding 0
 		display inline
+
+body .wp-site-blocks
+	padding 0em
