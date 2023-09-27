@@ -151,6 +151,7 @@ img.simple-mobile-true {
 }
 .xs img.simple-mobile-true {
   height: 2em;
+  margin-left: 0.5em;
 }
 .sm img.simple-mobile-true {
   height: 2em;
@@ -222,16 +223,16 @@ a.more-link i:hover {
 }
 .container .buy {
   margin-top: 4em;
-  width: 100%;
   grid-column-start: 1;
   grid-column-end: 8;
 }
 .container .buy img {
-  height: 2.5em;
+  height: 1.5em;
   display: block;
+  max-width: none;
 }
 .xs .container .buy img {
-  height: 1.5em;
+  height: 1.1em;
 }
 .container a.cart {
   display: block;
@@ -267,7 +268,11 @@ a.more-link i:hover {
   display: block;
   position: relative;
   grid-column-start: 5;
-  grid-column-end: 9;
+  grid-column-end: 10;
+}
+.lg .container .content {
+  grid-column-start: 5;
+  grid-column-end: 10;
 }
 .xs .container .content,
 .sm .container .content,
