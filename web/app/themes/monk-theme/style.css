@@ -150,8 +150,9 @@ img.simple-mobile-true {
   margin-left: 20%;
 }
 .xs img.simple-mobile-true {
-  height: 2em;
-  margin-left: 0.5em;
+  height: auto;
+  width: 80%;
+  margin-left: 12%;
 }
 .sm img.simple-mobile-true {
   height: 2em;
@@ -160,6 +161,10 @@ img.simple-mobile-true {
 .md img.simple-mobile-true {
   height: 3em;
   margin-bottom: 0;
+  margin-left: 13%;
+}
+.lg img.simple-mobile-true {
+  margin-left: 15%;
 }
 img.read-this {
   height: 2em;
@@ -211,13 +216,13 @@ a.more-link i:hover {
   grid-template-columns: repeat(8, 1fr);
   gap: 1em;
 }
-.container .row {
+.container .monk-row {
   grid-column-start: 2;
   grid-column-end: 10;
 }
-.xs .container .row,
-.sm .container .row,
-.md .container .row {
+.xs .container .monk-row,
+.sm .container .monk-row,
+.md .container .monk-row {
   grid-column-start: 1;
   grid-column-end: 10;
 }
