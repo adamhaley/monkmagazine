@@ -105,13 +105,16 @@ ul.nav-menu .social-links svg:hover {
   width: 2em;
   height: 2em;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   z-index: 2000;
 /*
 	&:hover
 		fill #fb0303
 	*/
+}
+.single-product .hamburger {
+  top: -30px;
 }
 .hamburger img {
   width: 80%;

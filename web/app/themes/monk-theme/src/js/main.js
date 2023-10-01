@@ -148,6 +148,8 @@ function attachSocialLinks() {
 	const facebookLinks = document.querySelectorAll('.facebook');
 	const instagramLinks = document.querySelectorAll('.ig');
 	const emailLinks = document.querySelectorAll('.email');
+	const xLinks = document.querySelectorAll('.twitter');
+	const linkedinLinks = document.querySelectorAll('.linkedin');
 
 	facebookLinks.forEach(function(link) {
 		link.addEventListener('click', function(e) {
@@ -167,6 +169,20 @@ function attachSocialLinks() {
 		link.addEventListener('click', function(e) {
 			e.preventDefault();
 			window.location.href = 'mailto:info@monkmagazine.com';
+		});
+	});
+
+	xLinks.forEach(function(link) {
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+			window.open('https://twitter.com/TheRealMonkMag', '_blank');
+		});
+	});
+
+	linkedinLinks.forEach(function(link) {
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+			window.open('https://www.linkedin.com/company/monkmagazine/', '_blank');
 		});
 	});
 }
