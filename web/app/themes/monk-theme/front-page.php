@@ -2,7 +2,7 @@
 
 <div class="container" x-data="{ content1 : false, content2 : false, content3 : false }">
 	<!-- simple mobile true image -->
-	<div class="row">
+	<div class="monk-row">
 		<img class="simple-mobile-true" src="<?php echo esc_url( get_stylesheet_directory_uri() .  '/assets/images/simple-mobile-true.png' ); ?>" alt="Simple.Mobile.True." >
 	</div><br />
 	<?php
@@ -68,7 +68,7 @@
 		<a href="" class="more-link" @click="content1=!content1"><!--<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/more.png' ) ?>" alt="More" class="more" />--><b>MORE</b><i :class="content1? 'fa fa-minus' : 'fa fa-plus'"></i>
 		</a>
 	</div>
-	<div class="row">
+	<div class="monk-row">
 			<span class="overflow">
 				<?php echo $post->post_content; ?>
 				<div class="overflow-bottom" @click="content1=false">
