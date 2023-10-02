@@ -211,10 +211,12 @@ a.more-link i:hover {
   grid-row: span 5;
 }
 .container {
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 1em;
+  padding-left: none !important;
+  padding-right: none !important;
 }
 .container .monk-row {
   grid-column-start: 2;
