@@ -113,7 +113,7 @@ function detectResponsiveEnvironment() {
 
 	console.log('running detect admin bar');
 	//if wp admin bar is there, move hamburger down
-	if(document.querySelector('#wpadminbar')) {
+	if(document.querySelector('#wpadminbar') && !document.querySelector('.hamburger').classList.contains('active') && document.querySelector('.hamburger').style.top != '32px'){
 		document.querySelector('.hamburger').style.top = '32px';
 	}
 
