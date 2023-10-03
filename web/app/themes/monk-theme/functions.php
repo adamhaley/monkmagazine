@@ -81,16 +81,9 @@ function add_woo_support()
 	add_theme_support( 'post-thumbnails' );
 }
 
-function jk_change_number_related_products( $args ) {
-	$args['posts_per_page'] = 16; // # of related products
-	$args['columns'] = 4; // # of columns per row
-	return $args;
-}
-
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 10 );
 add_filter('woocommerce_product_description_heading', '__return_null' );
 add_filter('use_block_editor_for_post', '__return_false');
-add_filter('woocommerce_output_related_products_args', 'jk_change_number_related_products', 20 );
 add_action('after_setup_theme', 'add_woo_support');
 add_action('wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 10);
 add_action('wp_enqueue_scripts', 'monktheme_register_styles');
