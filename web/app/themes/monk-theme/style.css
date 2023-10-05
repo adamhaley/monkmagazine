@@ -817,6 +817,15 @@ a.more-link i:hover {
   transform: scale(1.05);
   transition: all ease-in-out 0.2s;
 }
+ul {
+  display: block;
+  list-style-type: disc;
+  padding-left: 40px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
 
 
 /*# sourceMappingURL=style.css.map*/
