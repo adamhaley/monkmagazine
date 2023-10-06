@@ -17,10 +17,12 @@ web/app/cache/*
 web/wp
 web/.htaccess
 
-# Logs
 *.log
 *.swp
 *.swo
+*.map
+*.xml
+*.css
 
 # Dotenv
 .env
