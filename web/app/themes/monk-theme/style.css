@@ -541,6 +541,9 @@ a.more-link i:hover {
   margin-top: 1em;
   padding-right: 0em;
 }
+.lg .on-the-road p {
+  padding-right: 1em;
+}
 .on-the-road #monk-on-the-road {
   float: right;
   width: 50%;
