@@ -39,6 +39,7 @@
 					} else {
 						echo '<div class="carousel-item">';
 					}
+					//echo wp_get_attachment_image_sizes($image->ID, 'full');
 					echo "<img class='monks-home d-block w-300' src='" . wp_get_attachment_url($image->ID) . "' alt='Monks Home'>";
 					echo '</div>';
 				}
@@ -95,7 +96,9 @@
 			$loop = new WP_Query( $args );
 				if ( $loop->have_posts() ) {
 				while ( $loop->have_posts() ) : $loop->the_post();
-				echo "<li class='issue'><a href='" . get_permalink() . "'><img src='" . get_the_post_thumbnail_url( get_the_ID(), 'small'  ) . "' alt='" . get_the_title() . "' /></a></li>";
+				$url = get_the_post_thumbnail_url( get_the_ID(), 'small'  );
+				$url = preg_replace('/(.*?)(\/EP\d{1,2}front-big)(.*?)\.(jpg|jpeg|png|gif)$/i', '$1$2-300x400.$4', $url);
+				echo "<li class='issue'><a href='" . get_permalink() . "'><img src='" . $url . "' alt='" . get_the_title() . "' /></a></li>";
 				endwhile;
 			} else {
 				echo __( 'No products found' );
