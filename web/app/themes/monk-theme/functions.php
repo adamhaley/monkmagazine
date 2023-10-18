@@ -100,5 +100,10 @@ add_action('woocommerce_before_cart','add_header', 5);
 add_action('woocommerce_before_cart','add_open_container_div', 12);
 add_action('woocommerce_after_cart','add_close_container_div', 200);
 add_action('woocommerce_after_cart','add_footer', 215);
+//add header before page content
+add_action('before_page_content','add_header', 5);
+add_action('before_page_content','add_open_container_div', 7);
+add_action('after_page_content','add_close_container_div', 150);
+add_action('after_page_content','add_footer', 160);
 
 
