@@ -5,7 +5,7 @@
 Theme Name:     Monk-theme
 Description:    Monk Magazine Custom theme.
 Author:         Adam Haley
-Version:        0.2.7
+Version:        0.2.8
 */
 body {
   display: grid;
@@ -34,6 +34,17 @@ img.header {
 }
 .fa-plus:hover {
   color: #fb0303;
+}
+a {
+  padding: none;
+  margin: none;
+  text-decoration: none;
+  color: #000;
+  display: inline;
+}
+a:hover {
+  color: #fb0303;
+  text-decoration: underline;
 }
 ul.nav-menu {
   display: none;
