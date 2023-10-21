@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="efd85e79-221c-4c80-8c12-648e78e6e1a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/reset.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/reset.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/shop.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/main.styl" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/main.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/reset.styl" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/reset.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/shop.styl" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/monk-theme/src/styl/shop.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/monk-theme/page.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +126,9 @@
       <workItem from="1694296314301" duration="5245000" />
       <workItem from="1696311621077" duration="5005000" />
       <workItem from="1696480839984" duration="1661000" />
+      <workItem from="1697156598060" duration="9799000" />
+      <workItem from="1697666646700" duration="3000" />
+      <workItem from="1697666697614" duration="739000" />
     </task>
     <servers />
   </component>
