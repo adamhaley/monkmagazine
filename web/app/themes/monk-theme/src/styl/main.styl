@@ -390,14 +390,16 @@ a.more-link
 	//padding .5em
 	height 1em
 	width 100%
-	margin-top -4.5em
+	margin-top -2em
 	margin-left 2em
 	color #000
 	&:hover
 		color #000
 		text-decoration none
-	.xs &, .sm &, .md &
+	.xs &, .sm &,
 		margin-top 0
+	.md &
+		margin-top 5em
 	img
 		display inline-block
 		.xs &
@@ -418,8 +420,7 @@ a.more-link
 	.md &, .sm &
 		width 100%
 		//margin-left 4em
-		margin-top -1em
-		margin-bottom 1em
+		margin-top 1em
 		grid-column-start 7
 		grid-column-end 11
 		img

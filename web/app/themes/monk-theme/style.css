@@ -470,7 +470,7 @@ a.more-link i:hover {
   text-decoration: none;
   height: 1em;
   width: 100%;
-  margin-top: -4.5em;
+  margin-top: -2em;
   margin-left: 2em;
   color: #000;
 }
@@ -480,8 +480,9 @@ a.more-link i:hover {
 }
 .xs .more-stuff-to-buy,
 .sm .more-stuff-to-buy,
+.more-stuff-to-buy margin-top 0,
 .md .more-stuff-to-buy {
-  margin-top: 0;
+  margin-top: 5em;
 }
 .more-stuff-to-buy img {
   display: inline-block;
@@ -504,8 +505,7 @@ a.more-link i:hover {
 .md .more-stuff-to-buy,
 .sm .more-stuff-to-buy {
   width: 100%;
-  margin-top: -1em;
-  margin-bottom: 1em;
+  margin-top: 1em;
   grid-column-start: 7;
   grid-column-end: 11;
 }
