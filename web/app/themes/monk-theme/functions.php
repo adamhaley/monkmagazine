@@ -101,9 +101,30 @@ add_action('woocommerce_before_cart','add_open_container_div', 12);
 add_action('woocommerce_after_cart','add_close_container_div', 200);
 add_action('woocommerce_after_cart','add_footer', 215);
 //add header before page content
+add_action('the_content', 'add_header_to_page', 1);
+function add_header_to_page($content) {
+	if(is_page()) {
+		add_header();
+		add_open_container_div();
+	}
+	return $content;
+}
+
+//add footer after page content
+add_action('the_content', 'add_footer_to_page', 300);
+function add_footer_to_page($content) {
+	ob_start();
+	if(is_page()) {
+		add_close_container_div() . add_footer();
+	}
+	$footer = ob_get_clean();
+	return $content . $footer;
+}
+
+/*
 add_action('before_page_content','add_header', 5);
 add_action('before_page_content','add_open_container_div', 7);
 add_action('after_page_content','add_close_container_div', 150);
 add_action('after_page_content','add_footer', 160);
-
+*/
 
