@@ -7,3 +7,7 @@
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 require_once dirname(__DIR__) . '/config/application.php';
 require_once ABSPATH . 'wp-settings.php';
+
+define('FS_METHOD', 'direct');
+define('FS_CHMOD_DIR',0755);
+define('FS_CHMOD_FILE',0644);
