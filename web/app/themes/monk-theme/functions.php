@@ -11,7 +11,7 @@ function monketheme_support(){
 	add_theme_support('title-tag');
 }
 
-add_action('wp_head', 'header_code');
+// add_action('wp_head', 'header_code');
 
 function header_code() {
 	echo '<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN2K5L"></script> <script>  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag(\'js\', new Date()); gtag(\'config\', \'G-NN2K5L\');</script>';
@@ -92,7 +92,7 @@ add_action('woocommerce_before_main_content','add_header', 5);
 add_action('woocommerce_before_main_content','add_open_container_div', 7);
 add_action('woocommerce_after_main_content','add_close_container_div', 150);
 add_action('woocommerce_after_main_content','add_footer', 160);
-add_action('woocommerce_before_checkout_form','add_header', 1);
+// add_action('woocommerce_before_checkout_form','add_header', 1);
 add_action('woocommerce_before_checkout_form','add_open_container_div', 7);
 add_action('woocommerce_after_checkout_form','add_close_container_div', 170);
 add_action('woocommerce_after_checkout_form','add_footer', 100);
@@ -128,3 +128,13 @@ add_action('after_page_content','add_close_container_div', 150);
 add_action('after_page_content','add_footer', 160);
 */
 
+
+
+remove_action( 'wp_footer', 'the_block_template_skip_link' );
+
+// REMOVE WP EMOJI
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
