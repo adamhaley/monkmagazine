@@ -121,13 +121,6 @@ function add_footer_to_page($content) {
 	return $content . $footer;
 }
 
-/*
-add_action('before_page_content','add_header', 5);
-add_action('before_page_content','add_open_container_div', 7);
-add_action('after_page_content','add_close_container_div', 150);
-add_action('after_page_content','add_footer', 160);
-*/
-
 
 
 remove_action( 'wp_footer', 'the_block_template_skip_link' );
