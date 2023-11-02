@@ -346,6 +346,13 @@ body .wp-site-blocks {
   margin-left: auto;
   margin-right: auto;
 }
+.wc-block-components-product-rating {
+  display: none;
+}
+.woocommerce div.product div.images .flex-control-thumbs li {
+  padding: 0.5em;
+  padding-left: 0;
+}
 
 
 /*# sourceMappingURL=shop.css.map*/
