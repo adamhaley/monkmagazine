@@ -100,6 +100,9 @@ add_action('woocommerce_before_cart','add_header', 5);
 add_action('woocommerce_before_cart','add_open_container_div', 12);
 add_action('woocommerce_after_cart','add_close_container_div', 200);
 add_action('woocommerce_after_cart','add_footer', 215);
+add_action('woocommerce_before_thankyou','add_header',5);
+add_action('woocommerce_after_thankyou','add_footer',150);
+
 //add header before page content
 add_action('the_content', 'add_header_to_page', 1);
 function add_header_to_page($content) {
@@ -118,6 +121,7 @@ function add_footer_to_page($content) {
 		add_close_container_div() . add_footer();
 	}
 	$footer = ob_get_clean();
+	ob_end_clean();
 	return $content . $footer;
 }
 
@@ -142,7 +146,6 @@ function custom_woocommerce_gallery_thumbnail_size($size) {
     return $size;
 }
 add_filter('woocommerce_get_image_size_gallery_thumbnail', 'custom_woocommerce_gallery_thumbnail_size');
-
 
 
 
