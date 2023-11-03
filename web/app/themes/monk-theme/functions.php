@@ -131,3 +131,18 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+function custom_woocommerce_gallery_thumbnail_size($size) {
+    // Adjust the gallery image size
+    $size = array(
+        'width' => 9999, // Set a large width
+        'height' => 9999, // Set a large height
+        'crop' => false, // Disable cropping
+    );
+    return $size;
+}
+add_filter('woocommerce_get_image_size_gallery_thumbnail', 'custom_woocommerce_gallery_thumbnail_size');
+
+
+
+
