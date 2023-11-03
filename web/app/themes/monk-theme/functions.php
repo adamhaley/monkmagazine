@@ -121,7 +121,6 @@ function add_footer_to_page($content) {
 		add_close_container_div() . add_footer();
 	}
 	$footer = ob_get_clean();
-	ob_end_clean();
 	return $content . $footer;
 }
 
