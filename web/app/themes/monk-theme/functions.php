@@ -148,7 +148,7 @@ add_filter('woocommerce_get_image_size_gallery_thumbnail', 'custom_woocommerce_g
 
 // Add custom content before the Thank You page
 function woosuite_custom_before_thankyou_content() {
-	echo '<h2>We Got It!  You are AWESOME and soon to be Monked!  Your Rare Copy of Monk Magazine is on its way!  Thank you for joining the journey.
+	echo '<h2 class="we-got-it">We Got It!  You are AWESOME and soon to be Monked!  Your Rare Copy of Monk Magazine is on its way!  Thank you for joining the journey.
 <em>- The Monks</em></h2><br /><br /><br />';
 }
 add_action('woocommerce_before_thankyou', 'woosuite_custom_before_thankyou_content');
