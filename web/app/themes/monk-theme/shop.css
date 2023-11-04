@@ -360,7 +360,7 @@ p.woocommerce-notice {
   line-height: 1.5em;
 }
 bdi {
-  line-height: none;
+  line-height: 0;
 }
 body .wp-site-blocks {
   padding: 0em;
@@ -380,6 +380,9 @@ body .wp-site-blocks {
 .single-product .product .images .thumbnails img {
   max-width: 100px /* Adjust to your preferred width */;
   height: auto /* Maintain aspect ratio */;
+}
+.woocommerce-thankyou-order-received {
+  display: none;
 }
 
 

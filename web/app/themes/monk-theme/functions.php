@@ -146,5 +146,12 @@ function custom_woocommerce_gallery_thumbnail_size($size) {
 }
 add_filter('woocommerce_get_image_size_gallery_thumbnail', 'custom_woocommerce_gallery_thumbnail_size');
 
+// Add custom content before the Thank You page
+function woosuite_custom_before_thankyou_content() {
+	echo '<h2>We Got It!  You are AWESOME and soon to be Monked!  Your Rare Copy of Monk Magazine is on its way!  Thank you for joining the journey.
+<em>- The Monks</em></h2>';
+}
+add_action('woocommerce_before_thankyou', 'woosuite_custom_before_thankyou_content');
+
 
 
