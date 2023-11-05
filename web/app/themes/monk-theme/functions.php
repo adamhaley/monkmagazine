@@ -102,6 +102,10 @@ add_action('woocommerce_after_cart','add_close_container_div', 200);
 add_action('woocommerce_after_cart','add_footer', 215);
 add_action('woocommerce_before_thankyou','add_header',5);
 add_action('woocommerce_after_thankyou','add_footer',150);
+add_action('woocommerce_cart_is_empty', 'add_header_to_page', 2);
+add_action('woocommerce_cart_is_empty', 'get_footer', 1000);
+
+
 
 //add header before page content
 add_action('the_content', 'add_header_to_page', 1);
@@ -125,7 +129,6 @@ function add_footer_to_page($content) {
 }
 
 
-
 remove_action( 'wp_footer', 'the_block_template_skip_link' );
 
 // REMOVE WP EMOJI
@@ -146,12 +149,15 @@ function custom_woocommerce_gallery_thumbnail_size($size) {
 }
 add_filter('woocommerce_get_image_size_gallery_thumbnail', 'custom_woocommerce_gallery_thumbnail_size');
 
+
 // Add custom content before the Thank You page
 function woosuite_custom_before_thankyou_content() {
 	echo '<h2 class="we-got-it">We Got It!  You are AWESOME and soon to be Monked!  Your Rare Copy of Monk Magazine is on its way!  Thank you for joining the journey.
 <em>- The Monks</em></h2><br /><br /><br />';
 }
 add_action('woocommerce_before_thankyou', 'woosuite_custom_before_thankyou_content');
+
+
 
 
 
