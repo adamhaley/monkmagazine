@@ -213,7 +213,8 @@ function attachNavLinks() {
 }
 
 (function() {
-	window.addEventListener('load', detectResponsiveEnvironment, false);
+	detectResponsiveEnvironment();
+	// window.addEventListener('load', detectResponsiveEnvironment, false);
 	window.addEventListener('load', attachSocialLinks, false)
 	window.addEventListener('load', attachNavLinks, false)
 
