@@ -92,7 +92,7 @@ add_action('woocommerce_before_main_content','add_header', 5);
 add_action('woocommerce_before_main_content','add_open_container_div', 7);
 add_action('woocommerce_after_main_content','add_close_container_div', 150);
 add_action('woocommerce_after_main_content','add_footer', 160);
-// add_action('woocommerce_before_checkout_form','add_header', 1);
+add_action('woocommerce_before_checkout_form','add_header', 1);
 add_action('woocommerce_before_checkout_form','add_open_container_div', 7);
 add_action('woocommerce_after_checkout_form','add_close_container_div', 170);
 add_action('woocommerce_after_checkout_form','add_footer', 100);
@@ -156,9 +156,6 @@ function woosuite_custom_before_thankyou_content() {
 <em>- The Monks</em></h2><br /><br /><br />';
 }
 add_action('woocommerce_before_thankyou', 'woosuite_custom_before_thankyou_content');
-
-
-
 
 
 add_action('woocommerce_thankyou', function(){?>
