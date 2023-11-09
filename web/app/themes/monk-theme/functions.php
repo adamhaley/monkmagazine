@@ -92,7 +92,7 @@ add_action('woocommerce_before_main_content','add_header', 5);
 add_action('woocommerce_before_main_content','add_open_container_div', 7);
 add_action('woocommerce_after_main_content','add_close_container_div', 150);
 add_action('woocommerce_after_main_content','add_footer', 160);
-add_action('woocommerce_before_checkout_form','add_header', 1);
+// add_action('woocommerce_before_checkout_form','add_header', 1);
 add_action('woocommerce_before_checkout_form','add_open_container_div', 7);
 add_action('woocommerce_after_checkout_form','add_close_container_div', 170);
 add_action('woocommerce_after_checkout_form','add_footer', 100);
@@ -104,7 +104,8 @@ add_action('woocommerce_before_thankyou','add_header',5);
 add_action('woocommerce_after_thankyou','add_footer',150);
 add_action('woocommerce_cart_is_empty', 'add_header_to_page', 2);
 add_action('woocommerce_cart_is_empty', 'get_footer', 1000);
-
+add_filter('woocommerce_checkout_get_value','__return_empty_string',10);
+add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
 
 
 //add header before page content
