@@ -111,6 +111,10 @@ function detectResponsiveEnvironment() {
 
 	updateBodyClass();
 
+    //random bug fix for 32px offset hamburger don't ask
+	if(document.querySelector('.hamburger').style('top') === '32px') {
+		document.querySelector('.hamburger').style('top', '0px');
+	}
 
 };
 
