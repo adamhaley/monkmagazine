@@ -106,6 +106,16 @@ add_action('woocommerce_cart_is_empty', 'add_header_to_page', 2);
 add_action('woocommerce_cart_is_empty', 'get_footer', 1000);
 add_filter('woocommerce_checkout_get_value','__return_empty_string',10);
 add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
+add_filter( 'aioseo_thumbnail_size', function( $imageSize ) {
+    return [ 612, 700 ];
+} );
+
+
+function add_favicon_to_head() {
+    $favicon_url = 'https://monkmagazine.com/M-icon.png';
+    echo '<link rel="icon" href="' . esc_url($favicon_url) . '" type="image/x-icon" />';
+}
+add_action('wp_head', 'add_favicon_to_head');
 
 
 //add header before page content
