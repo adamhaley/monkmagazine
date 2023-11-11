@@ -2,7 +2,7 @@
 Theme Name:     Monk-theme
 Description:    Monk Magazine Custom theme.
 Author:         Adam Haley
-Version:        0.2.9
+Version:        0.3.0
 */
 body
 	display grid
@@ -712,5 +712,16 @@ a.more-link
 			&:hover
 				transform scale(1.05)
 				transition all ease-in-out .2s
+.xl.firefox &
+	.container .content
+		grid-column-start 7
+		grid-column-end 10
 
-
+.lg.firefox &
+	.container .content
+		grid-column-start 8
+		grid-column-end 10
+.md.firefox &
+	.container .content
+		grid-column-start 1
+		grid-column-end 10
