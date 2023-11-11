@@ -94,6 +94,14 @@ function detectResponsiveEnvironment() {
 		console.log('currentBreakpoint: ' + breakpoint);
 		return breakpoint;
 	}
+
+	function getCurrentBrowser() {
+		//detect firefox
+		if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+			document.body.classList.add('firefox');
+		}
+
+	}
 	//add class to the body tag based on breakpoint
 	function updateBodyClass() {
 		let breakpoint = getCurrentBreakpoint();
@@ -110,7 +118,7 @@ function detectResponsiveEnvironment() {
 	}
 
 	updateBodyClass();
-
+	getCurrentBrowser();
     //random bug fix for 32px offset hamburger don't ask
 	if(document.querySelector('.hamburger').style.top === '32px') {
 		document.querySelector('.hamburger').style.top = '0px';
