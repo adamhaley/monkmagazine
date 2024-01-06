@@ -86,9 +86,10 @@
 	<ul class="back-issues">
 		<?php
 			$args = array(
+				'meta_key' => 'issue-number',
 				'post_type'      => 'product',
 				'posts_per_page' => 19,
-				'orderby'	 => 'issue-number',
+				'orderby'	 => 'meta_value_num',
 				'order'		 => 'ASC',
 				'product_cat'    => 'back-issues'
 			);
