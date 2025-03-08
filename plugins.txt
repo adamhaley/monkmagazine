@@ -1,0 +1,17 @@
+all-in-one-seo-pack
+classic-editor
+easy-wp-smtp
+google-analytics-for-wordpress
+jetpack
+payment-gateway-stripe-and-woocommerce-integration
+pymntpl-paypal-woocommerce
+regenerate-thumbnails-advanced
+theme-customisations
+woo-stripe-payment
+woocommerce
+woocommerce-payments
+woocommerce-paypal-payments
+woocommerce-services
+wp-file-manager
+wp-media-library-categories
+wpforms-lite
