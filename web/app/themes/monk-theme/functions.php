@@ -81,6 +81,83 @@ function add_woo_support()
 	add_theme_support( 'post-thumbnails' );
 }
 
+function serve_protected_pdf() {
+    if (!isset($_GET['pdf_id']) || !is_user_logged_in()) {
+        wp_die('Unauthorized access', '403 Forbidden', array('response' => 403));
+    }
+
+    $pdf_id = intval($_GET['pdf_id']);
+    $user_id = get_current_user_id();
+    $required_product_id = 123; // Replace with your product ID
+
+    if (!wc_customer_bought_product('', $user_id, $required_product_id)) {
+        wp_die('You do not have permission to access this file.', '403 Forbidden', array('response' => 403));
+    }
+
+    $pdf_path = ABSPATH . "/private_pdfs/{$pdf_id}.pdf"; // Adjust path
+
+    if (file_exists($pdf_path)) {
+        header('Content-Type: application/pdf');
+        header('Content-Disposition: inline; filename="' . basename($pdf_path) . '"');
+        readfile($pdf_path);
+        exit;
+    } else {
+        wp_die('File not found.', '404 Not Found', array('response' => 404));
+    }
+}
+add_action('init', function() {
+    if (strpos($_SERVER['REQUEST_URI'], '/pdf-serve/') !== false) {
+        serve_protected_pdf();
+    }
+});
+
+
+function secure_pdf_flipbook() {
+    if (!is_user_logged_in()) {
+        return '<p>You must be logged in to access this content. <a href="' . esc_url(wp_login_url()) . '">Login</a></p>';
+    }
+
+    if (isset($_GET['pdf_id'])) {
+        $pdf_id = intval($_GET['pdf_id']);
+        $user_id = get_current_user_id();
+        $required_product_id = 123; // Replace with your WooCommerce product ID
+
+        if (!wc_customer_bought_product('', $user_id, $required_product_id)) {
+            return '<p>You need to purchase access to view this PDF. <a href="' . esc_url(get_permalink($required_product_id)) . '">Buy Now</a></p>';
+        }
+
+        // Secure PDF path
+        $pdf_path = ABSPATH . "/private_pdfs/{$pdf_id}.pdf"; // Adjust storage location
+
+        if (file_exists($pdf_path)) {
+            $pdf_viewer_url = esc_url(site_url('/pdf-serve/?pdf_id=' . $pdf_id));
+            
+            // DearFlip Shortcode Implementation
+            return '<div class="df3d-flipbook" data-pdf="' . $pdf_viewer_url . '" style="width:100%; height:800px;"></div>
+                    <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        dFlip.createBook(".df3d-flipbook", {
+                            webgl: true,
+                            backgroundColor: "#222",
+                            controlsPosition: "bottom",
+                            autoPlay: false,
+                            controls: ["zoom", "pageMode", "fullscreen"]
+                        });
+                    });
+                    </script>';
+        } else {
+            return '<p>Invalid PDF ID or file not found.</p>';
+        }
+    } else {
+        return '<p>No PDF specified.</p>';
+    }
+}
+add_shortcode('pdf_flipbook', 'secure_pdf_flipbook');
+
+
+
+
+
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 10 );
 add_filter('woocommerce_product_description_heading', '__return_null' );
 add_filter('use_block_editor_for_post', '__return_false');
