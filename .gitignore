@@ -24,6 +24,7 @@ web/.htaccess
 *.xml
 *.css
 *.csv
+*.map
 
 # Dotenv
 .env
