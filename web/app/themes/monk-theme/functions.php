@@ -42,7 +42,7 @@ function monktheme_register_styles(){
 
 function monktheme_register_scripts(){
 	$version = wp_get_theme()->get('Version');
-	wp_enqueue_script('monktheme-jquery', "https://code.jquery.com/jquery-3.6.0.slim.min.js", [], '3.6.0', true);
+	wp_enqueue_script('monktheme-jquery', "https://code.jquery.com/jquery-3.6.0.min.js", [], '3.6.0', true);
 	wp_enqueue_script('monktheme-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js", [], '4.5.2', true);
 	wp_enqueue_script('monktheme-main', get_stylesheet_directory_uri() . "/assets/bundle.js", [], $version, true);
 	if(is_front_page()){
