@@ -121,7 +121,6 @@ add_action('init', function() {
 
 function user_bought_digital_version($user_id, $parent_product_id, $digital_variation_id) {
 	//return false;
-	return true;     
     $customer_orders = wc_get_orders([
         'customer_id' => $user_id,
         'status'      => ['completed', 'processing'], // Only count completed/processing orders
@@ -183,7 +182,64 @@ function secure_pdf_flipbook() {
         return '<p>No PDF specified.</p>';
     }
 }
+
 add_shortcode('pdf_flipbook', 'secure_pdf_flipbook');
+
+function display_digital_version_link() {
+    global $product;
+
+    // Check if the user is logged in
+    if (!is_user_logged_in()) {
+        return;
+    }
+
+    $user_id = get_current_user_id();
+
+    // Get the parent product ID
+    $parent_product_id = $product->get_parent_id() ? $product->get_parent_id() : $product->get_id();
+
+    // Assuming you know how to identify the digital variation, you can retrieve it like this:
+    // You can replace this logic with your specific approach to get the digital version ID
+    $digital_product_id = get_digital_product_variation_id($parent_product_id);
+
+    // Check if the user has purchased the digital version of this product
+    if (user_bought_digital_version( $user_id, $parent_product_id, $digital_product_id )) {
+        // Generate the URL to the secure PDF viewer
+        $pdf_viewer_url = home_url('/monk-magazine-reader/?pdf_id=1&product_id=' . $product->get_id() . '&digital_variation_id=' . $digital_product_id);
+
+        // Display the message with the link to the digital version (PDF viewer)
+        echo '<p>You have purchased the digital version of this product. <a href="' . esc_url($pdf_viewer_url) . '" target="_blank">Click here to access it.</a></p>';
+    }
+}
+
+// Example function to retrieve the digital variation ID for a product (you may need to adjust this)
+function get_digital_product_variation_id($parent_product_id) {
+    // Here you can implement a way to fetch the digital product variation ID based on the parent product ID
+    // For example, if digital variations have a specific attribute or SKU:
+    $variations = get_posts([
+        'post_type' => 'product_variation',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+        'meta_query' => [
+            [
+                'key' => '_parent',
+                'value' => $parent_product_id,
+            ],
+        ],
+    ]);
+
+    foreach ($variations as $variation) {
+        // Check for a specific condition, for example, checking the SKU, attribute, or custom field for the digital version
+        if (has_term('digital', 'product_cat', $variation->ID)) {
+            return $variation->ID;
+        }
+    }
+
+    return false; // Return false if no digital variation is found
+}
+
+add_action('woocommerce_before_single_product_summary', 'display_digital_version_link', 20);
+
 
 
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 10 );
