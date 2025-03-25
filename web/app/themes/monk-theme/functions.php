@@ -48,7 +48,15 @@ function monktheme_register_scripts(){
 	if(is_front_page()){
 		wp_enqueue_script('monktheme-home', get_stylesheet_directory_uri() . "/assets/home.js", [], $version, true);
 	}
+
+	if (is_checkout()) {
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('wc-checkout', WC()->plugin_url() . '/assets/js/frontend/checkout.min.js', array('jquery'), WC_VERSION, true);
+
+    	}
 }
+
+
 
 function smartwp_remove_wp_block_library_css(){
 	if(is_front_page()) {
