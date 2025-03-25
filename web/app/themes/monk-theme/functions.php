@@ -240,6 +240,35 @@ function get_digital_product_variation_id($parent_product_id) {
 
 add_action('woocommerce_before_single_product_summary', 'display_digital_version_link', 20);
 
+function add_digital_version_link_to_email( $order, $sent_to_admin, $plain_text, $email ) {
+    // Loop through each item in the order
+    foreach ( $order->get_items() as $item_id => $item ) {
+        $product = $item->get_product();
+        
+        // Assuming you know how to identify the digital product, for example by SKU or variation ID
+        $parent_product_id = $product->get_parent_id() ? $product->get_parent_id() : $product->get_id();
+        $digital_product_id = get_digital_product_variation_id($parent_product_id);
+
+        // If the purchased product is a digital variation, add the link to the email
+        if ( user_bought_digital_variation( get_current_user_id(), $digital_product_id ) ) {
+            // Generate the URL to the secure PDF viewer
+            $pdf_viewer_url = home_url('/secure-pdf-viewer/?pdf_id=' . $product->get_id());
+
+            // Add the link to the email body
+            if ( $plain_text ) {
+                $message = "You have purchased the digital version of this product. Access it here: " . $pdf_viewer_url;
+            } else {
+                $message = '<p>You have purchased the digital version of this product. <a href="' . esc_url($pdf_viewer_url) . '" target="_blank">Click here to access it.</a></p>';
+            }
+
+            // Append the message to the email content
+            echo $message;
+        }
+    }
+}
+
+// Hook into WooCommerce email content
+add_action( 'woocommerce_email_order_details', 'add_digital_version_link_to_email', 10, 4 );
 
 
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 10 );
