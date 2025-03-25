@@ -49,13 +49,11 @@ function monktheme_register_scripts(){
 		wp_enqueue_script('monktheme-home', get_stylesheet_directory_uri() . "/assets/home.js", [], $version, true);
 	}
 
-	if (is_checkout()) {
-		wp_enqueue_script('jquery');
-		wp_enqueue_script('wc-checkout', WC()->plugin_url() . '/assets/js/frontend/checkout.min.js', array('jquery'), WC_VERSION, true);
 
-    	}
+	wp_dequeue_script('wc-checkout');
+	wp_enqueue_script('wc-checkout', WC()->plugin_url() . '/assets/js/frontend/checkout.min.js', array('jquery'), WC_VERSION, ['strategy' => 'defer']);
+
 }
-
 
 
 function smartwp_remove_wp_block_library_css(){
@@ -122,6 +120,8 @@ add_action('init', function() {
 });
 
 function user_bought_digital_version($user_id, $parent_product_id, $digital_variation_id) {
+	//return false;
+	return true;     
     $customer_orders = wc_get_orders([
         'customer_id' => $user_id,
         'status'      => ['completed', 'processing'], // Only count completed/processing orders
@@ -166,24 +166,16 @@ function secure_pdf_flipbook() {
         }
 
         // Secure PDF path
-        $pdf_path = ABSPATH . "/private_pdfs/{$pdf_id}.pdf"; // Adjust storage location
+        $pdf_path = ABSPATH . "private_pdfs/{$pdf_id}.pdf"; // Adjust storage location
 
         if (file_exists($pdf_path)) {
-            $pdf_viewer_url = esc_url(site_url('/pdf-serve/?pdf_id=' . $pdf_id));
-            
-            // DearFlip Shortcode Implementation
-            return '<div class="df3d-flipbook" data-pdf="' . $pdf_viewer_url . '" style="width:100%; height:800px;"></div>
-                    <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        dFlip.createBook(".df3d-flipbook", {
-                            webgl: true,
-                            backgroundColor: "#222",
-                            controlsPosition: "bottom",
-                            autoPlay: false,
-                            controls: ["zoom", "pageMode", "fullscreen"]
-                        });
-                    });
-                    </script>';
+            $pdf_viewer_url = esc_url(site_url('/pdf-serve/?pdf_id=' . $pdf_id . '&product_id=' . $parent_product_id . '&digital_variation_id=' . $digital_variation_id));
+	    // DearFlip Shortcode Implementatio
+	    //
+	    //// Return the dFlip shortcode
+
+	    return do_shortcode('[dflip id="599" source="' . esc_url($pdf_viewer_url) . '" width="100%" height="800px"]');
+	
         } else {
             return '<p>Invalid PDF ID or file not found.</p>';
         }
