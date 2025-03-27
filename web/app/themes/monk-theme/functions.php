@@ -92,11 +92,10 @@ function serve_protected_pdf() {
         wp_die('Unauthorized access', '403 Forbidden', array('response' => 403));
     }
 
-    $pdf_id = intval($_GET['pdf_id']);
+    $pdf_id = $_GET['pdf_id'];
     $user_id = get_current_user_id();
     $parent_product_id = $_GET['product_id']; // Replace with your WooCommerce product ID
     $digital_variation_id = $_GET['digital_variation_id'];
-
 
     if (!user_bought_digital_version($user_id, $parent_product_id, $digital_variation_id)) {
         wp_die('You do not have permission to access this file.', '403 Forbidden', array('response' => 403));
@@ -120,6 +119,7 @@ add_action('init', function() {
 });
 
 function user_bought_digital_version($user_id, $parent_product_id, $digital_variation_id) {
+	return true;
 	//return false;
     $customer_orders = wc_get_orders([
         'customer_id' => $user_id,
@@ -155,21 +155,24 @@ function secure_pdf_flipbook() {
     }
 
     if (isset($_GET['pdf_id']) && isset($_GET['product_id']) && isset($_GET['digital_variation_id'])) {
-        $pdf_id = intval($_GET['pdf_id']);
+        $pdf_id = $_GET['pdf_id'];
         $user_id = get_current_user_id();
         $parent_product_id = $_GET['product_id']; // Replace with your WooCommerce product ID
         $digital_variation_id = $_GET['digital_variation_id'];
 
-        if (!user_bought_digital_version( $user_id, $parent_product_id, $digital_variation_id )) {
+	if (!user_bought_digital_version( $user_id, $parent_product_id, $digital_variation_id )) {
             return '<p>You need to purchase access to view this PDF. <a href="' . esc_url(get_permalink($parent_product_id)) . '">Buy Now</a></p>';
         }
 
         // Secure PDF path
         $pdf_path = ABSPATH . "private_pdfs/{$pdf_id}.pdf"; // Adjust storage location
+	//echo $pdf_path;
 
         if (file_exists($pdf_path)) {
             $pdf_viewer_url = esc_url(site_url('/pdf-serve/?pdf_id=' . $pdf_id . '&product_id=' . $parent_product_id . '&digital_variation_id=' . $digital_variation_id));
-	    // DearFlip Shortcode Implementatio
+	  
+	    echo $pdf_viewer_url;
+        	// DearFlip Shortcode Implementatio
 	    //
 	    //// Return the dFlip shortcode
 
