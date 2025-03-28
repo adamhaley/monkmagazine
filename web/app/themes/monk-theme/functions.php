@@ -103,6 +103,8 @@ function serve_protected_pdf() {
 
     $pdf_path = ABSPATH . "/private_pdfs/{$pdf_id}.pdf"; // Adjust path
 
+echo $pdf_path;
+
     if (file_exists($pdf_path)) {
         header('Content-Type: application/pdf');
         header('Content-Disposition: inline; filename="' . basename($pdf_path) . '"');
@@ -119,7 +121,6 @@ add_action('init', function() {
 });
 
 function user_bought_digital_version($user_id, $parent_product_id, $digital_variation_id) {
-	return true;
 	//return false;
     $customer_orders = wc_get_orders([
         'customer_id' => $user_id,
@@ -127,12 +128,15 @@ function user_bought_digital_version($user_id, $parent_product_id, $digital_vari
         'limit'       => -1, // Get all orders
     ]);
 
+
     foreach ($customer_orders as $order) {
         foreach ($order->get_items() as $item) {
             $product = $item->get_product();
             if ($product) {
                 $product_id = $product->get_id();
                 $parent_id = $product->get_parent_id(); // For variations
+
+		echo $product_id . ' : ' . $parent_id;
 
                 // Check if it's the specific digital variation
                 if ($product_id == $digital_variation_id) {
@@ -197,18 +201,20 @@ function display_digital_version_link() {
     }
 
     $user_id = get_current_user_id();
-
+	
     // Get the parent product ID
-    $parent_product_id = $product->get_parent_id() ? $product->get_parent_id() : $product->get_id();
+    $parent_product_id = $product->id ? $product->id : $product->get_parent_id();
 
     // Assuming you know how to identify the digital variation, you can retrieve it like this:
     // You can replace this logic with your specific approach to get the digital version ID
     $digital_product_id = get_digital_product_variation_id($parent_product_id);
 
+
     // Check if the user has purchased the digital version of this product
     if (user_bought_digital_version( $user_id, $parent_product_id, $digital_product_id )) {
-        // Generate the URL to the secure PDF viewer
-        $pdf_viewer_url = home_url('/monk-magazine-reader/?pdf_id=1&product_id=' . $product->get_id() . '&digital_variation_id=' . $digital_product_id);
+	    // Generate the URL to the secure PDF viewer
+	    $issue_num = get_post_meta( $parent_product_id, 'issue-number', true );
+        $pdf_viewer_url = home_url('/monk-magazine-reader/?pdf_id=monk_' . $issue_num . '&product_id=' . $product->get_id() . '&digital_variation_id=' . $digital_product_id);
 
         // Display the message with the link to the digital version (PDF viewer)
         echo '<p>You have purchased the digital version of this product. <a href="' . esc_url($pdf_viewer_url) . '" target="_blank">Click here to access it.</a></p>';
@@ -219,26 +225,18 @@ function display_digital_version_link() {
 function get_digital_product_variation_id($parent_product_id) {
     // Here you can implement a way to fetch the digital product variation ID based on the parent product ID
     // For example, if digital variations have a specific attribute or SKU:
-    $variations = get_posts([
-        'post_type' => 'product_variation',
-        'post_status' => 'publish',
-        'posts_per_page' => -1,
-        'meta_query' => [
-            [
-                'key' => '_parent',
-                'value' => $parent_product_id,
-            ],
-        ],
-    ]);
+	
+	$product = wc_get_product($parent_product_id);
+	$variations = $product->get_available_variations();
 
-    foreach ($variations as $variation) {
-        // Check for a specific condition, for example, checking the SKU, attribute, or custom field for the digital version
-        if (has_term('digital', 'product_cat', $variation->ID)) {
-            return $variation->ID;
-        }
-    }
+	foreach( $variations as $variation ){
+		
+		if($variation['attributes']['attribute_media'] === 'digital'){
+			return $variation['variation_id'];
+		}
+	}
 
-    return false; // Return false if no digital variation is found
+	return false; // Return false if no digital variation is found
 }
 
 add_action('woocommerce_before_single_product_summary', 'display_digital_version_link', 20);
@@ -249,13 +247,14 @@ function add_digital_version_link_to_email( $order, $sent_to_admin, $plain_text,
         $product = $item->get_product();
         
         // Assuming you know how to identify the digital product, for example by SKU or variation ID
-        $parent_product_id = $product->get_parent_id() ? $product->get_parent_id() : $product->get_id();
+        $parent_product_id = $product->get_id() ? $product->get_id() : $product->get_parent_id();
         $digital_product_id = get_digital_product_variation_id($parent_product_id);
-
         // If the purchased product is a digital variation, add the link to the email
         if ( user_bought_digital_variation( get_current_user_id(), $digital_product_id ) ) {
-            // Generate the URL to the secure PDF viewer
-            $pdf_viewer_url = home_url('/secure-pdf-viewer/?pdf_id=' . $product->get_id());
+	    // Generate the URL to the secure PDF viewer
+	    //
+	    $issue_num = get_post_meta( $parent_product_id, 'issue-number', true );
+            $pdf_viewer_url = home_url('/secure-pdf-viewer/?pdf_id=monk_' .$issue_num . '&parent_product_id=' .  $product->get_id() . '&digital_variation_id=' . $digital_product_id);
 
             // Add the link to the email body
             if ( $plain_text ) {
