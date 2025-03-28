@@ -121,13 +121,11 @@ add_action('init', function() {
 });
 
 function user_bought_digital_version($user_id, $parent_product_id, $digital_variation_id) {
-	//return false;
     $customer_orders = wc_get_orders([
         'customer_id' => $user_id,
         'status'      => ['completed', 'processing'], // Only count completed/processing orders
         'limit'       => -1, // Get all orders
     ]);
-
 
     foreach ($customer_orders as $order) {
         foreach ($order->get_items() as $item) {
@@ -136,7 +134,6 @@ function user_bought_digital_version($user_id, $parent_product_id, $digital_vari
                 $product_id = $product->get_id();
                 $parent_id = $product->get_parent_id(); // For variations
 
-		echo $product_id . ' : ' . $parent_id;
 
                 // Check if it's the specific digital variation
                 if ($product_id == $digital_variation_id) {
@@ -162,7 +159,7 @@ function secure_pdf_flipbook() {
         $pdf_id = $_GET['pdf_id'];
         $user_id = get_current_user_id();
         $parent_product_id = $_GET['product_id']; // Replace with your WooCommerce product ID
-        $digital_variation_id = $_GET['digital_variation_id'];
+        $igital_variation_id = $_GET['digital_variation_id'];
 
 	if (!user_bought_digital_version( $user_id, $parent_product_id, $digital_variation_id )) {
             return '<p>You need to purchase access to view this PDF. <a href="' . esc_url(get_permalink($parent_product_id)) . '">Buy Now</a></p>';
@@ -203,10 +200,16 @@ function display_digital_version_link() {
     $user_id = get_current_user_id();
 	
     // Get the parent product ID
-    $parent_product_id = $product->id ? $product->id : $product->get_parent_id();
+ 	//print_r( $product->get_id() );
+    $parent_product_id = 41;
+    //$parent_product_id = $product->get_id();
 
     // Assuming you know how to identify the digital variation, you can retrieve it like this:
     // You can replace this logic with your specific approach to get the digital version ID
+    if(!$parent_product_id){
+	    return;
+    }
+    
     $digital_product_id = get_digital_product_variation_id($parent_product_id);
 
 
