@@ -134,7 +134,8 @@ function user_bought_digital_version($user_id, $parent_product_id, $digital_vari
                 $product_id = $product->get_id();
                 $parent_id = $product->get_parent_id(); // For variations
 
-
+		//echo $product_id . " : " . $parent_id . " : " . $digital_variation_id . " ///// ";
+		
                 // Check if it's the specific digital variation
                 if ($product_id == $digital_variation_id) {
                     return true;
@@ -200,9 +201,9 @@ function display_digital_version_link() {
     $user_id = get_current_user_id();
 	
     // Get the parent product ID
- 	//print_r( $product->get_id() );
-    $parent_product_id = 41;
-    //$parent_product_id = $product->get_id();
+    print_r( $product->get_id() );
+    //$parent_product_id = 41;
+    $parent_product_id = $product->get_id();
 
     // Assuming you know how to identify the digital variation, you can retrieve it like this:
     // You can replace this logic with your specific approach to get the digital version ID
