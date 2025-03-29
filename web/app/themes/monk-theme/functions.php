@@ -230,7 +230,13 @@ function get_digital_product_variation_id($parent_product_id) {
     // For example, if digital variations have a specific attribute or SKU:
 	
 	$product = wc_get_product($parent_product_id);
-	$variations = $product->get_available_variations();
+	
+	if ($product->is_type('variable')) {
+	    $variations = $product->get_available_variations();
+	} else {
+	    $variations = []; 
+	}
+	
 
 	foreach( $variations as $variation ){
 		
@@ -253,7 +259,7 @@ function add_digital_version_link_to_email( $order, $sent_to_admin, $plain_text,
         $parent_product_id = $product->get_id() ? $product->get_id() : $product->get_parent_id();
         $digital_product_id = get_digital_product_variation_id($parent_product_id);
         // If the purchased product is a digital variation, add the link to the email
-        if ( user_bought_digital_variation( get_current_user_id(), $digital_product_id ) ) {
+        if ( user_bought_digital_version( get_current_user_id(),$parent_product_id, $digital_product_id ) ) {
 	    // Generate the URL to the secure PDF viewer
 	    //
 	    $issue_num = get_post_meta( $parent_product_id, 'issue-number', true );
