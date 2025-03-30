@@ -282,35 +282,74 @@ function add_digital_version_link_to_email( $order, $sent_to_admin, $plain_text,
 // Hook into WooCommerce email content
 add_action( 'woocommerce_email_order_details', 'add_digital_version_link_to_email', 10, 4 );
 
+// Remove breadcrumb
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 10);
 
-remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 10 );
-add_filter('woocommerce_product_description_heading', '__return_null' );
+// Remove product description heading
+add_filter('woocommerce_product_description_heading', '__return_null');
+
+// Disable Gutenberg editor
 add_filter('use_block_editor_for_post', '__return_false');
+
+// Add WooCommerce theme support
 add_action('after_setup_theme', 'add_woo_support');
+
+// Remove WP Block Library CSS
 add_action('wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 10);
+
+// Register styles and scripts
 add_action('wp_enqueue_scripts', 'monktheme_register_styles');
 add_action('wp_enqueue_scripts', 'monktheme_register_scripts');
-add_action('woocommerce_before_main_content','add_header', 5);
-add_action('woocommerce_before_main_content','add_open_container_div', 7);
-add_action('woocommerce_after_main_content','add_close_container_div', 150);
-add_action('woocommerce_after_main_content','add_footer', 160);
-// add_action('woocommerce_before_checkout_form','add_header', 1);
-add_action('woocommerce_before_checkout_form','add_open_container_div', 7);
-add_action('woocommerce_after_checkout_form','add_close_container_div', 170);
-add_action('woocommerce_after_checkout_form','add_footer', 100);
-add_action('woocommerce_before_cart','add_header', 5);
-add_action('woocommerce_before_cart','add_open_container_div', 12);
-add_action('woocommerce_after_cart','add_close_container_div', 200);
-add_action('woocommerce_after_cart','add_footer', 215);
-add_action('woocommerce_before_thankyou','add_header',5);
-add_action('woocommerce_after_thankyou','add_footer',150);
+
+// Product pages structure
+add_action('woocommerce_before_main_content', 'add_header', 5);
+add_action('woocommerce_before_main_content', 'add_open_container_div', 7);
+add_action('woocommerce_after_main_content', 'add_close_container_div', 150);
+add_action('woocommerce_after_main_content', 'add_footer', 160);
+
+// Cart page structure
+add_action('woocommerce_before_cart', 'add_header', 5);
+add_action('woocommerce_before_cart', 'add_open_container_div', 12);
+add_action('woocommerce_after_cart', 'add_close_container_div', 200);
+add_action('woocommerce_after_cart', 'add_footer', 215);
+
+// Empty cart page structure
 add_action('woocommerce_cart_is_empty', 'add_header_to_page', 2);
 add_action('woocommerce_cart_is_empty', 'get_footer', 1000);
-add_filter('woocommerce_checkout_get_value','__return_empty_string',10);
-add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
-add_filter( 'aioseo_thumbnail_size', function( $imageSize ) {
-    return [ 612, 700 ];
-} );
+
+// Checkout page structure - MODIFIED
+add_action('woocommerce_before_checkout_form', 'add_custom_checkout_header', 5);
+add_action('woocommerce_before_checkout_form', 'add_open_container_div', 7);
+add_action('woocommerce_after_checkout_form', 'add_close_container_div', 90); // Lower priority
+add_action('woocommerce_after_checkout_form', 'add_custom_checkout_footer', 100);
+
+// Thank you page structure
+add_action('woocommerce_before_thankyou', 'add_header', 5);
+add_action('woocommerce_after_thankyou', 'add_footer', 150);
+
+// Disable shipping to different address by default
+add_filter('woocommerce_ship_to_different_address_checked', '__return_false');
+
+// Set AIOSEO thumbnail size
+add_filter('aioseo_thumbnail_size', function($imageSize) {
+    return [612, 700];
+});
+
+// IMPORTANT: Define custom checkout header/footer functions to prevent conflicts
+function add_custom_checkout_header() {
+    // Make sure this doesn't interfere with the checkout process
+    // Only add UI elements, don't modify form data
+    add_header();
+}
+
+function add_custom_checkout_footer() {
+    // Make sure this doesn't interfere with the checkout process
+    // Only add UI elements, don't modify form data
+    add_footer();
+}
+
+// REMOVED: This line was likely causing the checkout issue
+// add_filter('woocommerce_checkout_get_value','__return_empty_string',10);
 
 
 function add_favicon_to_head() {
