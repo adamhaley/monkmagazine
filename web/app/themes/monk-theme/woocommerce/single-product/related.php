@@ -486,7 +486,7 @@ if ( $related_products || !empty($global_related_by) ) :
 			}
 		} else if( $working_mode == 'default' && !empty( $related_products ))
 		{
-	        $crp_title         = get_option('custom_related_products_crp_title', esc_html__('Related Products', 'wt-woocommerce-related-products'));
+	        $crp_title         = get_option('custom_related_products_crp_title', esc_html__('Related 000000 Products', 'wt-woocommerce-related-products'));
 	        $crp_heading 	 = apply_filters('wt_related_products_heading', "<h2 class='wt-crp-heading'>" . esc_html( $crp_title ) . " </h2>", $crp_title);
 	        $bxslider = false;
 			?>
