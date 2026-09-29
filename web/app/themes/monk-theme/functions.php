@@ -15,7 +15,11 @@ function monketheme_support(){
 
 function header_code() {
 	echo '<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN2K5L"></script> <script>  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag(\'js\', new Date()); gtag(\'config\', \'G-NN2K5L\');</script>';
+    
+
 }
+
+
 
 
 add_action('after_setup_theme', 'monketheme_support');
@@ -74,6 +78,7 @@ function add_close_container_div() {
 }
 
 function add_header() {
+
 	get_header();
 }
 
@@ -87,12 +92,17 @@ function add_woo_support()
 	add_theme_support( 'post-thumbnails' );
 }
 
+// Outside the web root (and outside web/wp, which Composer replaces on core updates)
+if (!defined('MONK_PRIVATE_PDF_DIR')) {
+    define('MONK_PRIVATE_PDF_DIR', dirname(WP_CONTENT_DIR, 2) . '/private_pdfs');
+}
+
 function serve_protected_pdf() {
     if (!isset($_GET['pdf_id']) || !is_user_logged_in()) {
         wp_die('Unauthorized access', '403 Forbidden', array('response' => 403));
     }
 
-    $pdf_id = $_GET['pdf_id'];
+    $pdf_id = preg_replace('/[^A-Za-z0-9_-]/', '', $_GET['pdf_id']);
     $user_id = get_current_user_id();
     $parent_product_id = $_GET['product_id']; // Replace with your WooCommerce product ID
     $digital_variation_id = $_GET['digital_variation_id'];
@@ -101,9 +111,7 @@ function serve_protected_pdf() {
         wp_die('You do not have permission to access this file.', '403 Forbidden', array('response' => 403));
     }
 
-    $pdf_path = ABSPATH . "/private_pdfs/{$pdf_id}.pdf"; // Adjust path
-
-echo $pdf_path;
+    $pdf_path = MONK_PRIVATE_PDF_DIR . "/{$pdf_id}.pdf";
 
     if (file_exists($pdf_path)) {
         header('Content-Type: application/pdf');
@@ -156,7 +164,7 @@ function secure_pdf_flipbook() {
     }
 
     if (isset($_GET['pdf_id']) && isset($_GET['product_id']) && isset($_GET['digital_variation_id'])) {
-        $pdf_id = $_GET['pdf_id'];
+        $pdf_id = preg_replace('/[^A-Za-z0-9_-]/', '', $_GET['pdf_id']);
         $user_id = get_current_user_id();
         $parent_product_id = $_GET['product_id']; // Replace with your WooCommerce product ID
         $digital_variation_id = $_GET['digital_variation_id'];
@@ -166,8 +174,7 @@ function secure_pdf_flipbook() {
         }
 
         // Secure PDF path
-        $pdf_path = ABSPATH . "private_pdfs/{$pdf_id}.pdf"; // Adjust storage location
-	//echo $pdf_path;
+        $pdf_path = MONK_PRIVATE_PDF_DIR . "/{$pdf_id}.pdf";
 
         if (file_exists($pdf_path)) {
             $pdf_viewer_url = esc_url(site_url('/pdf-serve/?pdf_id=' . $pdf_id . '&product_id=' . $parent_product_id . '&digital_variation_id=' . $digital_variation_id));
@@ -244,37 +251,6 @@ function get_digital_product_variation_id($parent_product_id) {
 }
 
 add_action('woocommerce_before_single_product_summary', 'display_digital_version_link', 20);
-
-function add_digital_version_link_to_email( $order, $sent_to_admin, $plain_text, $email ) {
-    // Loop through each item in the order
-    foreach ( $order->get_items() as $item_id => $item ) {
-        $product = $item->get_product();
-        
-        // Assuming you know how to identify the digital product, for example by SKU or variation ID
-        $parent_product_id = $product->get_id() ? $product->get_id() : $product->get_parent_id();
-        $digital_product_id = get_digital_product_variation_id($parent_product_id);
-        // If the purchased product is a digital variation, add the link to the email
-        if ( user_bought_digital_version( get_current_user_id(),$parent_product_id, $digital_product_id ) ) {
-	    // Generate the URL to the secure PDF viewer
-	    //
-	    $issue_num = get_post_meta( $parent_product_id, 'issue-number', true );
-            $pdf_viewer_url = home_url('/secure-pdf-viewer/?pdf_id=monk_' .$issue_num . '&parent_product_id=' .  $product->get_id() . '&digital_variation_id=' . $digital_product_id);
-
-            // Add the link to the email body
-            if ( $plain_text ) {
-                $message = "You have purchased the digital version of this product. Access it here: " . $pdf_viewer_url;
-            } else {
-                $message = '<p>You have purchased the digital version of this product. <a href="' . esc_url($pdf_viewer_url) . '" target="_blank">Click here to access it.</a></p>';
-            }
-
-            // Append the message to the email content
-            echo $message;
-        }
-    }
-}
-
-// Hook into WooCommerce email content
-add_action( 'woocommerce_email_order_details', 'add_digital_version_link_to_email', 10, 4 );
 
 // Remove breadcrumb
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 10);
@@ -463,3 +439,6 @@ add_action('woocommerce_thankyou', function(){?>
 <?php wp_footer() ?>
 
 <?php }, 10, 1);
+
+
+
