@@ -160,7 +160,9 @@ function user_bought_digital_version($user_id, $parent_product_id, $digital_vari
 
 function secure_pdf_flipbook() {
     if (!is_user_logged_in()) {
-        return '<p>You must be logged in to access this content. <a href="' . esc_url(wp_login_url()) . '">Login</a></p>';
+        // Send readers to the branded My Account login, then straight back to this issue
+        $login_url = add_query_arg('redirect_to', rawurlencode(home_url(add_query_arg(array()))), wc_get_page_permalink('myaccount'));
+        return '<p>Please log in with the email address you ordered with to read your issue. <a href="' . esc_url($login_url) . '">Log in</a></p>';
     }
 
     if (isset($_GET['pdf_id']) && isset($_GET['product_id']) && isset($_GET['digital_variation_id'])) {
@@ -195,6 +197,14 @@ function secure_pdf_flipbook() {
 }
 
 add_shortcode('pdf_flipbook', 'secure_pdf_flipbook');
+
+// Honour the reader's redirect_to after a My Account login (same-site URLs only)
+add_filter('woocommerce_login_redirect', function ($redirect) {
+    if (!empty($_GET['redirect_to'])) {
+        return wp_validate_redirect(wp_unslash($_GET['redirect_to']), $redirect);
+    }
+    return $redirect;
+});
 
 function display_digital_version_link() {
     global $product;
