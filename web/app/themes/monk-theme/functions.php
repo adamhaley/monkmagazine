@@ -262,6 +262,59 @@ function get_digital_product_variation_id($parent_product_id) {
 
 add_action('woocommerce_before_single_product_summary', 'display_digital_version_link', 20);
 
+// Reader links for the digital issues in an order (variations with media = digital)
+function monk_order_reader_links($order) {
+    $links = array();
+    foreach ($order->get_items() as $item) {
+        $variation_id = $item->get_variation_id();
+        if (!$variation_id || get_post_meta($variation_id, 'attribute_media', true) !== 'digital') {
+            continue;
+        }
+        $parent_id = $item->get_product_id();
+        $links[] = array(
+            'title' => trim(preg_replace('/\s+/', ' ', wp_strip_all_tags(str_replace('<br>', ' ', get_the_title($parent_id))))),
+            'url'   => home_url('/monk-magazine-reader/?pdf_id=monk_' . get_post_meta($parent_id, 'issue-number', true) . '&product_id=' . $parent_id . '&digital_variation_id=' . $variation_id),
+        );
+    }
+    return $links;
+}
+
+// "Read your issue" box in the customer's order emails, for paid orders
+add_action('woocommerce_email_before_order_table', function ($order, $sent_to_admin, $plain_text, $email) {
+    if ($sent_to_admin || !$order->is_paid() || !in_array($email->id, array('customer_processing_order', 'customer_completed_order', 'customer_invoice'), true)) {
+        return;
+    }
+    $links = monk_order_reader_links($order);
+    if (!$links) {
+        return;
+    }
+    $login_note = 'You will be asked to log in with this email address and the password you chose at checkout (or use "Lost your password?").';
+    if ($plain_text) {
+        echo "YOUR DIGITAL ISSUE IS READY\n";
+        foreach ($links as $link) {
+            echo $link['title'] . ': ' . $link['url'] . "\n";
+        }
+        echo $login_note . "\n\n";
+        return;
+    }
+    echo '<div style="margin:0 0 24px;padding:16px;border:2px solid #000;"><p style="margin:0 0 8px;"><strong>Your digital issue is ready</strong></p>';
+    foreach ($links as $link) {
+        echo '<p style="margin:0 0 8px;"><a href="' . esc_url($link['url']) . '" style="font-weight:bold;">Read ' . esc_html($link['title']) . ' now</a></p>';
+    }
+    echo '<p style="margin:0;font-size:13px;">' . esc_html($login_note) . '</p></div>';
+}, 10, 4);
+
+// Same links on the thank-you page right after checkout
+add_action('woocommerce_thankyou', function ($order_id) {
+    $order = wc_get_order($order_id);
+    if (!$order || !$order->is_paid()) {
+        return;
+    }
+    foreach (monk_order_reader_links($order) as $link) {
+        echo '<p class="digital-issue-ready"><strong>Your digital issue is ready:</strong> <a href="' . esc_url($link['url']) . '">Read ' . esc_html($link['title']) . ' now</a></p>';
+    }
+}, 5);
+
 // Remove breadcrumb
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 10);
 
